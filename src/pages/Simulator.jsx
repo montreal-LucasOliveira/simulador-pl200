@@ -487,7 +487,9 @@ export default function Simulator({ session }) {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
                         <div className="bg-slate-50 p-4 rounded-2xl">
                             <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">Nota Final</p>
-                            <p className={`text-3xl font-black ${finalScore >= 70 ? 'text-emerald-600' : 'text-red-600'}`}>{finalScore}%</p>
+                            <p className={`text-3xl font-black ${finalScore >= 70 ? 'text-emerald-600' : 'text-red-600'}`}>
+                                {finalScore * 10} <span className="text-sm font-bold text-slate-400">/ 1000</span>
+                            </p>
                         </div>
                         <div className="bg-slate-50 p-4 rounded-2xl">
                             <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">Status</p>

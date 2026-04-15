@@ -65,7 +65,7 @@ export default function Dashboard({ session }) {
       });
 
       const chartData = Object.keys(statsAggregator).map(domain => ({
-         subject: domain.length > 20 ? domain.substring(0, 17) + "..." : domain,
+         subject: domain.length > 25 ? domain.substring(0, 22) + "..." : domain,
          fullMark: 100,
          A: Math.round((statsAggregator[domain].correct / statsAggregator[domain].total) * 100)
       }));
@@ -432,7 +432,7 @@ export default function Dashboard({ session }) {
                              <div className="font-bold text-slate-800 mt-1">{h.date}</div>
                          </div>
                          <div className="flex flex-col items-end">
-                             <span className={`font-black text-xl ${h.passed ? 'text-emerald-500' : 'text-red-500'}`}>{h.score}%</span>
+                             <span className={`font-black text-xl ${h.passed ? 'text-emerald-500' : 'text-red-500'}`}>{h.score * 10}</span>
                              <span className="text-[10px] text-slate-400 font-bold uppercase">{h.passed ? 'Passou' : 'Reprovou'}</span>
                          </div>
                      </div>
@@ -634,7 +634,7 @@ export default function Dashboard({ session }) {
                 <div className="h-[250px] w-full">
                     {radarData.length > 0 ? (
                         <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx="50%" cy="50%" outerRadius="70%" data={radarData}>
+                            <RadarChart cx="50%" cy="50%" outerRadius="55%" data={radarData}>
                                 <PolarGrid stroke="#e2e8f0" />
                                 <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 10, fontWeight: 700 }} />
                                 <Radar
@@ -754,12 +754,12 @@ export default function Dashboard({ session }) {
                       </div>
                       <div className="flex-1 flex flex-col gap-2 w-full">
                         <div className="flex justify-between items-end">
-                            <span className="text-slate-500 text-xs font-bold uppercase tracking-wide">Score Obtido</span>
-                            <span className={`text-xl font-black ${h.passed ? 'text-emerald-600' : 'text-slate-700'}`}>{h.score}%</span>
+                            <span className="text-slate-500 text-xs font-bold uppercase tracking-wide">Pontuação</span>
+                            <span className={`text-xl font-black ${h.passed ? 'text-emerald-600' : 'text-slate-700'}`}>{h.score * 10} / 1000</span>
                         </div>
                         <div className="h-2.5 w-full bg-slate-100 rounded-full relative overflow-hidden shadow-inner">
                           <div className={`h-full rounded-full transition-all duration-1000 ${h.passed ? 'bg-emerald-500' : 'bg-slate-400'}`} style={{ width: `${h.score}%` }}></div>
-                          <div className="absolute top-0 bottom-0 left-[70%] w-1 bg-white border-l border-red-500/20 z-10" title="Corte Oficial (70%)"></div>
+                          <div className="absolute top-0 bottom-0 left-[70%] w-1 bg-white border-l border-red-500/20 z-10" title="Nota de Corte Oficial (700 Pontos)"></div>
                         </div>
                       </div>
                     </div>

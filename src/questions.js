@@ -512,7 +512,7 @@ export const questionsData = [
     },
     {
         "id": "q23_topic1",
-        "text": "A equipe de vendas de uma empresa quer uma forma simplificada de gerir as oportunidades no Dynamics 365 Sales, sem adicionar código personalizado. Você tem de fornecer uma solução para cada requisito. Quais soluções deve fornecer na seguinte ordem? 1. Arrastar e soltar (drag and drop) oportunidades para mudar de fase. 2. Mostrar a cada vendedor as suas oportunidades na vista de Calendário e Kanban. 3. Mostrar o número de oportunidades abertas por fase numa vista padrão.",
+        "text": "A equipe de vendas de uma empresa quer uma forma simplificada de gerenciar as oportunidades no Dynamics 365 Sales, sem adicionar código personalizado. Você tem de fornecer uma solução para cada requisito. Quais soluções deve fornecer na seguinte ordem? 1. Arrastar e soltar (drag and drop) oportunidades para mudar de fase. 2. Mostrar a cada vendedor as suas oportunidades na vista de Calendário e Kanban. 3. Mostrar o número de oportunidades abertas por fase numa vista padrão.",
         "options": [
             "1. Adicionar o controle Kanban | 2. Adicionar ambos os controles (Calendário e Kanban) à vista 'As Minhas Oportunidades' | 3. Utilizar o painel de gráficos (chart pane) na vista",
             "1. Adicionar a Linha do Tempo (Timeline) | 2. Adicionar os controles a uma vista customizada | 3. Utilizar a vista de Lista",
@@ -527,7 +527,7 @@ export const questionsData = [
             "puloDoGato": "O controle Kanban no Dynamics 365 permite a funcionalidade de arrastar e soltar (Drag and Drop) baseada no Fluxo de Processo Empresarial (BPF) ou no Status da Oportunidade. Ao configurar controles, podemos adicioná-los a vistas específicas (como 'My Opportunities') em vez de a todas as vistas.",
             "cascasDeBanana": [
                 "Editable Grid (Grade Editável): Permite editar campos rapidamente como no Excel, mas NÃO permite 'arrastar e soltar' entre colunas/fases.",
-                "Timeline (Linha de Tempo): Serve para registar e-mails, tarefas e notas cronologicamente, não para gerir as fases das oportunidades."
+                "Timeline (Linha de Tempo): Serve para registar e-mails, tarefas e notas cronologicamente, não para gerenciar as fases das oportunidades."
             ],
             "dicaOuro": "Arrastar e soltar (Drag and Drop) oportunidades = Controle Kanban. Ver dados resumidos em barras/pizza sem sair da lista = Chart Pane (Painel de Gráficos)."
         },
@@ -675,7 +675,7 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta questão é uma variação exata da Questão 2 deste simulador, mas com opções de resposta ligeiramente diferentes. A Microsoft adora fazer isto!",
-            "papoReto": "Se a visualização é para *todos*, é uma Visualização Pública (Public View). Onde é que construímos e guardamos as coisas para a empresa inteira usar de forma consolidada e estruturada? Dentro de uma Solução, acedendo à secção de Tabelas/Entidades. Nada de criar visualizações pessoais isoladas.",
+            "papoReto": "Se a visualização é para *todos*, é uma Visualização Pública (Public View). Onde é que construímos e guardamos as coisas para a empresa inteira usar de forma consolidada e estruturada? Dentro de uma Solução, acedendo à seção de Tabelas/Entidades. Nada de criar visualizações pessoais isoladas.",
             "respostaCerta": "No componente de Entidades dentro de uma Solução (Entities component of a solution)",
             "puloDoGato": "Para criar componentes globais sem usar código, deve criar ou editar a Tabela (Entidade) diretamente nas configurações do sistema ou através de uma Solução no portal do criador (make.powerapps.com). Nas opções dadas, 'Componente de Entidades dentro de uma solução' é a única resposta que descreve a customização oficial da arquitetura do sistema.",
             "cascasDeBanana": [
@@ -712,7 +712,7 @@ export const questionsData = [
     },
     {
         "id": "q32_topic1",
-        "text": "Uma empresa utiliza um canvas app (aplicativo de tela) para gerir recursos de produção numa região específica. Os colaboradores devem estar nas instalações da empresa para utilizar o aplicativo. Devido a uma necessidade repentina de trabalho remoto, os colaboradores deixaram de se deslocar a um local específico e não conseguem acessar ao canvas app. Você deve reconfigurar o aplicativo para garantir que os colaboradores apenas acedem a partir de um número limitado de localizações. Quais componentes deve configurar para cada requisito, respectivamente? 1. Garantir que os colaboradores só podem acessar a partir de uma região específica. 2. Especificar as localizações a partir das quais um usuário pode acessar ao aplicativo.",
+        "text": "Uma empresa utiliza um canvas app (aplicativo de tela) para gerenciar recursos de produção numa região específica. Os colaboradores devem estar nas instalações da empresa para utilizar o aplicativo. Devido a uma necessidade repentina de trabalho remoto, os colaboradores deixaram de se deslocar a um local específico e não conseguem acessar ao canvas app. Você deve reconfigurar o aplicativo para garantir que os colaboradores apenas acedem a partir de um número limitado de localizações. Quais componentes deve configurar para cada requisito, respectivamente? 1. Garantir que os colaboradores só podem acessar a partir de uma região específica. 2. Especificar as localizações a partir das quais um usuário pode acessar ao aplicativo.",
         "options": [
             "1. Definições do Canvas app | 2. Política de Conformidade (Compliance policy)",
             "1. Power Platform admin center | 2. Política de Segurança Local (Local Security policy)",
@@ -722,7 +722,7 @@ export const questionsData = [
         "correctAnswer": 2,
         "explanation": {
             "intro": "Uma questão fundamental sobre a segurança baseada na localização (geofencing) e quem é responsável por essa barreira no ecossistema Microsoft.",
-            "papoReto": "O Power Apps por si só não sabe proibir alguém de entrar com base na morada ou no IP. Quem faz o papel de 'segurança do edifício' a verificar a sua identidade e a localização de onde está a tentar entrar é o Azure Active Directory (atualmente Microsoft Entra ID). Lá dentro, o segurança tem um manual de regras chamado 'Política de Acesso Condicional', onde diz: 'Se ele não estiver na região X, bloqueia a entrada'.",
+            "papoReto": "O Power Apps por si só não sabe proibir alguém de entrar com base na endereço ou no IP. Quem faz o papel de 'segurança do edifício' a verificar a sua identidade e a localização de onde está a tentar entrar é o Azure Active Directory (atualmente Microsoft Entra ID). Lá dentro, o segurança tem um manual de regras chamado 'Política de Acesso Condicional', onde diz: 'Se ele não estiver na região X, bloqueia a entrada'.",
             "respostaCerta": "1. Azure Active Directory | 2. Política de Acesso Condicional (Conditional Access policy)",
             "puloDoGato": "O acesso condicional (Conditional Access) avalia sinais como o local (endereço IP), o estado do dispositivo e o usuário para tomar decisões de segurança (ex: exigir MFA ou bloquear o acesso). Esta funcionalidade é exclusiva do Microsoft Entra ID (Azure AD), e não é configurada no Power Platform Admin Center nem dentro do próprio Canvas App.",
             "cascasDeBanana": [
@@ -811,7 +811,7 @@ export const questionsData = [
         "options": [
             "Desativar o pacote de idioma (language pack) brasileiro.",
             "Renomear a moeda brasileira.",
-            "Eliminar (Delete) o registro da moeda brasileira.",
+            "Excluir (Delete) o registro da moeda brasileira.",
             "Desativar (Deactivate) o registro da moeda brasileira."
         ],
         "correctAnswer": 3,
@@ -819,12 +819,12 @@ export const questionsData = [
             "intro": "Esta questão trata da manutenção de integridade de dados históricos versus a interrupção de novas transações.",
             "papoReto": "Se o Brasil vai parar de operar vendas, não queremos que as pessoas continuem a lançar vendas em Reais. Mas se apagarmos a moeda do sistema (Delete), todas as vendas passadas que usaram o Real vão ficar quebradas ou perder a referência financeira. A solução? 'Congelar' a moeda. Nós Desativamo-la.",
             "respostaCerta": "Desativar (Deactivate) o registro da moeda brasileira.",
-            "puloDoGato": "O Dataverse não permite eliminar (Delete) moedas que já estejam em uso por outros registros (como Oportunidades ou Faturas antigas). Desativar (Deactivate) um registro de moeda impede que ela seja selecionada em novas transações, mas mantém perfeitamente a integridade e os cálculos de todos os registros históricos.",
+            "puloDoGato": "O Dataverse não permite excluir (Delete) moedas que já estejam em uso por outros registros (como Oportunidades ou Faturas antigas). Desativar (Deactivate) um registro de moeda impede que ela seja selecionada em novas transações, mas mantém perfeitamente a integridade e os cálculos de todos os registros históricos.",
             "cascasDeBanana": [
-                "Eliminar (Delete): O sistema bloquearia esta ação devido a dependências (relacionamentos com registros antigos), e se não bloqueasse, causaria perda de dados.",
+                "Excluir (Delete): O sistema bloquearia esta ação devido a dependências (relacionamentos com registros antigos), e se não bloqueasse, causaria perda de dados.",
                 "Desativar o pacote de idioma: O idioma afeta apenas a tradução da interface do usuário (telas, botões), não tem absolutamente nada a ver com as regras de moedas (Currency) para valores financeiros."
             ],
-            "dicaOuro": "Parar de usar sem perder o histórico = Desativar (Deactivate). Nunca 'Eliminar' (Delete) dados transacionais ou moedas usadas."
+            "dicaOuro": "Parar de usar sem perder o histórico = Desativar (Deactivate). Nunca 'Excluir' (Delete) dados transacionais ou moedas usadas."
         },
         "difficulty": "intermediario",
         "domain": "Microsoft Dataverse"
@@ -858,21 +858,21 @@ export const questionsData = [
         "text": "Você gere um ambiente do Dynamics 365 e cria um conjunto de opções global (global option set / choice) para uma solução personalizada. Mais tarde, repara que o prefixo padrão (default prefix) está incorreto e que os valores numéricos das opções (option values) são demasiado longos. Você precisa de alterar o valor numérico do conjunto de opções e garantir que o prefixo fica correto. Quais são as DUAS ações conjugadas que deve executar?",
         "options": [
             "A) Alterar o prefixo nas definições do sistema E B) Editar o conjunto de opções diretamente.",
-            "A) Alterar o prefixo do publicador (publisher's prefix) E B) Eliminar (Delete) e recriar o conjunto de opções.",
+            "A) Alterar o prefixo do publicador (publisher's prefix) E B) Excluir (Delete) e recriar o conjunto de opções.",
             "A) Alterar o prefixo do publicador E B) Editar o conjunto de opções diretamente.",
-            "A) Alterar o prefixo nas definições do sistema E B) Eliminar (Delete) e recriar o conjunto de opções."
+            "A) Alterar o prefixo nas definições do sistema E B) Excluir (Delete) e recriar o conjunto de opções."
         ],
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta questão avalia o conhecimento sobre como as soluções (Solutions), os publicadores (Publishers) e os valores internos das colunas funcionam no Dataverse.",
-            "papoReto": "Quando cria um campo de escolha (Option Set), o sistema gera um valor numérico oculto (ex: 100000001). Esse '10000' é o prefixo que vem do Publicador da Solução em que está a trabalhar. Se esse número ficou errado ou é demasiado longo, não dá para simplesmente clicar e editar. Tem de se apagar o campo, consertar o prefixo no cadastro do Publicador da Solução, e criar o campo de novo a partir do zero.",
-            "respostaCerta": "A) Alterar o prefixo do publicador (publisher's prefix) E B) Eliminar (Delete) e recriar o conjunto de opções.",
-            "puloDoGato": "No Dataverse, NÃO é possível alterar o valor numérico base (value) de um Global Option Set após a sua criação (embora possa alterar o texto visível/label). Para corrigir um prefixo ou um valor numérico gerado, a única solução é eliminar o campo e recriar. O prefixo (tanto de texto como 'cr435_' quanto o prefixo numérico base de opções) é definido exclusivamente nas propriedades do Publicador (Publisher) da solução.",
+            "papoReto": "Quando cria um campo de escolha (Option Set), o sistema gera um valor numérico oculto (ex: 100000001). Esse '10000' é o prefixo que vem do Publicador da Solução em que está a trabalhar. Se esse número ficou errado ou é demasiado longo, não dá para simplesmente clicar e editar. Tem de se excluir o campo, consertar o prefixo no cadastro do Publicador da Solução, e criar o campo de novo a partir do zero.",
+            "respostaCerta": "A) Alterar o prefixo do publicador (publisher's prefix) E B) Excluir (Delete) e recriar o conjunto de opções.",
+            "puloDoGato": "No Dataverse, NÃO é possível alterar o valor numérico base (value) de um Global Option Set após a sua criação (embora possa alterar o texto visível/label). Para corrigir um prefixo ou um valor numérico gerado, a única solução é excluir o campo e recriar. O prefixo (tanto de texto como 'cr435_' quanto o prefixo numérico base de opções) é definido exclusivamente nas propriedades do Publicador (Publisher) da solução.",
             "cascasDeBanana": [
                 "Editar o conjunto de opções: O sistema bloqueia a edição do valor numérico base após a criação para garantir a integridade da base de dados.",
                 "Alterar nas definições do sistema: O prefixo não é uma configuração global do sistema, é controlado pela Solução/Publicador específico onde o componente está a ser criado."
             ],
-            "dicaOuro": "Errou o prefixo (nome ou número) de um Option Set (Choice)? A única solução do sistema é Delete & Recreate (Eliminar e Recriar). Definir Prefixos = Configurações do Publicador (Publisher)."
+            "dicaOuro": "Errou o prefixo (nome ou número) de um Option Set (Choice)? A única solução do sistema é Delete & Recreate (Excluir e Recriar). Definir Prefixos = Configurações do Publicador (Publisher)."
         },
         "difficulty": "iniciante",
         "domain": "Ambientes do Microsoft Power Platform"
@@ -995,16 +995,16 @@ export const questionsData = [
         "id": "q44_topic1",
         "text": "Você está a configurar um ambiente no Microsoft Dataverse. Você precisa garantir que os acessos estão configurados corretamente para os seguintes requisitos: 1. Garantir que um usuário consiga acessar a um aplicativo (App) específico. 2. Garantir que um usuário consiga visualizar uma entidade (Tabela) específica. Quais ações deve executar, respectivamente?",
         "options": [
-            "1. Gerir Funções (Manage Roles) do aplicativo | 2. Atribuir um direito de acesso (Security Role) ao usuário",
+            "1. Gerenciar Funções (Manage Roles) do aplicativo | 2. Atribuir um direito de acesso (Security Role) ao usuário",
             "1. Atribuir um direito de acesso (Security Role) ao usuário | 2. Partilhar o registro (Share record)",
-            "1. Partilhar o registro (Share record) | 2. Gerir Funções (Manage Roles) da entidade",
-            "1. Adicionar o usuário a uma Equipe de Acesso (Access Team) | 2. Gerir Funções (Manage Roles) do aplicativo"
+            "1. Partilhar o registro (Share record) | 2. Gerenciar Funções (Manage Roles) da entidade",
+            "1. Adicionar o usuário a uma Equipe de Acesso (Access Team) | 2. Gerenciar Funções (Manage Roles) do aplicativo"
         ],
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma questão fundamental sobre a diferença entre a visibilidade de um Aplicativo (App) e a visibilidade de Dados (Tabelas/Entidades).",
-            "papoReto": "Se um colega não vê o ícone do aplicativo na página inicial, você tem de ir às configurações do App e ligá-lo à função dele (Gerir Funções / Manage Roles). Se ele consegue abrir o aplicativo, mas não vê a tabela 'Clientes' lá dentro (ou recebe um erro de permissão), ele precisa de um Direito de Acesso (Security Role) que lhe dê permissão de Leitura nessa entidade.",
-            "respostaCerta": "1. Gerir Funções (Manage Roles) do aplicativo | 2. Atribuir um direito de acesso (Security Role) ao usuário",
+            "papoReto": "Se um colega não vê o ícone do aplicativo na página inicial, você tem de ir às configurações do App e ligá-lo à função dele (Gerenciar Funções / Manage Roles). Se ele consegue abrir o aplicativo, mas não vê a tabela 'Clientes' lá dentro (ou recebe um erro de permissão), ele precisa de um Direito de Acesso (Security Role) que lhe dê permissão de Leitura nessa entidade.",
+            "respostaCerta": "1. Gerenciar Funções (Manage Roles) do aplicativo | 2. Atribuir um direito de acesso (Security Role) ao usuário",
             "puloDoGato": "O acesso à Interface (o Model-driven app em si) é gerido partilhando o aplicativo e associando-o a Security Roles (Manage Roles). O acesso aos Dados (as Tabelas/Entidades) é gerido através da atribuição desses mesmos Security Roles diretamente ao Usuário ou à sua Equipe.",
             "cascasDeBanana": [
                 "Partilhar o registro (Share record): Isto dá acesso a uma única linha de dados (ex: o cliente João), mas não dá acesso à Entidade inteira de forma estrutural nem ao Aplicativo."
@@ -1087,7 +1087,7 @@ export const questionsData = [
     },
     {
         "id": "q48_topic1",
-        "text": "Você implementa uma Grade Editável (Editable Grid) para a entidade Conta (Account). A equipe de negócio fornece a seguinte lista de funcionalidades que gostariam que fossem implementadas na grade: 1. Agrupar por instância de registro (Group by). 2. Configurar uma regra de negócios para mostrar uma mensagem de erro. 3. Editar o campo composto 'Endereço' (Address composite field). 4. Utilizar a grade editável em telemóveis (mobile phones). Quais destas funcionalidades PODEM ser realizadas na Editable Grid? Selecione a opção que indica corretamente Sim/Não para cada ponto respectivamente:",
+        "text": "Você implementa uma Grade Editável (Editable Grid) para a entidade Conta (Account). A equipe de negócio fornece a seguinte lista de funcionalidades que gostariam que fossem implementadas na grade: 1. Agrupar por instância de registro (Group by). 2. Configurar uma regra de negócios para mostrar uma mensagem de erro. 3. Editar o campo composto 'Endereço' (Address composite field). 4. Utilizar a grade editável em celulares (mobile phones). Quais destas funcionalidades PODEM ser realizadas na Editable Grid? Selecione a opção que indica corretamente Sim/Não para cada ponto respectivamente:",
         "options": [
             "1. Sim | 2. Sim | 3. Não | 4. Sim",
             "1. Sim | 2. Não | 3. Sim | 4. Sim",
@@ -1101,7 +1101,7 @@ export const questionsData = [
             "respostaCerta": "1. Agrupar: Sim | 2. Regras: Sim | 3. Editar campo composto: Não | 4. Celular: Sim",
             "puloDoGato": "Editable Grids suportam agrupamento (Grouping), execução de Business Rules no cliente, e são compatíveis com mobile. No entanto, NÃO suportam a edição nativa de 'Composite Fields' (Campos Compostos, como o Nome Completo ou Endereço Completo), nem campos de Estado (State/Status) ou campos do tipo Cliente (Customer/PartyList).",
             "cascasDeBanana": [
-                "Achar que a Editable Grid suporta campos compostos (Composite Fields). Este é o erro mais comum. Para editar uma morada na grade, tem de colocar as colunas individuais (Rua 1, Cidade, País) em vez da coluna agrupada (Endereço Completo)."
+                "Achar que a Editable Grid suporta campos compostos (Composite Fields). Este é o erro mais comum. Para editar uma endereço na grade, tem de colocar as colunas individuais (Rua 1, Cidade, País) em vez da coluna agrupada (Endereço Completo)."
             ],
             "dicaOuro": "Grades Editáveis suportam quase tudo (Regras, Agrupamentos, Mobile), EXCETO: Campos Compostos, Status, e campos de Cliente."
         },
@@ -1191,7 +1191,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma ótima questão de desenvolvimento Canvas Apps. Atenção: O gabarito oficial desta prova, muitas vezes espalhado pela internet, costumava dar como certa a limpeza da coleção (Clear), mas a forma técnica correta e recomendada em Power Fx é a utilização da função Reset.",
-            "papoReto": "Imagine que o usuário marcou 10 produtos numa lista (Galeria) clicando naquelas 'caixinhas de seleção' (checkboxes). De repente, desiste e clica num botão 'Limpar tudo'. Como apagar todos os 'vistos' das caixinhas de uma só vez? Basta mandar a galeria inteira reiniciar para o seu estado original de fábrica usando a função Reset().",
+            "papoReto": "Imagine que o usuário marcou 10 produtos numa lista (Galeria) clicando naquelas 'caixinhas de seleção' (checkboxes). De repente, desiste e clica num botão 'Limpar tudo'. Como excluir todos os 'vistos' das caixinhas de uma só vez? Basta mandar a galeria inteira reiniciar para o seu estado original de fábrica usando a função Reset().",
             "respostaCerta": "Utilizar a função Reset() e passar o controle da galeria como parâmetro: Reset(Gallery1).",
             "puloDoGato": "No Power Fx, a função `Reset(Control)` descarta todas as alterações feitas pelo usuário num controle e restaura os seus valores padrão (default). Quando o Reset é invocado para uma Galeria inteira (`Reset(Gallery1)`), a plataforma reinicia todos os controles dentro da galeria (incluindo as checkboxes) para o seu valor inicial (que normalmente é 'false' / desmarcado). Esta é a forma mais performática sem ter de usar ciclos for.",
             "cascasDeBanana": [
@@ -1264,10 +1264,10 @@ export const questionsData = [
             "intro": "Questão fundamental sobre Gestão do Ciclo de Vida da Aplicação (ALM) e Soluções no Power Platform.",
             "papoReto": "Quer juntar as tabelas do Dataverse, os telas do Power Apps e os fluxos do Power Automate num 'pacote' só para enviar para o ambiente de testes? Esse pacote chama-se 'Solução'. E o único sítio nativo onde se constroem e exportam Soluções manuais é na prancheta de desenho do Power Apps, ou seja, no Power Apps Designer (também conhecido como Maker Portal / make.powerapps.com).",
             "respostaCerta": "Designer do Power Apps (Maker Portal / Power Apps designer)",
-            "puloDoGato": "As Soluções (Solutions) são os contentores usados para transportar componentes entre ambientes. São criadas, populadas e exportadas exclusivamente na secção 'Soluções' do Maker Portal (Power Apps designer).",
+            "puloDoGato": "As Soluções (Solutions) são os contentores usados para transportar componentes entre ambientes. São criadas, populadas e exportadas exclusivamente na seção 'Soluções' do Maker Portal (Power Apps designer).",
             "cascasDeBanana": [
                 "Azure DevOps: O DevOps é uma ferramenta excelente usada para automatizar (pipelines CI/CD) a movimentação do pacote, mas o pacote em si tem de existir e ser criado primeiramente no Maker Portal.",
-                "Centro de administração da Power Platform: Serve para gerir os ambientes físicos (criar, copiar, fazer backup), não para desenhar ou agrupar os pacotes de Solução que vão lá dentro."
+                "Centro de administração da Power Platform: Serve para gerenciar os ambientes físicos (criar, copiar, fazer backup), não para desenhar ou agrupar os pacotes de Solução que vão lá dentro."
             ],
             "dicaOuro": "Criar ou Exportar pacotes de Solução (Solution Packages) = Power Apps Designer (Maker Portal / make.powerapps.com)."
         },
@@ -1310,11 +1310,11 @@ export const questionsData = [
         "correctAnswer": 3,
         "explanation": {
             "intro": "Uma ótima oportunidade para revermos o mesmo conceito testado na questão 53. A Microsoft sabe que as coleções geram confusão visual no Power Apps.",
-            "papoReto": "Mais uma vez: o usuário marcou 10 produtos numa lista (Galeria) com aquelas 'caixinhas de seleção'. O usuário desiste e clica em 'Limpar'. A forma mais limpa, rápida e correta de apagar todos os 'vistos' visuais das caixinhas numa só pancada é dizer à galeria inteira: 'Faz Reset para o estado inicial'.",
+            "papoReto": "Mais uma vez: o usuário marcou 10 produtos numa lista (Galeria) com aquelas 'caixinhas de seleção'. O usuário desiste e clica em 'Limpar'. A forma mais limpa, rápida e correta de excluir todos os 'vistos' visuais das caixinhas numa só pancada é dizer à galeria inteira: 'Faz Reset para o estado inicial'.",
             "respostaCerta": "Utilizar a fórmula Reset() e passar o controle da galeria (gallery control) como parâmetro à fórmula.",
             "puloDoGato": "No Power Fx, a função `Reset(NomeDaGaleria)` restaura todos os controles dentro dessa galeria aos seus valores predefinidos (default). Como o padrão de uma checkbox é estar desmarcada (false), todas perdem o visto imediatamente. É infinitamente mais performático do que tentar manipular coleções manualmente apenas para atualizar o aspeto visual no tela.",
             "cascasDeBanana": [
-                "Limpar a Coleção (Clear): Tal como explicado na Q53, limpar a coleção de dados não desmarca visualmente a checkbox que o usuário clicou no tela. Teria de usar o Reset na mesma para apagar a marca visual.",
+                "Limpar a Coleção (Clear): Tal como explicado na Q53, limpar a coleção de dados não desmarca visualmente a checkbox que o usuário clicou no tela. Teria de usar o Reset na mesma para excluir a marca visual.",
                 "Reset(Checkbox): O Reset afeta apenas o controle passado como parâmetro. Se passar apenas o controle Checkbox de uma linha específica, não vai limpar as das outras linhas. Ao passar a Galeria inteira, resolve tudo."
             ],
             "dicaOuro": "Limpar o estado visual de todos os controles numa Galeria inteira (como Checkboxes e TextInputs) com um só clique = Reset(NomeDaGaleria)."
@@ -1513,7 +1513,7 @@ export const questionsData = [
     },
     {
         "id": "q66_topic1",
-        "text": "Uma empresa vende produtos utilizando um portal do Power Apps. Você precisa criar um novo aplicativo de tela (canvas app) que listará todos os usuários do portal. O aplicativo será usado por todos os colaboradores para gerir o acesso ao portal. Você precisa criar o aplicativo. O que deve fazer?",
+        "text": "Uma empresa vende produtos utilizando um portal do Power Apps. Você precisa criar um novo aplicativo de tela (canvas app) que listará todos os usuários do portal. O aplicativo será usado por todos os colaboradores para gerenciar o acesso ao portal. Você precisa criar o aplicativo. O que deve fazer?",
         "options": [
             "Criar o aplicativo utilizando a tabela Conta (Account) como fonte de dados.",
             "Utilizar o aplicativo Gestão do Portal (Portal Management app).",
@@ -1530,7 +1530,7 @@ export const questionsData = [
                 "Criar um model-driven app (Opção D): A questão pede expressamente para criar um 'canvas app' (aplicativo de tela). Escolher o model-driven estaria a ignorar o requisito direto.",
                 "Utilizar o Portal Management app: Isto é uma app existente (nativa) gerida por administradores e não um 'novo canvas app' que você iria construir para a equipe."
             ],
-            "dicaOuro": "Listar ou gerir Usuárioes de um Portal/Power Pages num Power App = Conectar à tabela Contato (Contact)."
+            "dicaOuro": "Listar ou gerenciar Usuárioes de um Portal/Power Pages num Power App = Conectar à tabela Contato (Contact)."
         },
         "difficulty": "iniciante",
         "domain": "Microsoft Dataverse"
@@ -1593,7 +1593,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Questão prática sobre personalização avançada de Interface de Usuário (UI) no Power Pages / Portais.",
-            "papoReto": "Tem um arquivo CSS pronto? Não precisa de complicar. Abre o estúdio de design do portal, vai à secção onde escolhe as cores (Temas) e clica em 'Carregar CSS'. O portal assume logo o estilo por cima do que já existe.",
+            "papoReto": "Tem um arquivo CSS pronto? Não precisa de complicar. Abre o estúdio de design do portal, vai à seção onde escolhe as cores (Temas) e clica em 'Carregar CSS'. O portal assume logo o estilo por cima do que já existe.",
             "respostaCerta": "Aceder ao Estúdio dos Portais (Portals Studio / Design Studio), abrir o painel de Temas (Themes) e fazer o upload do arquivo CSS personalizado.",
             "puloDoGato": "No Design Studio do Power Pages (antigo Portals Studio), o espaço de trabalho 'Estilo' (Styling / Themes workspace) permite nativamente fazer o upload de arquivos `.css` personalizados. Ele substitui ou complementa o Bootstrap padrão (theme.css) usado pelo portal.",
             "cascasDeBanana": [
@@ -1607,7 +1607,7 @@ export const questionsData = [
     },
     {
         "id": "q70_topic1",
-        "text": "Você precisa criar uma nova tabela personalizada (custom table) no Dataverse para gerir 'Projetos'. Os requisitos de segurança ditam que cada Projeto deve pertencer a um usuário específico ou a uma equipe, para que possa restringir o acesso com base na unidade de negócios. Além disso, os usuários precisam de conseguir associar e-mails, tarefas e reuniões telefónicas diretamente a estes Projetos. Que definições deve selecionar ao criar a tabela? (Selecione a combinação correta de Propriedade e Ativação)",
+        "text": "Você precisa criar uma nova tabela personalizada (custom table) no Dataverse para gerenciar 'Projetos'. Os requisitos de segurança ditam que cada Projeto deve pertencer a um usuário específico ou a uma equipe, para que possa restringir o acesso com base na unidade de negócios. Além disso, os usuários precisam de conseguir associar e-mails, tarefas e reuniões telefónicas diretamente a estes Projetos. Que definições deve selecionar ao criar a tabela? (Selecione a combinação correta de Propriedade e Ativação)",
         "options": [
             "Propriedade: Usuário ou Equipe (User or team) | Ativar: Fazer desta tabela uma tabela de Atividades (Make this table an activity table).",
             "Propriedade: Organização (Organization) | Ativar: Criar uma nova atividade (Create a new activity).",
@@ -1630,7 +1630,7 @@ export const questionsData = [
     },
     {
         "id": "q71_topic1",
-        "text": "Está a criar um canvas app e um model-driven app para gerir contas de clientes. O canvas app requer uma regra de negócios (business rule) para definir a coluna 'Tipo de Negócio' como 'Grande' se o tamanho do cliente for superior a um valor específico. O model-driven app requer uma regra de negócios para recomendar a reavaliação da classificação da conta quando esta for suspensa por crédito apenas neste formulário específico do aplicativo. Qual o escopo (scope) que deve configurar para cada regra de negócios, respectivamente?",
+        "text": "Está a criar um canvas app e um model-driven app para gerenciar contas de clientes. O canvas app requer uma regra de negócios (business rule) para definir a coluna 'Tipo de Negócio' como 'Grande' se o tamanho do cliente for superior a um valor específico. O model-driven app requer uma regra de negócios para recomendar a reavaliação da classificação da conta quando esta for suspensa por crédito apenas neste formulário específico do aplicativo. Qual o escopo (scope) que deve configurar para cada regra de negócios, respectivamente?",
         "options": [
             "1. Tabela (Table/Entity) | 2. Formulário Específico (Specific form)",
             "1. Todos os Formulários (All forms) | 2. Tabela (Table)",
@@ -1911,7 +1911,7 @@ export const questionsData = [
         "text": "Você gere aplicativos da Microsoft Power Platform para uma empresa. Precisa de ocultar o botão 'Fluxo' (Flow / Power Automate) na interface de usuário. Qual definição de configuração deve alterar?",
         "options": [
             "O Mapa do Site (The SiteMap)",
-            "A secção de Personalizações nas Definições do Sistema (The Customizations section of System Settings)",
+            "A seção de Personalizações nas Definições do Sistema (The Customizations section of System Settings)",
             "O componente de Entidade da solução padrão (The Entity component of the default solution)",
             "O separador Botões (The Buttons tab) do Flow"
         ],
@@ -1919,7 +1919,7 @@ export const questionsData = [
         "explanation": {
             "intro": "Esta é uma daquelas questões de 'decoração de menu' que testa se o candidato já navegou a fundo nas configurações clássicas de sistema do Dynamics/Dataverse.",
             "papoReto": "Sabe aquele botão 'Power Automate' (antigo Flow) que aparece por defeito no topo das vistas e formulários nos Model-driven apps? Se a sua empresa não quiser que os usuários cliquem lá, tem de ir às definições antigas do sistema, no separador 'Personalização' (Customizations) e desmarcar a caixa 'Mostrar botão Flow'.",
-            "respostaCerta": "A secção de Personalizações nas Definições do Sistema (The Customizations section of System Settings)",
+            "respostaCerta": "A seção de Personalizações nas Definições do Sistema (The Customizations section of System Settings)",
             "puloDoGato": "Para ocultar o botão 'Flow' (agora muitas vezes referido como 'Power Automate') globalmente na Interface Unificada, o administrador deve acessar às Definições Avançadas > Definições do Sistema (System Settings) > Separador Personalizações (Customizations tab) e definir 'Enable Microsoft Flow' ou 'Show Microsoft Flow button' para Não (No).",
             "cascasDeBanana": [
                 "O Mapa do Site (SiteMap): O SiteMap controla o menu lateral esquerdo (áreas e subáreas), não os botões da barra de comandos (Command Bar / Ribbon).",
@@ -2049,7 +2049,7 @@ export const questionsData = [
     },
     {
         "id": "q89_topic1",
-        "text": "Uma quinta (farm) utiliza um aplicativo de tela (canvas app) para gerir os calendários de plantação de sementes. A quinta utiliza inteligência de negócio (business intelligence) para fornecer recomendações de alterações de calendário com base em dados meteorológicos. Você deve implementar uma regra de negócios (business rule) que altere a informação em vários formulários no canvas app com base nos dados de business intelligence. Qual o escopo (scope) que deve usar na regra de negócios?",
+        "text": "Uma quinta (farm) utiliza um aplicativo de tela (canvas app) para gerenciar os calendários de plantação de sementes. A quinta utiliza inteligência de negócio (business intelligence) para fornecer recomendações de alterações de calendário com base em dados meteorológicos. Você deve implementar uma regra de negócios (business rule) que altere a informação em vários formulários no canvas app com base nos dados de business intelligence. Qual o escopo (scope) que deve usar na regra de negócios?",
         "options": [
             "Tabela (Table / Entity)",
             "Todos os Formulários (All Forms)",
@@ -2120,7 +2120,7 @@ export const questionsData = [
         "id": "q92_topic1",
         "text": "Uma empresa utiliza o Power Apps. Os usuários devem conseguir visualizar APENAS as colunas 'address1' na tabela Conta (Account). Você precisa garantir que outras colunas de endereço não sejam visíveis para os usuários quando estes criarem vistas (views) e filtros. O que deve fazer?",
         "options": [
-            "Eliminar as outras colunas de endereço da tabela.",
+            "Excluir as outras colunas de endereço da tabela.",
             "Desativar a opção de Pesquisa (Search) para as colunas.",
             "Utilizar segurança no nível da coluna (Column-level security) para remover o acesso de leitura a todos os usuários.",
             "Criar regras de negócios (business rules) para ocultar as outras colunas de endereço."
@@ -2152,7 +2152,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Questão sobre os comportamentos em cascata (Cascading Behaviors) dos relacionamentos no Dataverse.",
-            "papoReto": "Se apagar o 'Pai', o que acontece aos 'Filhos'? Para este requisito (e de acordo com o gabarito de ações da Microsoft), se a tabela personalizada for apagada, tudo vai junto (Cascade All / Tudo em Cascata). Se a tabela personalizada for partilhada com alguém, não queremos partilhar automaticamente os contatos filhos (Restrict / Restringir).",
+            "papoReto": "Se excluir o 'Pai', o que acontece aos 'Filhos'? Para este requisito (e de acordo com o gabarito de ações da Microsoft), se a tabela personalizada for apagada, tudo vai junto (Cascade All / Tudo em Cascata). Se a tabela personalizada for partilhada com alguém, não queremos partilhar automaticamente os contatos filhos (Restrict / Restringir).",
             "respostaCerta": "1. Tudo em Cascata (Cascade All) | 2. Restringir (Restrict)",
             "puloDoGato": "Em relacionamentos 1:N, o comportamento de eliminação 'Cascade All' (Tudo em cascata) garante que os registros filhos são eliminados quando o pai é eliminado, mantendo a base de dados limpa. O comportamento de partilha 'Restrict' (Restringir) impede que a ação de partilha do registro pai conceda automaticamente acesso aos registros filhos associados, garantindo a segurança dos Contatos.",
             "cascasDeBanana": [
@@ -2179,7 +2179,7 @@ export const questionsData = [
             "respostaCerta": "A) Criar um novo aplicativo no Teams. E B) Instalar um aplicativo existente no Teams.",
             "puloDoGato": "A provisão de um ambiente do Microsoft Dataverse for Teams acontece de forma 100% automática (seamless) quando os usuários executam uma de duas ações diretamente no cliente do Microsoft Teams: criar uma nova app ou instalar uma app existente na equipe. Não requer acesso nem passos manuais no Power Platform Admin Center.",
             "cascasDeBanana": [
-                "Criar um novo ambiente no Power Platform Admin Center: Apesar de poder gerir ambientes do Teams lá (como upgrades para o Dataverse completo ou cópias de segurança), a *criação inicial* (provisão) é desencadeada exclusivamente a partir da interface do Teams."
+                "Criar um novo ambiente no Power Platform Admin Center: Apesar de poder gerenciar ambientes do Teams lá (como upgrades para o Dataverse completo ou cópias de segurança), a *criação inicial* (provisão) é desencadeada exclusivamente a partir da interface do Teams."
             ],
             "dicaOuro": "Criação do Dataverse for Teams é Automática ao: 1) Criar App no Teams OU 2) Instalar App no Teams."
         },
@@ -2198,13 +2198,13 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Gestão de capacidade (Capacity Management) e limpeza de logs de auditoria no Dataverse.",
-            "papoReto": "A base de dados encheu com históricos antigos? O Dataverse permite limpar o lixo de auditoria de três formas precisas: apagar os logs de uma Tabela inteira, apagar os logs de um Registro específico, ou apagar todos os logs que sejam mais antigos do que uma determinada data. Não dá para apagar 'só de uma coluna' ou 'entre duas datas exatas' de forma nativa pela interface de retenção.",
+            "papoReto": "A base de dados encheu com históricos antigos? O Dataverse permite limpar o lixo de auditoria de três formas precisas: excluir os logs de uma Tabela inteira, excluir os logs de um Registro específico, ou excluir todos os logs que sejam mais antigos do que uma determinada data. Não dá para excluir 'só de uma coluna' ou 'entre duas datas exatas' de forma nativa pela interface de retenção.",
             "respostaCerta": "Por registro (by record), Por tabela (by table) e Mais antigo que uma data especificada (older than a specified date).",
             "puloDoGato": "Na interface moderna de gestão de retenção de auditoria e bulk delete do Dataverse, as três opções granulares nativas suportadas para libertar espaço de log são: 'By record' (Por registro), 'By table' (Por tabela) e 'Older than a specified date' (Mais antigo que a data especificada).",
             "cascasDeBanana": [
                 "Por coluna (by column): O Dataverse não suporta a eliminação do histórico de auditoria no nível individual da coluna. Se a auditoria for eliminada para a tabela ou registro, vai tudo junto."
             ],
-            "dicaOuro": "Apagar Auditoria: Por Tabela (Table), Por Registro (Record), ou Mais antigo que uma Data (Older than date)."
+            "dicaOuro": "Excluir Auditoria: Por Tabela (Table), Por Registro (Record), ou Mais antigo que uma Data (Older than date)."
         },
         "difficulty": "iniciante",
         "domain": "Microsoft Dataverse"
@@ -2490,7 +2490,7 @@ export const questionsData = [
         "id": "q108_topic1",
         "text": "Você construiu um canvas app. Planeia tornar a app disponível no Microsoft Teams para que todos os colaboradores a possam utilizar. Precisa de adicionar a app ao Teams. Quais as três ações que deve executar em sequência? (Selecione a ordem correta)",
         "options": [
-            "1. Iniciar sessão no Maker Portal -> 2. Selecionar e descarregar a Power App -> 3. Adicionar a app ao Teams.",
+            "1. Iniciar sessão no Maker Portal -> 2. Selecionar e baixar a Power App -> 3. Adicionar a app ao Teams.",
             "1. Iniciar sessão no Power Platform Admin Center -> 2. Selecionar a app -> 3. Publicar no Teams.",
             "1. Iniciar sessão no Teams Admin Center -> 2. Carregar o pacote da app -> 3. Partilhar com a equipe.",
             "1. Abrir o Power Apps Studio -> 2. Guardar a app como arquivo zip -> 3. Enviar por e-mail para o administrador do Teams."
@@ -2498,11 +2498,11 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Processo de publicação de uma Power App 'standalone' (independente) dentro do cliente do Microsoft Teams.",
-            "papoReto": "Como levar uma app que fez no portal para o Teams? Primeiro, vai ao Maker Portal (make.powerapps.com). Segundo, encontra a sua app e faz o download dela (o sistema gera um arquivo próprio para o Teams). Terceiro, vai ao Teams e faz o upload desse arquivo na secção de Apps. Já está!",
-            "respostaCerta": "1. Iniciar sessão no Maker Portal -> 2. Selecionar e descarregar a Power App -> 3. Adicionar a app ao Teams.",
+            "papoReto": "Como levar uma app que fez no portal para o Teams? Primeiro, vai ao Maker Portal (make.powerapps.com). Segundo, encontra a sua app e faz o download dela (o sistema gera um arquivo próprio para o Teams). Terceiro, vai ao Teams e faz o upload desse arquivo na seção de Apps. Já está!",
+            "respostaCerta": "1. Iniciar sessão no Maker Portal -> 2. Selecionar e baixar a Power App -> 3. Adicionar a app ao Teams.",
             "puloDoGato": "Este é o fluxo clássico de 'Add to Teams' disponível no menu de contexto das aplicações no Maker Portal. O Power Apps gera automaticamente o manifesto necessário para o Teams reconhecer a aplicação como uma 'Tab' ou App pessoal.",
             "cascasDeBanana": [
-                "Teams Admin Center: É usado para gerir políticas de quem pode ver que apps, mas não é onde o 'maker' inicia o processo de exportação da sua app para o Teams.",
+                "Teams Admin Center: É usado para gerenciar políticas de quem pode ver que apps, mas não é onde o 'maker' inicia o processo de exportação da sua app para o Teams.",
                 "Power Platform Admin Center: Não lida com o download ou publicação individual de apps para o Teams."
             ],
             "dicaOuro": "Levar app para o Teams = Maker Portal > Download > Upload no Teams."
@@ -2630,7 +2630,7 @@ export const questionsData = [
     },
     {
         "id": "q114_topic1",
-        "text": "Você planeia criar um aplicativo de tela (canvas app) para gerir ordens de serviço. Precisa de configurar os seguintes requisitos: 1. Enviar um e-mail automático assim que um registro for guardado. 2. Mostrar a coluna 'Expiração' apenas se a data de criação do registro for superior a 30 dias. Que funcionalidades deve utilizar para cada requisito?",
+        "text": "Você planeia criar um aplicativo de tela (canvas app) para gerenciar ordens de serviço. Precisa de configurar os seguintes requisitos: 1. Enviar um e-mail automático assim que um registro for guardado. 2. Mostrar a coluna 'Expiração' apenas se a data de criação do registro for superior a 30 dias. Que funcionalidades deve utilizar para cada requisito?",
         "options": [
             "1. Fluxo do Power Automate (Power Automate flow) | 2. Fórmula (Formula)",
             "1. Regra de Negócio (Business Rule) | 2. Fórmula",
@@ -2749,9 +2749,9 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Tentativa de usar automação para limpeza de dados.",
-            "papoReto": "Um fluxo (Power Automate) só acorda *depois* que o erro já foi feito (o registro já foi criado). Ele até podia tentar apagar o duplicado depois, mas o requisito é que a tabela 'não contenha' duplicados, o que implica prevenção na entrada. O fluxo não é uma ferramenta de bloqueio de base de dados.",
+            "papoReto": "Um fluxo (Power Automate) só acorda *depois* que o erro já foi feito (o registro já foi criado). Ele até podia tentar excluir o duplicado depois, mas o requisito é que a tabela 'não contenha' duplicados, o que implica prevenção na entrada. O fluxo não é uma ferramenta de bloqueio de base de dados.",
             "respostaCerta": "Não",
-            "puloDoGato": "Fluxos são assíncronos por natureza. Até o fluxo correr e validar o dado, o duplicado já existe na base de dados. Além disso, não é uma forma eficiente nem padrão de gerir unicidade.",
+            "puloDoGato": "Fluxos são assíncronos por natureza. Até o fluxo correr e validar o dado, o duplicado já existe na base de dados. Além disso, não é uma forma eficiente nem padrão de gerenciar unicidade.",
             "dicaOuro": "Power Automate = Reação. Alternate Key = Prevenção."
         },
         "difficulty": "iniciante",
@@ -3658,7 +3658,7 @@ export const questionsData = [
     },
     {
         "id": "q158_topic1",
-        "text": "Você precisa usar as equipes nativas do Microsoft Entra ID (Azure AD) para lidar e gerir o acesso e licenciamento de segurança dos usuários a um aplicativo do Microsoft Dataverse. Você precisa configurar as equipes de grupos do Entra ID no Dataverse e aplicar funções de segurança a elas. Operacionalmente, o que você deve focar em usar para mapear e vincular estritamente o registro grupo principais de equipe na nuvem no Dataverse?",
+        "text": "Você precisa usar as equipes nativas do Microsoft Entra ID (Azure AD) para lidar e gerenciar o acesso e licenciamento de segurança dos usuários a um aplicativo do Microsoft Dataverse. Você precisa configurar as equipes de grupos do Entra ID no Dataverse e aplicar funções de segurança a elas. Operacionalmente, o que você deve focar em usar para mapear e vincular estritamente o registro grupo principais de equipe na nuvem no Dataverse?",
         "options": [
             "ID do Grupo do Microsoft Entra ID (Object/Group ID)",
             "Nome Nominal do Grupo do Microsoft Entra ID",
@@ -3875,7 +3875,7 @@ export const questionsData = [
     },
     {
         "id": "q167_topic1",
-        "text": "Você gerencia uma instância do Microsoft Dataverse para uma grande empresa corporativa. O sistema contém uma relação de arquitetura um-para-muitos (1:N) entre uma tabela de Professores e uma tabela de Turmas. Você tem uma regra estrita: se o registro principais de um Professor for acidentalmente (ou propositalmente) excluído, essa ordem de exclusão NÃO deverá exercer absolutamente nenhum impacto (\"apagar ou avisar\") sobre os respectivos registros da Turma relacionada. A turma deve apenas ficar orfã sem professor em silêncio. Qual comportamento de cascateamento de relação você deve usar no Dataverse?",
+        "text": "Você gerencia uma instância do Microsoft Dataverse para uma grande empresa corporativa. O sistema contém uma relação de arquitetura um-para-muitos (1:N) entre uma tabela de Professores e uma tabela de Turmas. Você tem uma regra estrita: se o registro principais de um Professor for acidentalmente (ou propositalmente) excluído, essa ordem de exclusão NÃO deverá exercer absolutamente nenhum impacto (\"excluir ou avisar\") sobre os respectivos registros da Turma relacionada. A turma deve apenas ficar orfã sem professor em silêncio. Qual comportamento de cascateamento de relação você deve usar no Dataverse?",
         "options": [
             "Referencial, Remover Link (Referential, Remove Link)",
             "Cascatear Tudo (Cascade All)",
@@ -3890,9 +3890,9 @@ export const questionsData = [
             "puloDoGato": "O Behavior de relacionamento `Referential, Remove Link` garante que todas as referências cruzadas no metadado filho (`Lookup column`) apontando para aquele pai sejam setadas como Null (\"Removendo o Link\"), mas permitindo a exclusão sumária do Pai independentemente e mantendo o registro Filho completamente intacto na outra tabela.",
             "cascasDeBanana": [
                 "Restringir Exclusão (Restrict Delete): Travaria a solicitação do usuário, ele tomaria um Popup de Erro e nem conseguiria deletar o Professor.",
-                "Parental ou Cascatear Tudo: Seria desastroso, pois excluiria o Professor E enviaria o comando \"Delete\" para apagar a Turma inteira do banco de dados."
+                "Parental ou Cascatear Tudo: Seria desastroso, pois excluiria o Professor E enviaria o comando \"Delete\" para excluir a Turma inteira do banco de dados."
             ],
-            "dicaOuro": "Apagar o Pai sutilmente e deixar o Filho viver sozinho, apenas solto / orfão (\"remover o laço e reter dados\") = Referencial, Remover Link."
+            "dicaOuro": "Excluir o Pai sutilmente e deixar o Filho viver sozinho, apenas solto / orfão (\"remover o laço e reter dados\") = Referencial, Remover Link."
         },
         "difficulty": "iniciante",
         "domain": "Microsoft Dataverse"
@@ -3902,21 +3902,21 @@ export const questionsData = [
         "text": "Você projeta um esquema para uma nova solução limpa do Microsoft Dataverse. Uma empresa de logística planeja usar a solução base para armazenar centenas de Produtos e as quantidades brutas correspondentes de estoque daquele produto em diferentes pontos de venda físicos pelo país. A regra de negócios principal diz que: sempre que a matriz excluir da lista um Produto principal, TODA a rede de dados de centenas de filiais com informações ativas sobre o estoque do produto precisarão ser excluídas violenta e rapidamente em conjunto. Direto nos metadados, o que você deve fazer para atender e não gargalar o ambiente?",
         "options": [
             "Configure nativamente um comportamento de \"Relação em Cascata\" (Cascade All) na tabela primária.",
-            "Configure um Fluxo de Automação de Nuvem (Power Automate) diário para apagar linhas de filhos orfãos.",
+            "Configure um Fluxo de Automação de Nuvem (Power Automate) diário para excluir linhas de filhos orfãos.",
             "Configure um comportamento de relação \"Remover Link\" (Remove Link) na tabela e instale uma auditoria.",
             "Configure uma Regra de Negócios (Business Rule) na UI para forçar exclusões rápidas síncronas."
         ],
         "correctAnswer": 0,
         "explanation": {
             "intro": "Um contraponto exato à reflexão ensinada na questão q167, para fixar os comportamentos arquitetônicos de Cascade.",
-            "papoReto": "Quer apagar a árvore e jogar todos os galhos, folhas e raízes fora de uma única vez em milionésimos de segundo e sem precisar programar robô externo pra isso? Basta ir na Aba Relacionamento, clicar e configurar o Comportamento em Cascata (Cascade All / Parental). Morreu o Pai (Produto), morre toda a linhagem de estoque filha em todas as lojas simultaneamente na camada de banco de dados.",
+            "papoReto": "Quer excluir a árvore e jogar todos os galhos, folhas e raízes fora de uma única vez em milionésimos de segundo e sem precisar programar robô externo pra isso? Basta ir na Aba Relacionamento, clicar e configurar o Comportamento em Cascata (Cascade All / Parental). Morreu o Pai (Produto), morre toda a linhagem de estoque filha em todas as lojas simultaneamente na camada de banco de dados.",
             "respostaCerta": "Configure nativamente um comportamento de \"Relação em Cascata\" (Cascade All) na tabela primária.",
             "puloDoGato": "A instrução relacional `Cascade Delete / Cascade All` resolve imperativamente a deleção rápida de tabelas vinculadas em subnível sem nenhum overhead ou necessidade de Power Automate externo. A operação ocorre no âmago do SQL de arquitetura do Dataverse nativamente.",
             "cascasDeBanana": [
                 "Fluxo do Power Automate: Possível? Sim. Correto para a prova e arquitetura? Não! Gastaria limite de requisição da API (API Calls) excessivas e poderia levar horas engasgado num loop para um grande ERP excluir item a item no Backend.",
                 "Regras de Negócios: Configurações de interface (Business Rule) trabalham na aba visual de um formulário alterando abas, campos ocultos e caixas... Elas NÃO possuem qualquer função sistêmica para excluir dados do banco."
             ],
-            "dicaOuro": "Apagar o banco matriz (Tabela Pai) E arrancar imediatamente todos os registros Filhos dele sem uso de código = \"Exclusão Direcional em Cascata\" (Cascade All / Deleção em Cascata)."
+            "dicaOuro": "Excluir o banco matriz (Tabela Pai) E arrancar imediatamente todos os registros Filhos dele sem uso de código = \"Exclusão Direcional em Cascata\" (Cascade All / Deleção em Cascata)."
         },
         "difficulty": "avancado",
         "domain": "Microsoft Dataverse"

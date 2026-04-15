@@ -672,7 +672,7 @@ export default function Dashboard({ session }) {
                 <div className="h-[250px] w-full">
                     {radarData.length > 0 ? (
                         <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx="50%" cy="50%" outerRadius="45%" data={radarData}>
+                            <RadarChart cx="50%" cy="50%" outerRadius="55%" data={radarData}>
                                 <PolarGrid stroke="#e2e8f0" />
                                 <PolarAngleAxis dataKey="subject" tick={<RenderCustomTick />} />
                                 <Radar

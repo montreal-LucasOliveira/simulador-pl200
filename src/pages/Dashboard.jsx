@@ -12,7 +12,7 @@ const RenderCustomTick = ({ payload, x, y, textAnchor, stroke, radius }) => {
   let currentLine = '';
 
   words.forEach(word => {
-    if ((currentLine + word).length > 22 && currentLine.length > 0) {
+    if ((currentLine + word).length > 15 && currentLine.length > 0) {
       lines.push(currentLine.trim());
       currentLine = word + ' ';
     } else {
@@ -31,11 +31,11 @@ const RenderCustomTick = ({ payload, x, y, textAnchor, stroke, radius }) => {
         dy={4}
         textAnchor={textAnchor}
         fill="#64748b"
-        fontSize={10}
+        fontSize={9}
         fontWeight={700}
       >
         {lines.map((line, index) => (
-          <tspan key={index} x={0} dy={index === 0 ? 0 : 12}>
+          <tspan key={index} x={0} dy={index === 0 ? 0 : 11}>
             {line}
           </tspan>
         ))}
@@ -672,7 +672,7 @@ export default function Dashboard({ session }) {
                 <div className="h-[250px] w-full">
                     {radarData.length > 0 ? (
                         <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx="50%" cy="50%" outerRadius="60%" data={radarData}>
+                            <RadarChart cx="50%" cy="50%" outerRadius="45%" data={radarData}>
                                 <PolarGrid stroke="#e2e8f0" />
                                 <PolarAngleAxis dataKey="subject" tick={<RenderCustomTick />} />
                                 <Radar

@@ -30,7 +30,7 @@ export default function LandingPage() {
         const randomNum = Math.floor(Math.random() * 9000) + 1000;
         const generatedNickname = `Aluno_${randomNum}`;
 
-        const { error } = await supabase.auth.signUp({ 
+        const { data, error } = await supabase.auth.signUp({ 
             email, 
             password,
             options: {
@@ -42,8 +42,14 @@ export default function LandingPage() {
             }
         });
         if (error) throw error;
-        alert('Cadastro realizado! Agora você já pode entrar na plataforma.');
-        setIsSignUp(false);
+
+        // Se a confirmação de e-mail estiver desativada no Supabase, 'data.session' existirá
+        if (data.session) {
+            navigate('/dashboard');
+        } else {
+            alert('Cadastro realizado! Verifique seu e-mail para confirmar o acesso.');
+            setIsSignUp(false);
+        }
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;

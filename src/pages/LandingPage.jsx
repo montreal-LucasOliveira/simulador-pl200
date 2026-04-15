@@ -35,7 +35,7 @@ export default function LandingPage() {
             password,
             options: {
                 data: {
-                    isPremium: false,
+                    isPremium: true, // Modo de Teste: Ativando Premium para todos
                     nickname: generatedNickname
                 }
             }
@@ -71,7 +71,6 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300">
             <a href="#features" className="hover:text-white transition-colors">Funcionalidades</a>
             <a href="#depoimentos" className="hover:text-white transition-colors">Avaliações</a>
-            <a href="#planos" className="hover:text-white transition-colors">Assinatura</a>
             <button 
               onClick={() => setShowSupport(true)}
               className="hover:text-white transition-colors flex items-center gap-2"
@@ -187,7 +186,7 @@ export default function LandingPage() {
                     onClick={() => setIsSignUp(!isSignUp)}
                     className="text-blue-700 font-black hover:underline ml-1"
                   >
-                    {isSignUp ? 'Fazer Login' : 'Assinar Agora'}
+                    {isSignUp ? 'Fazer Login' : 'Criar Conta Grátis'}
                   </button>
                 </div>
               </form>
@@ -243,81 +242,6 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* Pricing / Marketing */}
-      <div id="planos" className="bg-slate-900 text-white py-24 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black mb-6">Invista no Seu Conhecimento</h2>
-            <p className="text-xl text-slate-400 font-medium max-w-2xl mx-auto">Planos justos para você ser aprovado na Microsoft mais rápido. Cancele quando quiser.</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
-            <div className="bg-slate-800/50 p-8 rounded-[2rem] border border-slate-700 hover:border-slate-600 transition-colors">
-              <h3 className="text-xl font-bold text-slate-300">Plano Freemium</h3>
-              <div className="text-5xl font-black my-6 text-white">Grátis</div>
-              <p className="text-sm text-slate-400 font-medium mb-8">Para testar o ambiente.</p>
-              <ul className="space-y-4 mb-10 text-sm text-slate-300 font-medium">
-                <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-slate-500" /> Simulado Iniciante (Trava em 50%)</li>
-                <li className="flex items-center gap-3 opacity-30"><XCircle size={20} /> Acesso aos Dashboards</li>
-                <li className="flex items-center gap-3 opacity-30"><XCircle size={20} /> Simulados Nível Prova</li>
-              </ul>
-              <button disabled className="w-full py-4 bg-slate-800 text-slate-500 font-bold rounded-xl cursor-not-allowed">Plano Base</button>
-            </div>
-
-            <div className="bg-blue-600 p-8 md:p-10 rounded-[2rem] shadow-2xl transform md:-translate-y-4 relative z-10 border border-blue-400">
-              <div className="absolute -top-4 inset-x-0 flex justify-center">
-                <span className="bg-amber-400 text-amber-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">Flexível</span>
-              </div>
-              <h3 className="text-xl font-bold text-blue-100">Assinatura Mensal</h3>
-              <div className="text-5xl font-black my-6 text-white">R$ 69,90<span className="text-xl font-medium text-blue-300">/mês</span></div>
-              <p className="text-sm text-blue-100 font-medium mb-8">Acesso total por 30 dias. Cancele quando quiser.</p>
-              <ul className="space-y-4 mb-12 text-sm text-white font-medium">
-                <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-white" /> 100% de Acesso Desbloqueado</li>
-                <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-white" /> Banco com 300Q Reais + Pix Support</li>
-                <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-white" /> Dashboard Microsoft OOTB</li>
-                <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-white" /> Modos Intermediário e Prova</li>
-              </ul>
-              <button 
-                onClick={() => {
-                   document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' });
-                   setIsSignUp(true);
-                }}
-                className="w-full py-4 bg-white text-blue-800 hover:bg-slate-50 hover:scale-105 font-black rounded-xl transition-all shadow-xl text-lg"
-              >
-                COMEÇAR AGORA
-              </button>
-            </div>
-
-            <div className="bg-slate-800/50 p-8 rounded-[2rem] border border-slate-700 hover:border-slate-600 transition-colors">
-              <div className="absolute -top-4 inset-x-0 flex justify-center">
-                <span className="bg-emerald-500 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest shadow-sm shadow-emerald-900/40">Melhor Custo-Benefício</span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-300">Assinatura Anual</h3>
-              <div className="text-5xl font-black my-6 text-white">R$ 49,90<span className="text-xl font-medium text-slate-400">/mês</span></div>
-              <div className="text-xs text-emerald-400 mb-8 font-extrabold bg-emerald-400/10 inline-block px-3 py-2 rounded-lg border border-emerald-500/20">
-                Pague R$ 598,80 à vista (Economia de R$ 240/ano)
-              </div>
-              <ul className="space-y-4 mb-10 text-sm text-slate-300 font-medium">
-                <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-400" /> Todas as vantagens Premium</li>
-                <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-400" /> Acesso de longo prazo (12 meses)</li>
-                <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-400" /> Preparo contínuo sem interrupções</li>
-              </ul>
-              <button 
-                onClick={() => {
-                   document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' });
-                   setIsSignUp(true);
-                }}
-                className="w-full py-4 bg-slate-700 hover:bg-slate-600 border border-slate-600 text-white font-bold rounded-xl transition-colors"
-              >
-                APROVEITAR DESCONTO
-              </button>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      
       {/* Footer */}
       <footer className="bg-slate-950 text-slate-500 py-12 text-center text-sm font-medium">
         <p>© {new Date().getFullYear()} PL-200 Premium SaaS. Simulador focado na certificação Power Platform Funcional Consultant.</p>

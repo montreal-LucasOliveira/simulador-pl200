@@ -13,12 +13,26 @@ export default function ResetPassword() {
   const [isUpdating, setIsUpdating] = useState(false);
 
   useEffect(() => {
-    // Verifica se estamos voltando de um link de recuperação
-    // O Supabase coloca os tokens na Hash da URL
+    // Escuta eventos de autenticação para detectar recuperação de senha
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        setIsUpdating(true);
+      }
+    });
+
+    // Fallback: Verifica se há erro na URL (como link expirado)
     const hash = window.location.hash;
-    if (hash && hash.includes('type=recovery')) {
+    if (hash.includes('error_description')) {
+      const params = new URLSearchParams(hash.replace('#', '?'));
+      const description = params.get('error_description');
+      if (description) {
+        setErrorMsg(`Erro no link: ${description}. Por favor, solicite um novo.`);
+      }
+    } else if (hash.includes('type=recovery')) {
       setIsUpdating(true);
     }
+
+    return () => subscription.unsubscribe();
   }, []);
 
   const handleResetRequest = async (e) => {

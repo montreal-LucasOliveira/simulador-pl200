@@ -6,6 +6,44 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import { generateCertificate } from '../utils/certificate';
 import SupportModal from '../components/SupportModal';
 
+const RenderCustomTick = ({ payload, x, y, textAnchor, stroke, radius }) => {
+  const words = payload.value.split(' ');
+  const lines = [];
+  let currentLine = '';
+
+  words.forEach(word => {
+    if ((currentLine + word).length > 22 && currentLine.length > 0) {
+      lines.push(currentLine.trim());
+      currentLine = word + ' ';
+    } else {
+      currentLine += word + ' ';
+    }
+  });
+  if (currentLine.trim().length > 0) {
+      lines.push(currentLine.trim());
+  }
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text
+        x={0}
+        y={0}
+        dy={4}
+        textAnchor={textAnchor}
+        fill="#64748b"
+        fontSize={10}
+        fontWeight={700}
+      >
+        {lines.map((line, index) => (
+          <tspan key={index} x={0} dy={index === 0 ? 0 : 12}>
+            {line}
+          </tspan>
+        ))}
+      </text>
+    </g>
+  );
+};
+
 export default function Dashboard({ session }) {
   const navigate = useNavigate();
   const [history, setHistory] = useState([]);
@@ -65,7 +103,7 @@ export default function Dashboard({ session }) {
       });
 
       const chartData = Object.keys(statsAggregator).map(domain => ({
-         subject: domain.length > 25 ? domain.substring(0, 22) + "..." : domain,
+         subject: domain,
          fullMark: 100,
          A: Math.round((statsAggregator[domain].correct / statsAggregator[domain].total) * 100)
       }));
@@ -634,9 +672,9 @@ export default function Dashboard({ session }) {
                 <div className="h-[250px] w-full">
                     {radarData.length > 0 ? (
                         <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx="50%" cy="50%" outerRadius="55%" data={radarData}>
+                            <RadarChart cx="50%" cy="50%" outerRadius="60%" data={radarData}>
                                 <PolarGrid stroke="#e2e8f0" />
-                                <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748b', fontSize: 10, fontWeight: 700 }} />
+                                <PolarAngleAxis dataKey="subject" tick={<RenderCustomTick />} />
                                 <Radar
                                     name="Seu Desempenho"
                                     dataKey="A"

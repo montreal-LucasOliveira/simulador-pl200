@@ -9,6 +9,7 @@ import { LanguageContext } from '../contexts/LanguageContext';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 
 const RenderCustomTick = ({ payload, x, y, textAnchor, stroke, radius }) => {
+  if (!payload || !payload.value) return null;
   const words = payload.value.split(' ');
   const lines = [];
   let currentLine = '';
@@ -54,7 +55,8 @@ export default function Dashboard({ session }) {
 
   // States Interativos Novos
   const [menuAberto, setMenuAberto] = useState(false);
-  const [seloAberto, setSeloAberto] = useState(null);
+  const [seloHoverId, setSeloHoverId] = useState(null);
+  const [seloModal, setSeloModal] = useState(null);
   const [historicoCompletoAberto, setHistoricoCompletoAberto] = useState(false);
   const [loadingHistory, setLoadingHistory] = useState(true);
   const [radarData, setRadarData] = useState([]);
@@ -322,7 +324,7 @@ export default function Dashboard({ session }) {
           </div>
           <div className="flex items-center gap-4 md:gap-6">
             <div className="flex items-center gap-2 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 px-4 py-1.5 rounded-full font-bold text-sm shadow-sm border border-orange-100">
-              <Flame size={18} className="animate-pulse" fill="currentColor" /> {streak} dias ofensiva
+              <Flame size={18} className="animate-pulse" fill="currentColor" /> {streak} {t('days_streak', 'dias ofensiva')}
             </div>
 
             <LanguageSwitcher />
@@ -339,12 +341,12 @@ export default function Dashboard({ session }) {
               {menuAberto && (
                   <div className="absolute top-14 right-0 w-56 bg-white border border-slate-200 rounded-2xl shadow-2xl py-2 z-50 animate-fade-in-up">
                       <div className="px-4 py-3 border-b border-slate-100 mb-2">
-                          <p className="text-xs text-slate-400 uppercase font-black tracking-wider">Conta Conectada</p>
+                          <p className="text-xs text-slate-400 uppercase font-black tracking-wider">{t('connected_account', 'Conta Conectada')}</p>
                           <p className="font-bold text-slate-800 truncate">{userEmail}</p>
                           <div className="mt-2 flex items-center gap-1.5">
                               <span className={`w-2 h-2 rounded-full ${isPremium ? 'bg-emerald-500' : 'bg-slate-300'}`}></span>
                               <span className="text-[10px] font-black uppercase tracking-tighter text-slate-500">
-                                  {isPremium ? 'Assinante Premium' : 'Conta Gratuita'}
+                                  {isPremium ? t('active_subscription') : t('free_plan')}
                               </span>
                           </div>
                       </div>
@@ -355,7 +357,7 @@ export default function Dashboard({ session }) {
                                 onClick={() => handleStripeCheckout('monthly')}
                                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-3 rounded-xl font-black text-xs shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
                             >
-                                <Zap size={14} className="text-amber-400" fill="currentColor" /> SEJA PREMIUM AGORA
+                                <Zap size={14} className="text-amber-400" fill="currentColor" /> {t('be_premium_now', 'SEJA PREMIUM AGORA')}
                             </button>
                         </div>
                       )}
@@ -363,7 +365,7 @@ export default function Dashboard({ session }) {
                         onClick={() => navigate('/profile')}
                         className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 flex items-center gap-3 transition-colors"
                       >
-                          <User size={16} /> Meu Perfil
+                          <User size={16} /> {t('menu_profile', 'Meu Perfil')}
                       </button>
                       <button 
                         onClick={() => {
@@ -372,13 +374,13 @@ export default function Dashboard({ session }) {
                         }}
                         className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 flex items-center gap-3 transition-colors"
                       >
-                          <Award size={16} /> Meus Certificados
+                          <Award size={16} /> {t('menu_certificates', 'Meus Certificados')}
                       </button>
                       <button 
                         onClick={() => navigate('/settings')}
                         className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 flex items-center gap-3 transition-colors"
                       >
-                          <Settings size={16} /> Configurações de UI
+                          <Settings size={16} /> {t('menu_ui_settings', 'Configurações de UI')}
                       </button>
                       <div className="my-2 border-t border-slate-100"></div>
                       <button 
@@ -389,7 +391,7 @@ export default function Dashboard({ session }) {
                         }}
                         className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 flex items-center gap-3 transition-colors"
                       >
-                          <Mail size={16} /> Fale Conosco
+                          <Mail size={16} /> {t('menu_contact', 'Fale Conosco')}
                       </button>
                       <button 
                         onClick={() => {
@@ -399,14 +401,14 @@ export default function Dashboard({ session }) {
                         }}
                         className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 flex items-center gap-3 transition-colors"
                       >
-                          <AlertCircle size={16} /> Relatar Problema
+                          <AlertCircle size={16} /> {t('menu_report_issue', 'Relatar Problema')}
                       </button>
                       <div className="my-2 border-t border-slate-100"></div>
                       <button 
                         onClick={handleLogout} 
                         className="w-full text-left px-5 py-2.5 font-bold text-sm text-red-600 hover:bg-red-50 flex items-center gap-3 transition-colors"
                       >
-                          <LogOut size={16} /> Encerrar Sessão
+                          <LogOut size={16} /> {t('menu_logout', 'Encerrar Sessão')}
                       </button>
                       
                       {isAdmin && (
@@ -416,7 +418,7 @@ export default function Dashboard({ session }) {
                             onClick={() => navigate('/admin')} 
                             className="w-full text-left px-5 py-2.5 font-black text-xs text-blue-700 hover:bg-blue-50 flex items-center gap-3 transition-colors uppercase tracking-wider"
                           >
-                              <Shield size={16} /> Painel de Gestão
+                              <Shield size={16} /> {t('menu_admin_panel', 'Painel de Gestão')}
                           </button>
                         </>
                       )}
@@ -433,25 +435,25 @@ export default function Dashboard({ session }) {
       )}
 
       {/* MODAL DE SELOS GAAMIFICATION */}
-      {seloAberto && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex justify-center items-center p-4">
-            <div className="bg-white rounded-3xl w-full max-w-sm overflow-hidden shadow-2xl transform transition-all animate-fade-in-up">
-                <div className={`h-24 bg-gradient-to-br ${seloAberto.grad} w-full relative flex justify-center items-end pb-3`}>
-                    <div className="absolute top-4 right-4 bg-white/20 p-1.5 rounded-full cursor-pointer hover:bg-white/40" onClick={() => setSeloAberto(null)}>
+      {seloModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex justify-center items-center p-4" onClick={() => setSeloModal(null)}>
+            <div className="bg-white rounded-3xl w-full max-w-sm overflow-hidden shadow-2xl transform transition-all animate-fade-in-up" onClick={e => e.stopPropagation()}>
+                <div className={`h-24 bg-gradient-to-br ${seloModal.grad} w-full relative flex justify-center items-end pb-3`}>
+                    <div className="absolute top-4 right-4 bg-white/20 p-1.5 rounded-full cursor-pointer hover:bg-white/40" onClick={() => setSeloModal(null)}>
                         <X size={16} className="text-white" />
                     </div>
                 </div>
                 <div className="flex justify-center -mt-10 mb-4 px-6 relative z-10">
                     <div className="bg-white p-2 rounded-2xl shadow-xl w-20 h-20 flex items-center justify-center border-4 border-slate-50">
-                        {seloAberto.icone}
+                        {seloModal.icone}
                     </div>
                 </div>
                 <div className="text-center px-6 pb-8">
-                    <h3 className="font-black text-2xl text-slate-800 mb-2">{seloAberto.titulo}</h3>
+                    <h3 className="font-black text-2xl text-slate-800 mb-2">{seloModal.titulo}</h3>
                     <p className="text-slate-500 font-medium leading-relaxed text-sm bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        {seloAberto.desc}
+                        {seloModal.desc}
                     </p>
-                    <button onClick={() => setSeloAberto(null)} className="mt-6 w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition-colors">
+                    <button onClick={() => setSeloModal(null)} className="mt-6 w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition-colors">
                         Incrível! Voltar ao Painel
                     </button>
                 </div>
@@ -535,7 +537,7 @@ export default function Dashboard({ session }) {
                 </div>
                 <p className="text-sm text-slate-500 mb-8 font-medium leading-relaxed flex-1">{t('beginner_desc')}</p>
                 <div className="mt-auto pt-4 border-t border-slate-100">
-                  <button onClick={() => startSimulator('iniciante', 'exam')} className="w-full bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 font-bold py-3.5 rounded-xl transition-colors flex justify-center items-center gap-2">
+                  <button onClick={() => startSimulator('iniciante')} className="w-full bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 font-bold py-3.5 rounded-xl transition-colors flex justify-center items-center gap-2">
                     <Play size={18} /> {t('start_training')}
                   </button>
                 </div>
@@ -553,7 +555,7 @@ export default function Dashboard({ session }) {
                 </div>
                 <p className="text-sm text-slate-500 mb-8 font-medium leading-relaxed flex-1">{t('intermediate_desc')}</p>
                 <div className="mt-auto pt-4 border-t border-slate-100 relative z-10">
-                  <button onClick={() => startSimulator('intermediario', 'exam')} className="w-full bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-bold py-3.5 rounded-xl transition-colors flex justify-center items-center gap-2">
+                  <button onClick={() => startSimulator('intermediario')} className="w-full bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-bold py-3.5 rounded-xl transition-colors flex justify-center items-center gap-2">
                     <Play size={18} /> {t('start_training')}
                   </button>
                 </div>
@@ -698,38 +700,39 @@ export default function Dashboard({ session }) {
                  </div>
                  
                  <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
-                    {selos.map(selo => (
+                     {selos.map(selo => (
                       <div 
                         key={selo.id}
-                        onMouseEnter={() => setSeloAberto(selo.id)}
-                        onMouseLeave={() => setSeloAberto(null)}
-                        className={`relative cursor-pointer transition-all duration-300 flex flex-col items-center justify-center p-4 rounded-2xl border-2
-                          ${selo.conquistado ? 'border-transparent bg-gradient-to-br shadow-md hover:shadow-lg ' + selo.grad : 'border-dashed border-slate-200 bg-slate-50 opacity-40 hover:opacity-100'}`}
+                        onMouseEnter={() => setSeloHoverId(selo.id)}
+                        onMouseLeave={() => setSeloHoverId(null)}
+                        onClick={() => setSeloModal(selo)}
+                        className={`relative cursor-pointer transition-all duration-300 flex flex-col items-center justify-center p-3 rounded-2xl border-2
+                          ${selo.conquistado ? 'border-transparent bg-gradient-to-br shadow-md hover:scale-105 ' + selo.grad : 'border-dashed border-slate-200 bg-slate-50 opacity-40 hover:opacity-100'}`}
                       >
-                         <div className="bg-white p-3 rounded-2xl shadow-sm mb-3">
+                         <div className="bg-white p-2.5 rounded-xl shadow-sm mb-3">
                            {selo.icone}
                          </div>
-                         <span className={`text-[10px] font-black uppercase text-center tracking-wider max-w-[80px] leading-tight
+                         <span className={`text-[9px] font-black uppercase text-center tracking-wider leading-tight max-w-[80px]
                            ${selo.conquistado ? 'text-slate-800' : 'text-slate-400'}`}>
-                           {selo.id === 'pioneer' ? t('badge_pioneer') :
-                            selo.id === 'marathon' ? t('badge_marathon') :
-                            selo.id === 'precision' ? t('badge_precision') :
-                            selo.id === 'perfectionist' ? t('badge_perfectionist') :
-                            selo.id === 'owl' ? t('badge_owl') :
-                            selo.id === 'earlybird' ? t('badge_early_bird') :
+                           {selo.id === 'fogo' ? t('badge_pioneer') :
+                            selo.id === 'livro' ? t('badge_marathon') :
+                            selo.id === 'alvo' ? t('badge_precision') :
+                            selo.id === 'trofeu' ? t('badge_perfectionist') :
+                            selo.id === 'clock' ? t('badge_owl') :
+                            selo.id === 'sun' ? t('badge_early_bird') :
                             selo.id === 'shield' ? t('badge_unshakable') :
                             selo.id === 'award' ? t('badge_master') : selo.titulo}
                          </span>
                          
                          {/* Tooltip Hover */}
                          <div className={`absolute -top-2 left-1/2 -mt-2 -translate-x-1/2 -translate-y-full w-48 bg-slate-800 text-white text-xs p-3 rounded-xl shadow-xl transition-all duration-200 z-50 pointer-events-none text-center
-                           ${seloAberto === selo.id ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}>
-                            <p className="font-bold mb-1 text-purple-300">{selo.id === 'pioneer' ? t('badge_pioneer') :
-                            selo.id === 'marathon' ? t('badge_marathon') :
-                            selo.id === 'precision' ? t('badge_precision') :
-                            selo.id === 'perfectionist' ? t('badge_perfectionist') :
-                            selo.id === 'owl' ? t('badge_owl') :
-                            selo.id === 'earlybird' ? t('badge_early_bird') :
+                           ${seloHoverId === selo.id ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}>
+                            <p className="font-bold mb-1 text-purple-300">{selo.id === 'fogo' ? t('badge_pioneer') :
+                            selo.id === 'livro' ? t('badge_marathon') :
+                            selo.id === 'alvo' ? t('badge_precision') :
+                            selo.id === 'trofeu' ? t('badge_perfectionist') :
+                            selo.id === 'clock' ? t('badge_owl') :
+                            selo.id === 'sun' ? t('badge_early_bird') :
                             selo.id === 'shield' ? t('badge_unshakable') :
                             selo.id === 'award' ? t('badge_master') : selo.titulo}</p>
                             <p className="text-[10px] text-slate-300 leading-tight">{selo.desc}</p>
@@ -769,7 +772,7 @@ export default function Dashboard({ session }) {
                                     {idx + 1}
                                 </div>
                                 <div>
-                                    <p className="font-black text-slate-800 truncate pr-2 max-w-[120px] sm:max-w-[180px]">{user.profile?.full_name?.split(' ')[0] || user.email?.split('@')[0] || "Usuário Anônimo"}</p>
+                                    <p className="font-black text-slate-800 truncate pr-2 max-w-[120px] sm:max-w-[180px]">{user.name}</p>
                                        <div className="flex items-center gap-1 mt-0.5">
                                           <TrendingUp size={10} className="text-slate-400" />
                                           <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Best: {user.best_score}%</p>

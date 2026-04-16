@@ -4,8 +4,10 @@ import { Target, CheckCircle2, ChevronRight, Zap, Trophy, Shield, Users, BarChar
 import { supabase } from '../lib/supabase';
 import SupportModal from '../components/SupportModal';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function LandingPage() {
+  const { t } = useLanguage();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -77,13 +79,13 @@ export default function LandingPage() {
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300">
-            <a href="#features" className="hover:text-white transition-colors">Funcionalidades</a>
-            <a href="#depoimentos" className="hover:text-white transition-colors">Avaliações</a>
+            <a href="#features" className="hover:text-white transition-colors">{t('lp_nav_features', 'Funcionalidades')}</a>
+            <a href="#depoimentos" className="hover:text-white transition-colors">{t('lp_nav_reviews', 'Avaliações')}</a>
             <button 
               onClick={() => setShowSupport(true)}
               className="hover:text-white transition-colors flex items-center gap-2"
             >
-              <MessageSquare size={16} /> Suporte
+              <MessageSquare size={16} /> {t('lp_nav_support', 'Suporte')}
             </button>
             <div className="ml-4">
               <LanguageSwitcher />
@@ -101,31 +103,31 @@ export default function LandingPage() {
           
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/50 border border-blue-200 text-blue-800 text-xs font-black tracking-widest uppercase mb-6">
-                <Zap size={14} className="text-amber-500" fill="currentColor" /> Plataforma de Alta Performance
+                <Zap size={14} className="text-amber-500" fill="currentColor" /> {t('lp_hero_badge', 'Plataforma de Alta Performance')}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] mb-6 text-slate-900 tracking-tight">
-              Aprove de Primeira na Certificação <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Microsoft PL-200</span>
+              {t('lp_hero_title_1', 'Aprove de Primeira na Certificação ')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Microsoft PL-200</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium max-w-2xl">
-              Nossa plataforma não é apenas um simulador estático. É um <strong className="text-slate-800">simulador dinâmico de alta performance</strong> alimentado por 300 questões reais e categorizadas, gamificação e métricas oficiais que imitam o ambiente real da prova.
+              {t('lp_hero_desc')}
             </p>
             
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-center gap-3 font-bold text-slate-700 bg-white p-4 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.04)] border border-slate-100">
                 <div className="bg-emerald-100 p-2 rounded-lg text-emerald-600"><CheckCircle2 size={20} /></div>
-                <span>300 Questões Focadas</span>
+                <span>{t('lp_feat_1')}</span>
               </div>
               <div className="flex items-center gap-3 font-bold text-slate-700 bg-white p-4 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.04)] border border-slate-100">
                 <div className="bg-blue-100 p-2 rounded-lg text-blue-600"><BarChart3 size={20} /></div>
-                <span>Dashboard Analytics M365</span>
+                <span>{t('lp_feat_2')}</span>
               </div>
               <div className="flex items-center gap-3 font-bold text-slate-700 bg-white p-4 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.04)] border border-slate-100">
                 <div className="bg-purple-100 p-2 rounded-lg text-purple-600"><Shield size={20} /></div>
-                <span>Nivelamento (Iniciante ao Avançado)</span>
+                <span>{t('lp_feat_3')}</span>
               </div>
               <div className="flex items-center gap-3 font-bold text-slate-700 bg-white p-4 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.04)] border border-slate-100">
                 <div className="bg-orange-100 p-2 rounded-lg text-orange-600"><Trophy size={20} /></div>
-                <span>Sistema de Gamificação e Selos</span>
+                <span>{t('lp_feat_4')}</span>
               </div>
             </div>
           </div>
@@ -136,10 +138,10 @@ export default function LandingPage() {
             <div className="bg-white p-8 sm:p-10 rounded-[2rem] shadow-2xl border border-slate-100 relative">
               <div className="text-center mb-8">
                 <h2 className="text-2xl font-black text-slate-900 mb-2">
-                    {isSignUp ? 'Crie sua Conta' : 'Acesse seu Portal'}
+                    {isSignUp ? t('lp_auth_create_title') : t('lp_auth_login_title')}
                 </h2>
                 <p className="text-sm text-slate-500 font-medium">
-                    {isSignUp ? 'Inicie sua jornada rumo à aprovação.' : 'Faça login para continuar seus estudos.'}
+                    {isSignUp ? t('lp_auth_create_desc') : t('lp_auth_login_desc')}
                 </p>
               </div>
 
@@ -151,7 +153,7 @@ export default function LandingPage() {
 
               <form onSubmit={handleAuth} className="space-y-5">
                 <div>
-                  <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">E-mail de Cadastro</label>
+                  <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">{t('lp_auth_email_label')}</label>
                   <input 
                     type="email" 
                     value={email}
@@ -163,13 +165,13 @@ export default function LandingPage() {
                 </div>
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">Senha Secreta</label>
+                    <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">{t('lp_auth_pass_label')}</label>
                     <button 
                       type="button"
                       onClick={() => navigate('/reset-password')}
                       className="text-xs text-blue-600 font-bold hover:underline"
                     >
-                      Esqueci
+                      {t('lp_auth_forgot')}
                     </button>
                   </div>
                   <input 
@@ -186,18 +188,18 @@ export default function LandingPage() {
                     disabled={loading}
                     className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black text-lg py-4 px-4 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-xl mt-6 disabled:opacity-50"
                 >
-                  {loading ? <Loader2 className="animate-spin" /> : (isSignUp ? 'CADASTRAR AGORA' : 'ENTRAR')} <ChevronRight size={22} />
+                  {loading ? <Loader2 className="animate-spin" /> : (isSignUp ? t('lp_auth_btn_signup') : t('lp_auth_btn_login'))} <ChevronRight size={22} />
                 </button>
                 <div className="text-center mt-6 pt-6 border-t border-slate-100">
                   <span className="text-sm text-slate-500 font-medium">
-                    {isSignUp ? 'Já possui conta?' : 'Ainda não é assinante?'}
+                    {isSignUp ? t('lp_auth_have_account') : t('lp_auth_no_account')}
                   </span> 
                   <button 
                     type="button"
                     onClick={() => setIsSignUp(!isSignUp)}
                     className="text-blue-700 font-black hover:underline ml-1"
                   >
-                    {isSignUp ? 'Fazer Login' : 'Criar Conta Grátis'}
+                    {isSignUp ? t('lp_auth_do_login') : t('lp_auth_do_signup')}
                   </button>
                 </div>
               </form>
@@ -211,14 +213,14 @@ export default function LandingPage() {
       <div id="depoimentos" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-black text-slate-900 mb-4">Aprovados pela comunidade técnica</h2>
-            <p className="text-slate-500 font-medium max-w-2xl mx-auto">Nossos alunos reduzem em até 60% o tempo técnico de preparação usando nosso motor inteligente de provas.</p>
+            <h2 className="text-3xl font-black text-slate-900 mb-4">{t('lp_proof_title')}</h2>
+            <p className="text-slate-500 font-medium max-w-2xl mx-auto">{t('lp_proof_desc')}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
                 <div className="flex gap-1 mb-4 text-amber-400"><Target size={20} fill="currentColor" /><Target size={20} fill="currentColor" /><Target size={20} fill="currentColor" /></div>
-                <p className="text-slate-700 font-medium italic mb-6">"O simulador cobriu exatamente os gaps que eu tinha em Dataverse Security Roles. A plataforma não te deixa apenas errar, ela humilha suas dúvidas mostrando a documentação nas caixas de papo-reto de cada revisão."</p>
+                <p className="text-slate-700 font-medium italic mb-6">{t('lp_quote_1')}</p>
                 <div className="flex items-center gap-4">
                     <div className="w-10 h-10 bg-indigo-200 rounded-full flex items-center justify-center font-bold text-indigo-800">CJ</div>
                     <div>
@@ -229,7 +231,7 @@ export default function LandingPage() {
             </div>
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 transform md:-translate-y-4 shadow-xl border-blue-100 ring-4 ring-blue-50">
                 <div className="flex gap-1 mb-4 text-amber-400"><Target size={20} fill="currentColor" /><Target size={20} fill="currentColor" /><Target size={20} fill="currentColor" /></div>
-                <p className="text-slate-700 font-medium italic mb-6">"Fiz a PL-200 semana passada e acertei 840/1000. O nível Avançado do simulador é 100% fiel à tensão do cronômetro real. A gamificação me fez estudar 15 dias seguidos."</p>
+                <p className="text-slate-700 font-medium italic mb-6">{t('lp_quote_2')}</p>
                 <div className="flex items-center gap-4">
                     <div className="w-10 h-10 bg-emerald-200 rounded-full flex items-center justify-center font-bold text-emerald-800">MT</div>
                     <div>
@@ -240,7 +242,7 @@ export default function LandingPage() {
             </div>
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
                 <div className="flex gap-1 mb-4 text-amber-400"><Target size={20} fill="currentColor" /><Target size={20} fill="currentColor" /><Target size={20} fill="currentColor" /></div>
-                <p className="text-slate-700 font-medium italic mb-6">"Eu usava PDFs pirateados pra estudar antes e só me confundia. Usar esse SaaS com o histórico de aprovação simulado estilo Microsoft Learn me deu a métrica que eu precisava para saber quando agendar a prova."</p>
+                <p className="text-slate-700 font-medium italic mb-6">{t('lp_quote_3')}</p>
                 <div className="flex items-center gap-4">
                     <div className="w-10 h-10 bg-orange-200 rounded-full flex items-center justify-center font-bold text-orange-800">RD</div>
                     <div>
@@ -255,13 +257,13 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="bg-slate-950 text-slate-500 py-12 text-center text-sm font-medium">
-        <p>© {new Date().getFullYear()} PL-200 Premium SaaS. Simulador focado na certificação Power Platform Funcional Consultant.</p>
+        <p>© {new Date().getFullYear()} PL-200 Premium SaaS. {t('lp_footer_disclaimer')}</p>
         <div className="mt-4 flex justify-center gap-6 text-slate-600">
           <button onClick={() => setShowSupport(true)} className="hover:text-blue-400 flex items-center gap-2">
-            <MessageSquare size={14} /> Fale Conosco & Suporte
+            <MessageSquare size={14} /> {t('lp_nav_support', 'Fale Conosco & Suporte')}
           </button>
           <span>|</span>
-          <p>Este site não possui afiliação oficial com a Microsoft.</p>
+          <p>{t('lp_footer_no_affil')}</p>
         </div>
       </footer>
 

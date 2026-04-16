@@ -66,6 +66,14 @@ export default function Simulator({ session }) {
 
       const sourceQuestions = language === 'en' ? questionsDataEn : questionsData;
 
+      const getTheme = (ptQuery, enQuery) => {
+        return shuffleArray(sourceQuestions.filter(q => {
+          const domainMatch = q.domain.includes(ptQuery) || (enQuery && q.domain.includes(enQuery));
+          const isNotBeginner = q.difficulty !== 'iniciante' && q.difficulty !== 'beginner';
+          return domainMatch && isNotBeginner;
+        }));
+      };
+
       if (type === 'geral') {
         selectedQuestions = sourceQuestions; // Carrega todas (250+)
         setTimeLeft(null); // Sem limite
@@ -84,13 +92,11 @@ export default function Simulator({ session }) {
       } else if (type === 'avancado') {
         // Algoritmo de Pesos Oficiais PL-200 (Prova de 50 questoes)
         // Dataverse: 12, P.Apps: 10, Automate: 10, Pages/BI: 10, Agents/Env: 8
-        const getTheme = (query) => shuffleArray(sourceQuestions.filter(q => q.domain.includes(query) && q.difficulty !== 'iniciante'));
-        
-        const pDataverse = getTheme("Dataverse").slice(0, 12);
-        const pApps = getTheme("Aplicativos do Microsoft Power").slice(0, 10);
-        const pAutomate = getTheme("Automate").slice(0, 10);
-        const pPagesBI = getTheme("Power BI").concat(getTheme("Pages")).slice(0, 10);
-        const pAgentsEnv = getTheme("Chatbot").concat(getTheme("Ambiente")).slice(0, 8);
+        const pDataverse = getTheme("Dataverse", "Dataverse").slice(0, 12);
+        const pApps = getTheme("Aplicativos do Microsoft Power", "Microsoft Power Apps").slice(0, 10);
+        const pAutomate = getTheme("Automate", "Power Automate").slice(0, 10);
+        const pPagesBI = getTheme("Power BI", "Power BI").concat(getTheme("Pages", "Power Pages")).slice(0, 10);
+        const pAgentsEnv = getTheme("Chatbot", "Copilot Studio").concat(getTheme("Ambiente", "Environments")).slice(0, 8);
         
         let basePool = [...pDataverse, ...pApps, ...pAutomate, ...pPagesBI, ...pAgentsEnv];
         
@@ -98,7 +104,7 @@ export default function Simulator({ session }) {
         if(basePool.length < 50) {
            const diff = 50 - basePool.length;
            const alreadyInIds = new Set(basePool.map(q => q.id));
-           const others = shuffleArray(sourceQuestions.filter(q => !alreadyInIds.has(q.id) && q.difficulty !== 'iniciante'));
+           const others = shuffleArray(sourceQuestions.filter(q => !alreadyInIds.has(q.id) && q.difficulty !== 'iniciante' && q.difficulty !== 'beginner'));
            basePool = [...basePool, ...others.slice(0, diff)];
         }
         basePool = shuffleArray(basePool); // Randomiza a ordem pra prova
@@ -108,15 +114,24 @@ export default function Simulator({ session }) {
       } else {
         // Filtrar por dificuldade (Iniciante / Intermediario normal)
         let difficultyFilter = type;
-        const filtered = sourceQuestions.filter(q => q.difficulty === difficultyFilter);
+        const filtered = sourceQuestions.filter(q => 
+          q.difficulty === difficultyFilter || 
+          (difficultyFilter === 'iniciante' && q.difficulty === 'beginner') ||
+          (difficultyFilter === 'intermediario' && q.difficulty === 'intermediate')
+        );
         selectedQuestions = shuffleArray(filtered).slice(0, 50);
         
         if(selectedQuestions.length < 50) {
-            const others = shuffleArray(sourceQuestions.filter(q => q.difficulty !== difficultyFilter));
+            const others = shuffleArray(sourceQuestions.filter(q => 
+                q.difficulty !== difficultyFilter && 
+                !(difficultyFilter === 'iniciante' && q.difficulty === 'beginner') &&
+                !(difficultyFilter === 'intermediario' && q.difficulty === 'intermediate')
+            ));
             selectedQuestions = [...selectedQuestions, ...others.slice(0, 50 - selectedQuestions.length)];
         }
         setTimeLeft(7200); 
       }
+
 
       setQuestions(selectedQuestions);
       setLoading(false);
@@ -143,21 +158,27 @@ export default function Simulator({ session }) {
 
   // Cronometro Logic
   useEffect(() => {
-    if (timeLeft === null || simuladorFinalizado || timeExpired) return;
+    if (timeLeft === null || simuladorFinalizado || isPaused) return;
+
+    if (timeExpired && type === 'avancado') return; // Para no avancado
 
     const timerInterval = setInterval(() => {
       setTimeLeft(prev => {
-        if (prev <= 1) {
-          clearInterval(timerInterval);
-          handleTimeExpiration();
-          return 0;
-        }
+        if (timeExpired) return prev + 1; // Contagem crescente
+        if (prev <= 1) return 0; // Segura no 0 pro useEffect disparar o alerta
         return prev - 1;
       });
     }, 1000);
 
     return () => clearInterval(timerInterval);
-  }, [timeLeft, simuladorFinalizado, timeExpired]);
+  }, [timeLeft, simuladorFinalizado, timeExpired, isPaused, type]);
+
+  // Disparador de Alerta de Tempo
+  useEffect(() => {
+    if (timeLeft === 0 && !timeExpired) {
+      handleTimeExpiration();
+    }
+  }, [timeLeft, timeExpired]);
 
   const handleTimeExpiration = () => {
     setTimeExpired(true);

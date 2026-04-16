@@ -694,11 +694,11 @@ export default function Dashboard({ session }) {
                     <h3 className="font-black text-slate-800 flex items-center gap-2 text-sm uppercase tracking-wider">
                         <Medal className="text-purple-600" size={18} /> {t('achievements')}
                     </h3>
-                    <span className="bg-purple-50 text-purple-700 text-[10px] font-black px-2 py-1 rounded-lg uppercase tracking-widest">{selosConfig.filter(s => s.conquistado).length} {t('unlocked')}</span>
+                    <span className="bg-purple-50 text-purple-700 text-[10px] font-black px-2 py-1 rounded-lg uppercase tracking-widest">{selos.filter(s => s.conquistado).length} {t('unlocked')}</span>
                  </div>
                  
                  <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
-                    {selosConfig.map(selo => (
+                    {selos.map(selo => (
                       <div 
                         key={selo.id}
                         onMouseEnter={() => setSeloAberto(selo.id)}

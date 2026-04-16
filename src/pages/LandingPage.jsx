@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Target, CheckCircle2, ChevronRight, Zap, Trophy, Shield, Users, BarChart3, Loader2, MessageSquare, ShieldCheck } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import SupportModal from '../components/SupportModal';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -84,6 +85,9 @@ export default function LandingPage() {
             >
               <MessageSquare size={16} /> Suporte
             </button>
+            <div className="ml-4">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </header>

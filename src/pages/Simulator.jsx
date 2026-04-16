@@ -2,6 +2,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { CheckCircle2, XCircle, ChevronRight, ChevronLeft, Menu, X, RotateCcw, AlertCircle, Lightbulb, BookOpen, Target, Clock, Trophy, Pause, Play } from 'lucide-react';
 import { questionsData } from '../questions';
+import { questionsDataEn } from '../questions_en';
+import { LanguageContext } from '../contexts/LanguageContext';
 import { supabase } from '../lib/supabase';
 import { generateCertificate } from '../utils/certificate';
 import { useSearchParams } from 'react-router-dom';
@@ -9,6 +11,7 @@ import { useSearchParams } from 'react-router-dom';
 export default function Simulator({ session }) {
   const { type } = useParams(); // 'iniciante', 'intermediario', 'avancado', 'geral'
   const navigate = useNavigate();
+  const { language, t } = React.useContext(LanguageContext);
   
   const [questions, setQuestions] = useState([]);
   const [progress, setProgress] = useState({});
@@ -61,8 +64,10 @@ export default function Simulator({ session }) {
         return arr;
       };
 
+      const sourceQuestions = language === 'en' ? questionsDataEn : questionsData;
+
       if (type === 'geral') {
-        selectedQuestions = questionsData; // Carrega todas (250+)
+        selectedQuestions = sourceQuestions; // Carrega todas (250+)
         setTimeLeft(null); // Sem limite
         
         // Busca progresso salvo no banco
@@ -79,7 +84,7 @@ export default function Simulator({ session }) {
       } else if (type === 'avancado') {
         // Algoritmo de Pesos Oficiais PL-200 (Prova de 50 questoes)
         // Dataverse: 12, P.Apps: 10, Automate: 10, Pages/BI: 10, Agents/Env: 8
-        const getTheme = (query) => shuffleArray(questionsData.filter(q => q.domain.includes(query) && q.difficulty !== 'iniciante'));
+        const getTheme = (query) => shuffleArray(sourceQuestions.filter(q => q.domain.includes(query) && q.difficulty !== 'iniciante'));
         
         const pDataverse = getTheme("Dataverse").slice(0, 12);
         const pApps = getTheme("Aplicativos do Microsoft Power").slice(0, 10);
@@ -93,7 +98,7 @@ export default function Simulator({ session }) {
         if(basePool.length < 50) {
            const diff = 50 - basePool.length;
            const alreadyInIds = new Set(basePool.map(q => q.id));
-           const others = shuffleArray(questionsData.filter(q => !alreadyInIds.has(q.id) && q.difficulty !== 'iniciante'));
+           const others = shuffleArray(sourceQuestions.filter(q => !alreadyInIds.has(q.id) && q.difficulty !== 'iniciante'));
            basePool = [...basePool, ...others.slice(0, diff)];
         }
         basePool = shuffleArray(basePool); // Randomiza a ordem pra prova
@@ -103,11 +108,11 @@ export default function Simulator({ session }) {
       } else {
         // Filtrar por dificuldade (Iniciante / Intermediario normal)
         let difficultyFilter = type;
-        const filtered = questionsData.filter(q => q.difficulty === difficultyFilter);
+        const filtered = sourceQuestions.filter(q => q.difficulty === difficultyFilter);
         selectedQuestions = shuffleArray(filtered).slice(0, 50);
         
         if(selectedQuestions.length < 50) {
-            const others = shuffleArray(questionsData.filter(q => q.difficulty !== difficultyFilter));
+            const others = shuffleArray(sourceQuestions.filter(q => q.difficulty !== difficultyFilter));
             selectedQuestions = [...selectedQuestions, ...others.slice(0, 50 - selectedQuestions.length)];
         }
         setTimeLeft(7200); 

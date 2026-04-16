@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import ResetPassword from './pages/ResetPassword';
 import { supabase } from './lib/supabase';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 export default function App() {
   const [session, setSession] = useState(null);
@@ -46,38 +47,40 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route 
-          path="/" 
-          element={!session ? <LandingPage setMockSession={setSession} /> : <Navigate to="/dashboard" replace />} 
-        />
-        <Route 
-          path="/dashboard" 
-          element={session ? <Dashboard session={session} setMockSession={setSession} /> : <Navigate to="/" replace />} 
-        />
-        <Route 
-          path="/profile" 
-          element={session ? <Profile session={session} /> : <Navigate to="/" replace />} 
-        />
-        <Route 
-          path="/settings" 
-          element={session ? <Settings session={session} /> : <Navigate to="/" replace />} 
-        />
-        <Route 
-          path="/simulator/:type" 
-          element={session ? <Simulator session={session} /> : <Navigate to="/" replace />} 
-        />
-        <Route 
-          path="/admin" 
-          element={session ? <Admin session={session} /> : <Navigate to="/" replace />} 
-        />
-        <Route 
-          path="/reset-password" 
-          element={<ResetPassword />} 
-        />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route 
+            path="/" 
+            element={!session ? <LandingPage setMockSession={setSession} /> : <Navigate to="/dashboard" replace />} 
+          />
+          <Route 
+            path="/dashboard" 
+            element={session ? <Dashboard session={session} setMockSession={setSession} /> : <Navigate to="/" replace />} 
+          />
+          <Route 
+            path="/profile" 
+            element={session ? <Profile session={session} /> : <Navigate to="/" replace />} 
+          />
+          <Route 
+            path="/settings" 
+            element={session ? <Settings session={session} /> : <Navigate to="/" replace />} 
+          />
+          <Route 
+            path="/simulator/:type" 
+            element={session ? <Simulator session={session} /> : <Navigate to="/" replace />} 
+          />
+          <Route 
+            path="/admin" 
+            element={session ? <Admin session={session} /> : <Navigate to="/" replace />} 
+          />
+          <Route 
+            path="/reset-password" 
+            element={<ResetPassword />} 
+          />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }

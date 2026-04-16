@@ -5,6 +5,8 @@ import { supabase } from '../lib/supabase';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { generateCertificate } from '../utils/certificate';
 import SupportModal from '../components/SupportModal';
+import { LanguageContext } from '../contexts/LanguageContext';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 const RenderCustomTick = ({ payload, x, y, textAnchor, stroke, radius }) => {
   const words = payload.value.split(' ');
@@ -46,6 +48,7 @@ const RenderCustomTick = ({ payload, x, y, textAnchor, stroke, radius }) => {
 
 export default function Dashboard({ session }) {
   const navigate = useNavigate();
+  const { t } = useContext(LanguageContext);
   const [history, setHistory] = useState([]);
   const [streak, setStreak] = useState(0);
 
@@ -321,6 +324,8 @@ export default function Dashboard({ session }) {
             <div className="flex items-center gap-2 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 px-4 py-1.5 rounded-full font-bold text-sm shadow-sm border border-orange-100">
               <Flame size={18} className="animate-pulse" fill="currentColor" /> {streak} dias ofensiva
             </div>
+
+            <LanguageSwitcher />
             
             <div className="relative border-l border-slate-200 pl-4 md:pl-6 flex items-center">
               <button 
@@ -567,23 +572,23 @@ export default function Dashboard({ session }) {
               <div className="bg-gradient-to-br from-blue-700 to-blue-900 text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all group flex flex-col h-full relative overflow-hidden transform md:col-span-2">
                  {!isPremium && <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center text-center p-4">
                   <Trophy className="text-amber-400 mb-3" size={40} />
-                  <span className="font-black text-white text-xl">Exclusivo Premium</span>
-                  <span className="text-sm text-blue-200 mt-1">É necessário assinatura ativa</span>
+                  <span className="font-black text-white text-xl">{t('premium_exclusive')}</span>
+                  <span className="text-sm text-blue-200 mt-1">{t('premium_required')}</span>
                 </div>}
                 <div className="flex justify-between items-start mb-6">
                   <div className="max-w-md">
                     <div className="flex items-center gap-2 mb-2">
                         <Flame className="text-orange-400" size={20} />
-                        <span className="text-orange-300 font-bold text-xs tracking-wider uppercase">Mais Escolhido</span>
+                        <span className="text-orange-300 font-bold text-xs tracking-wider uppercase">{t('most_chosen')}</span>
                     </div>
-                    <h3 className="font-black text-2xl text-white">Simulado Avançado (Prova Real)</h3>
-                    <p className="text-sm text-blue-100 mt-2 font-medium leading-relaxed">Cronômetro rígido restritivo. A prova trará proporções exatas segundo os pilares exigidos pelo edital oficial da Microsoft MS PL-200.</p>
+                    <h3 className="font-black text-2xl text-white">{t('advanced_sim')}</h3>
+                    <p className="text-sm text-blue-100 mt-2 font-medium leading-relaxed">{t('advanced_desc')}</p>
                   </div>
                   <span className="bg-amber-400 text-amber-900 text-sm font-black px-4 py-2 rounded-xl shadow-md border border-amber-300">50 Q.</span>
                 </div>
                 <div className="mt-auto pt-5 border-t border-blue-600 relative z-0">
                   <button onClick={() => setShowModeSelector(true)} className="w-full bg-white text-blue-800 hover:bg-slate-50 hover:scale-[1.01] font-black py-4 rounded-xl transition-transform shadow-xl flex justify-center items-center gap-2 text-lg">
-                    <Play size={20} fill="currentColor" /> Simular Prova Real Agora
+                    <Play size={20} fill="currentColor" /> {t('start_real_exam')}
                   </button>
                 </div>
               </div>
@@ -591,14 +596,14 @@ export default function Dashboard({ session }) {
               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full relative overflow-hidden transform md:col-span-2 hover:border-blue-300">
                 <div className="flex justify-between items-start mb-6">
                   <div className="max-w-md">
-                    <h3 className="font-black text-xl text-slate-800 group-hover:text-blue-700 transition-colors">Modo Estudo Permanente (Geral)</h3>
-                    <p className="text-sm text-slate-500 mt-2 font-medium leading-relaxed">Pratique com todas as questões do banco de dados (250+), sem limite de tempo. Sua evolução fica salva na conta para você continuar depois.</p>
+                    <h3 className="font-black text-xl text-slate-800 group-hover:text-blue-700 transition-colors">{t('study_mode')}</h3>
+                    <p className="text-sm text-slate-500 mt-2 font-medium leading-relaxed">{t('study_desc')}</p>
                   </div>
                   <span className="bg-blue-50 border border-blue-100 text-blue-700 text-xs font-black px-3 py-1.5 rounded-lg shadow-sm">250+ Q.</span>
                 </div>
                 <div className="mt-auto pt-5 border-t border-slate-100 relative z-0">
                   <button onClick={() => startSimulator('geral', 'tutorial')} className="w-full bg-slate-800 hover:bg-slate-900 text-white font-black py-4 rounded-xl transition-all shadow-md flex justify-center items-center gap-2">
-                    <BookOpen size={20} /> Entrar no Modo Permanente
+                    <BookOpen size={20} /> {t('start_study_mode')}
                   </button>
                 </div>
               </div>

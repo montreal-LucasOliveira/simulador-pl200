@@ -171,10 +171,10 @@ export default function Dashboard({ session }) {
             const bestScore = userStats.length > 0 ? Math.max(...userStats.map(h => h.score)) : 0;
             return {
                 name: p.nickname || p.full_name || 'Usuário Anônimo',
-                points: totalPoints,
-                bestScore: bestScore
+                total_correct: totalPoints,
+                best_score: bestScore
             };
-        }).sort((a, b) => b.points - a.points).slice(0, 5);
+        }).sort((a, b) => b.total_correct - a.total_correct).slice(0, 5);
 
         setRanking(userRanking);
     } catch (err) {

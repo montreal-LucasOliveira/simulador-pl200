@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Mail, Lock, Loader2, ArrowLeft, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { LanguageContext } from '../contexts/LanguageContext';
+import { useContext } from 'react';
 
 export default function ResetPassword() {
   const navigate = useNavigate();
+  const { t } = useContext(LanguageContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -33,7 +36,7 @@ export default function ResetPassword() {
       const params = new URLSearchParams(hash.replace('#', '?'));
       const description = params.get('error_description');
       if (description) {
-        setErrorMsg(`Erro no link: ${description}. Por favor, solicite um novo.`);
+        setErrorMsg(t('reset_link_error').replace('{desc}', description));
       }
     } else if (hash.includes('type=recovery')) {
       setIsUpdating(true);
@@ -53,7 +56,7 @@ export default function ResetPassword() {
         redirectTo: `${window.location.origin}/reset-password`,
       });
       if (error) throw error;
-      setMessage('Link de recuperação enviado! Verifique sua caixa de entrada.');
+      setMessage(t('reset_link_sent'));
     } catch (err) {
       setErrorMsg(err.message);
     } finally {
@@ -70,7 +73,7 @@ export default function ResetPassword() {
     const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$/;
     if (!passwordRegex.test(password)) {
       setLoading(false);
-      setErrorMsg('A senha deve ter no mínimo 6 caracteres e conter letras e números.');
+      setErrorMsg(t('auth_pass_req'));
       return;
     }
 
@@ -81,7 +84,7 @@ export default function ResetPassword() {
       // Limpa o modo de recuperação após sucesso
       localStorage.removeItem('sb-recovery-mode');
       
-      alert('Senha atualizada com sucesso! Agora você já pode entrar com sua nova senha.');
+      alert(t('reset_success_alert'));
       navigate('/');
     } catch (err) {
       setErrorMsg(err.message);
@@ -102,7 +105,7 @@ export default function ResetPassword() {
             onClick={() => navigate('/')}
             className="mb-8 flex items-center gap-2 text-slate-400 hover:text-blue-600 font-bold transition-all group"
           >
-            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> Voltar ao Login
+            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> {t('reset_back_login')}
           </button>
 
           <div className="text-center mb-8">
@@ -110,12 +113,12 @@ export default function ResetPassword() {
               {isUpdating ? <ShieldCheck size={32} /> : <Mail size={32} />}
             </div>
             <h1 className="text-2xl font-black text-slate-900 tracking-tight">
-              {isUpdating ? 'Nova Senha' : 'Recuperar Senha'}
+              {isUpdating ? t('reset_title_new') : t('reset_title_request')}
             </h1>
             <p className="text-sm text-slate-500 font-medium mt-2">
               {isUpdating 
-                ? 'Defina sua nova credencial de acesso segura.' 
-                : 'Enviaremos um link para você redefinir sua senha.'}
+                ? t('reset_desc_new') 
+                : t('reset_desc_request')}
             </p>
           </div>
 
@@ -134,7 +137,7 @@ export default function ResetPassword() {
           <form onSubmit={isUpdating ? handlePasswordUpdate : handleResetRequest} className="space-y-5">
             {!isUpdating ? (
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">E-mail de Cadastro</label>
+                <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">{t('reset_email_label')}</label>
                 <div className="relative">
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
                   <input 
@@ -143,13 +146,13 @@ export default function ResetPassword() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="w-full p-4 pl-12 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all font-medium"
-                    placeholder="voce@exemplo.com"
+                    placeholder={t('email_placeholder')}
                   />
                 </div>
               </div>
             ) : (
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nova Senha Secreta</label>
+                <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">{t('reset_new_pass_label')}</label>
                 <div className="relative">
                   <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
                   <input 
@@ -158,10 +161,10 @@ export default function ResetPassword() {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     className="w-full p-4 pl-12 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all font-medium"
-                    placeholder="Mín. 6 caracteres (letras e números)"
+                    placeholder={t('pass_placeholder_6')}
                   />
                 </div>
-                <p className="text-[10px] text-slate-400 mt-2 font-medium">Requisito: Mínimo de 6 caracteres, contendo obrigatóriamente letras e números.</p>
+                <p className="text-[10px] text-slate-400 mt-2 font-medium">{t('reset_pass_hint')}</p>
               </div>
             )}
 
@@ -170,7 +173,7 @@ export default function ResetPassword() {
               disabled={loading}
               className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black text-lg py-4 rounded-2xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-xl shadow-slate-200 disabled:opacity-50"
             >
-              {loading ? <Loader2 className="animate-spin" /> : (isUpdating ? 'ATUALIZAR SENHA' : 'ENVIAR LINK')}
+              {loading ? <Loader2 className="animate-spin" /> : (isUpdating ? t('reset_btn_update') : t('reset_btn_send'))}
             </button>
           </form>
         </div>

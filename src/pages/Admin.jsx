@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Shield, User, Star, Check, X, ArrowLeft, Users, Trophy, Mail, Calendar, Trash2, MessageSquare, CheckCircle, Clock, AlertCircle } from 'lucide-react';
+import { LanguageContext } from '../contexts/LanguageContext';
+import { useContext } from 'react';
 
 export default function Admin({ session }) {
   const navigate = useNavigate();
+  const { t } = useContext(LanguageContext);
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState([]);
   const [supportRequests, setSupportRequests] = useState([]);
@@ -41,7 +44,7 @@ export default function Admin({ session }) {
 
     if (!error) {
       setSupportRequests(prev => prev.filter(r => r.id !== id));
-      alert("Chamado arquivado com sucesso.");
+      alert(t('request_archived_ok'));
     }
   };
 
@@ -52,13 +55,13 @@ export default function Admin({ session }) {
             <div className="w-20 h-20 bg-red-500/20 text-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6">
                 <Shield size={40} />
             </div>
-            <h1 className="text-2xl font-black text-white mb-2 tracking-tight">Acesso Restrito</h1>
-            <p className="text-slate-400 font-medium mb-8">Esta área é exclusiva para a equipe de gestão da plataforma PL-200 Premium. Seu acesso foi registrado por segurança.</p>
+            <h1 className="text-2xl font-black text-white mb-2 tracking-tight">{t('restricted_access')}</h1>
+            <p className="text-slate-400 font-medium mb-8">{t('restricted_desc')}</p>
             <button 
                 onClick={() => navigate('/dashboard')}
                 className="w-full py-4 bg-white text-slate-900 font-black rounded-2xl shadow-xl hover:bg-slate-100 transition-all flex items-center justify-center gap-2"
             >
-                <ArrowLeft size={18} /> Voltar ao Painel
+                <ArrowLeft size={18} /> {t('back_to_dashboard')}
             </button>
         </div>
       </div>
@@ -112,7 +115,7 @@ export default function Admin({ session }) {
       .eq('id', userId);
 
     if (error) {
-      alert("Erro ao atualizar status premium.");
+      alert(t('profile_error'));
     } else {
       setUsers(prev => prev.map(u => u.id === userId ? { ...u, is_premium: !currentStatus } : u));
       setStats(prev => ({ ...prev, premium: prev.premium + (!currentStatus ? 1 : -1) }));
@@ -120,7 +123,7 @@ export default function Admin({ session }) {
   };
 
   const deleteUser = async (userId, userEmail) => {
-    const confirmed = window.confirm(`ATENÇÃO: Você está prestes a excluir definitivamente o usuário ${userEmail}. Isso removerá todo o histórico de simulados e o perfil desta pessoa. Deseja continuar?`);
+    const confirmed = window.confirm(t('delete_user_confirm').replace('{email}', userEmail));
     
     if (!confirmed) return;
     
@@ -142,7 +145,7 @@ export default function Admin({ session }) {
         
       if (pError) throw pError;
       
-      alert("Usuário removido da base de dados com sucesso.");
+      alert(t('user_deleted_ok'));
       setUsers(prev => prev.filter(u => u.id !== userId));
       setStats(prev => ({ 
         total: prev.total - 1, 
@@ -150,7 +153,7 @@ export default function Admin({ session }) {
       }));
     } catch (err) {
       console.error("Erro ao excluir usuário:", err);
-      alert("Erro ao excluir usuário. Verifique os logs.");
+      alert(t('error_delete_user'));
     } finally {
       setLoading(false);
     }
@@ -163,13 +166,13 @@ export default function Admin({ session }) {
         <div className="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
           <div className="flex items-center gap-3">
              <div className="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center font-black">A</div>
-             <span className="font-black text-slate-900 uppercase tracking-tighter">Backoffice Gestor</span>
+             <span className="font-black text-slate-900 uppercase tracking-tighter">{t('admin_backoffice')}</span>
           </div>
           <button 
             onClick={() => navigate('/dashboard')}
             className="text-sm font-bold text-slate-500 hover:text-blue-600 flex items-center gap-2 transition-colors"
           >
-            <ArrowLeft size={16} /> Voltar ao Painel
+            <ArrowLeft size={16} /> {t('back_to_dashboard')}
           </button>
         </div>
       </nav>
@@ -179,15 +182,15 @@ export default function Admin({ session }) {
         {/* Stats Grid */}
         <div className="grid md:grid-cols-4 gap-6 mb-10">
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-            <p className="text-slate-400 font-bold text-xs uppercase tracking-widest mb-1">Total de Alunos</p>
+            <p className="text-slate-400 font-bold text-xs uppercase tracking-widest mb-1">{t('total_students')}</p>
             <h2 className="text-3xl font-black text-slate-900">{stats.total}</h2>
           </div>
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-            <p className="text-emerald-500 font-bold text-xs uppercase tracking-widest mb-1">Membros Premium</p>
+            <p className="text-emerald-500 font-bold text-xs uppercase tracking-widest mb-1">{t('premium_members')}</p>
             <h2 className="text-3xl font-black text-emerald-600">{stats.premium}</h2>
           </div>
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-            <p className="text-blue-500 font-bold text-xs uppercase tracking-widest mb-1">Taxa de Conversão</p>
+            <p className="text-blue-500 font-bold text-xs uppercase tracking-widest mb-1">{t('conv_rate')}</p>
             <h2 className="text-3xl font-black text-blue-600">
               {stats.total > 0 ? Math.round((stats.premium / stats.total) * 100) : 0}%
             </h2>
@@ -195,7 +198,7 @@ export default function Admin({ session }) {
           <div className="bg-gradient-to-br from-indigo-600 to-blue-700 p-6 rounded-3xl text-white shadow-lg flex items-center gap-5">
             <div className="p-4 bg-white/20 rounded-2xl"><Trophy size={32}/></div>
             <div>
-              <p className="text-blue-100 font-bold text-xs uppercase tracking-widest">Painel Ativo</p>
+              <p className="text-blue-100 font-bold text-xs uppercase tracking-widest">{t('active_panel')}</p>
               <h2 className="text-3xl font-black">v2.0</h2>
             </div>
           </div>
@@ -207,13 +210,13 @@ export default function Admin({ session }) {
             onClick={() => setActiveTab('users')}
             className={`px-6 py-3 rounded-2xl font-black text-sm flex items-center gap-2 transition-all ${activeTab === 'users' ? 'bg-slate-900 text-white shadow-lg' : 'bg-white text-slate-500 hover:bg-slate-50 border border-slate-200'}`}
           >
-            <Users size={18} /> Usuários
+            <Users size={18} /> {t('users_tab')}
           </button>
           <button 
             onClick={() => setActiveTab('support')}
             className={`px-6 py-3 rounded-2xl font-black text-sm flex items-center gap-2 transition-all relative ${activeTab === 'support' ? 'bg-slate-900 text-white shadow-lg' : 'bg-white text-slate-500 hover:bg-slate-50 border border-slate-200'}`}
           >
-            <MessageSquare size={18} /> Suporte
+            <MessageSquare size={18} /> {t('support_tab')}
             {supportRequests.length > 0 && (
               <span className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-[10px] flex items-center justify-center rounded-full border-2 border-white font-black animate-pulse">
                 {supportRequests.length}
@@ -225,18 +228,18 @@ export default function Admin({ session }) {
         {activeTab === 'users' ? (
           <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
             <div className="p-8 border-b border-slate-100 flex justify-between items-center">
-              <h2 className="font-black text-2xl text-slate-800">Comunidade PL-200</h2>
-              <button onClick={fetchAdminData} className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-xl text-sm transition-colors">Atualizar Dados</button>
+              <h2 className="font-black text-2xl text-slate-800">{t('community_pl200')}</h2>
+              <button onClick={fetchAdminData} className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-xl text-sm transition-colors">{t('update_data')}</button>
             </div>
 
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-slate-50 text-slate-400 text-[11px] font-black uppercase tracking-[0.2em]">
-                    <th className="px-8 py-4">Estudante / E-mail</th>
-                    <th className="px-8 py-4">Data de Cadastro</th>
-                    <th className="px-8 py-4">Melhor Nota</th>
-                    <th className="px-8 py-4 text-center">Ações</th>
+                    <th className="px-8 py-4">{t('table_student')}</th>
+                    <th className="px-8 py-4">{t('table_date')}</th>
+                    <th className="px-8 py-4">{t('table_best_score')}</th>
+                    <th className="px-8 py-4 text-center">{t('table_actions')}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -254,7 +257,7 @@ export default function Admin({ session }) {
                             : 'bg-blue-600 text-white'
                           }`}
                         >
-                          {user.is_premium ? 'Remover Pro' : 'Tornar Premium'}
+                          {user.is_premium ? t('remove_pro') : t('make_premium')}
                         </button>
                         <button 
                           onClick={() => deleteUser(user.id, user.email)}
@@ -273,7 +276,7 @@ export default function Admin({ session }) {
           <div className="space-y-6">
              <div className="bg-white rounded-3xl border border-slate-200 shadow-xl p-8">
                 <h2 className="font-black text-2xl text-slate-800 mb-6 flex items-center gap-3">
-                   <MessageSquare className="text-blue-600" /> Chamados de Suporte
+                   <MessageSquare className="text-blue-600" /> {t('support_requests_title')}
                 </h2>
                 <div className="space-y-4">
                   {supportRequests.map((req) => (
@@ -288,13 +291,13 @@ export default function Admin({ session }) {
                        <p className="text-slate-600 font-medium bg-white p-4 rounded-xl border border-slate-100">{req.message}</p>
                     </div>
                   ))}
-                  {supportRequests.length === 0 && <p className="text-center text-slate-400 py-10">Nenhum chamado pendente.</p>}
+                  {supportRequests.length === 0 && <p className="text-center text-slate-400 py-10">{t('no_pending_requests')}</p>}
                 </div>
              </div>
           </div>
         )}
 
-        {loading && <div className="text-center py-20 font-bold text-slate-400">Carregando dados...</div>}
+        {loading && <div className="text-center py-20 font-bold text-slate-400">{t('loading_data')}</div>}
       </main>
     </div>
   );

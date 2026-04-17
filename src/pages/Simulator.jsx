@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { CheckCircle2, XCircle, ChevronRight, ChevronLeft, Menu, X, RotateCcw, AlertCircle, Lightbulb, BookOpen, Target, Clock, Trophy, Pause, Play } from 'lucide-react';
+import { CheckCircle2, XCircle, ChevronRight, ChevronLeft, Menu, X, RotateCcw, AlertCircle, Lightbulb, BookOpen, Target, Clock, Trophy, Pause, Play, Compass, Check, ArrowLeft, ListChecks } from 'lucide-react';
 import { questionsData } from '../questions';
 import { questionsDataEn } from '../questions_en';
 import { LanguageContext } from '../contexts/LanguageContext';
@@ -380,7 +380,7 @@ export default function Simulator({ session }) {
     return (
         <div className="flex h-screen flex-col items-center justify-center bg-slate-50 gap-4">
             <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-600 border-t-transparent"></div>
-            <p className="font-black text-slate-400 animate-pulse uppercase tracking-[0.2em] text-xs">Carregando Simulado de Alta Performance...</p>
+            <p className="font-black text-slate-400 animate-pulse uppercase tracking-[0.2em] text-xs">{t('loading_sim')}</p>
         </div>
     );
   }
@@ -390,11 +390,6 @@ export default function Simulator({ session }) {
   const totalAnswered = answeredKeys.length;
   const correctCount = answeredKeys.filter(key => progress[key].isCorrect).length;
 
-  // ICONES LOCAIS (PARA EVITAR ERRO DE IMPORT NÃO ENCONTRADO)
-  const ListChecks = (props) => <CheckCircle2 {...props} />;
-  const ArrowLeft = (props) => <ChevronLeft {...props} />;
-  const Check = (props) => <CheckCircle2 {...props} />;
-
   return (
     <div className={`flex h-screen bg-slate-50 font-sans text-slate-800 no-copy ${isReviewing ? 'overflow-hidden' : ''}`}>
       
@@ -402,7 +397,7 @@ export default function Simulator({ session }) {
       <div className={`fixed inset-y-0 left-0 z-50 w-72 bg-white border-r border-slate-200 transform transition-transform duration-300 ease-in-out flex flex-col ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0`}>
         <div className="p-4 border-b border-slate-200 flex justify-between items-center bg-blue-700 text-white">
           <button onClick={() => navigate('/dashboard')} className="flex items-center gap-2 hover:bg-blue-600 px-2 py-1 rounded transition-colors text-sm font-bold">
-            <ChevronLeft size={16} /> Voltar
+            <ChevronLeft size={16} /> {t('back')}
           </button>
           <button onClick={() => setSidebarOpen(false)} className="md:hidden">
             <X size={20} />
@@ -412,12 +407,12 @@ export default function Simulator({ session }) {
         <div className="p-4 border-b border-slate-100 bg-slate-50">
           <div className="flex justify-between items-end mb-2">
             <div className="flex flex-col">
-              <span className="text-[10px] font-bold text-slate-400 uppercase">Respondidas</span>
+              <span className="text-[10px] font-bold text-slate-400 uppercase">{t('answered')}</span>
               <span className="text-sm font-black text-slate-700">{totalAnswered} / {questions.length}</span>
             </div>
             
             <div className={`flex flex-col items-end text-right ${mode === 'exam' && !simuladorFinalizado ? 'hidden' : ''}`}>
-                <span className="text-[10px] font-bold text-slate-400 uppercase leading-none mb-1">Acertos</span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase leading-none mb-1">{t('corrects')}</span>
                 <span className="text-xl font-black text-emerald-600 leading-none">
                     {totalAnswered > 0 ? Math.round((correctCount / totalAnswered) * 100) : 0}%
                 </span>
@@ -456,7 +451,7 @@ export default function Simulator({ session }) {
               >
                 <div className="flex flex-col">
                   <span className={`text-sm font-bold ${isCurrent ? 'text-blue-700' : 'text-slate-700'}`}>
-                    Questão {idx + 1}
+                    {t('question')} {idx + 1}
                   </span>
                 </div>
                 {isAnswered && !isLocked && (
@@ -478,7 +473,7 @@ export default function Simulator({ session }) {
             className="w-full flex items-center justify-center gap-2 py-3 px-4 text-white bg-slate-800 hover:bg-slate-900 shadow-md rounded-xl font-bold transition-all disabled:opacity-50"
           >
             <CheckCircle2 size={18} />
-            Finalizar Simulado
+            {t('finish_simulado')}
           </button>
           
           {type === 'geral' && (
@@ -487,7 +482,7 @@ export default function Simulator({ session }) {
               className="w-full flex items-center justify-center gap-2 py-3 px-4 mt-2 text-red-600 bg-red-50 hover:bg-red-100 border border-red-100 rounded-xl font-bold transition-all"
             >
               <RotateCcw size={18} />
-              Zerar Estudo Geral
+              {t('reset_geral')}
             </button>
           )}
         </div>
@@ -507,28 +502,28 @@ export default function Simulator({ session }) {
                         {finalScore >= 70 ? <Trophy size={48} /> : <Target size={48} />}
                     </div>
                     
-                    <h1 className="text-4xl font-black text-slate-900 mb-2">Relatório de Desempenho</h1>
-                    <p className="text-slate-500 font-medium mb-8 uppercase tracking-widest text-xs">Simulado {type} • Modo {mode === 'exam' ? 'Prova Real' : 'Estudo'}</p>
+                    <h1 className="text-4xl font-black text-slate-900 mb-2">{t('performance_report')}</h1>
+                    <p className="text-slate-500 font-medium mb-8 uppercase tracking-widest text-xs">{t('question')} {type} • Modo {mode === 'exam' ? t('exam_real_mode') : t('exam_study_mode')}</p>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
                         <div className="bg-slate-50 p-4 rounded-2xl">
-                            <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">Nota Final</p>
+                            <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">{t('nota_final')}</p>
                             <p className={`text-3xl font-black ${finalScore >= 70 ? 'text-emerald-600' : 'text-red-600'}`}>
                                 {finalScore * 10} <span className="text-sm font-bold text-slate-400">/ 1000</span>
                             </p>
                         </div>
                         <div className="bg-slate-50 p-4 rounded-2xl">
-                            <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">Status</p>
+                            <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">{t('status')}</p>
                             <p className={`text-[10px] font-black p-1 rounded-lg ${finalScore >= 70 ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
-                                {finalScore >= 70 ? 'APROVADO' : 'REPROVADO'}
+                                {finalScore >= 70 ? t('approved') : t('failed')}
                             </p>
                         </div>
                         <div className="bg-slate-50 p-4 rounded-2xl">
-                            <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">Acertos</p>
+                            <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">{t('corrects')}</p>
                             <p className="text-3xl font-black text-slate-800">{correctCount}</p>
                         </div>
                         <div className="bg-slate-50 p-4 rounded-2xl">
-                            <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">Total</p>
+                            <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">{t('total')}</p>
                             <p className="text-3xl font-black text-slate-800">{questions.length}</p>
                         </div>
                     </div>
@@ -538,7 +533,7 @@ export default function Simulator({ session }) {
                             onClick={() => navigate('/dashboard')}
                             className="px-8 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-black transition-all shadow-lg flex items-center gap-2 text-sm"
                         >
-                            <ArrowLeft size={18} /> Voltar ao Painel
+                            <ArrowLeft size={18} /> {t('back_dashboard')}
                         </button>
                         
                         {finalScore >= 80 && mode === 'exam' && (
@@ -546,7 +541,7 @@ export default function Simulator({ session }) {
                                 onClick={() => generateCertificate(profile?.full_name || userEmail.split('@')[0], finalScore, new Date().toLocaleDateString())}
                                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black rounded-2xl hover:scale-105 transition-all shadow-xl flex items-center gap-2 text-sm"
                             >
-                                <Trophy size={18} /> Baixar Certificado PDF
+                                <Trophy size={18} /> {t('download_cert')}
                             </button>
                         )}
                         
@@ -557,14 +552,14 @@ export default function Simulator({ session }) {
                             }}
                             className="px-8 py-4 bg-white text-slate-600 border border-slate-200 font-bold rounded-2xl hover:bg-slate-50 transition-all flex items-center gap-2 text-sm"
                         >
-                            <BookOpen size={18} /> Revisar Questões
+                            <BookOpen size={18} /> {t('review_q')}
                         </button>
                     </div>
                 </div>
 
                 <div id="detalhes-revisao" className="space-y-8 no-copy pb-32">
                     <h2 className="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3">
-                        <ListChecks size={28} className="text-blue-600" /> Revisão de Questões
+                        <ListChecks size={28} className="text-blue-600" /> {t('revisao_titulo')}
                     </h2>
                     {questions.map((q, idx) => {
                         const answer = progress[q.id];
@@ -572,9 +567,9 @@ export default function Simulator({ session }) {
                         return (
                             <div key={idx} className={`bg-white rounded-3xl border ${isCorrect ? 'border-emerald-100' : 'border-red-100'} shadow-sm overflow-hidden`}>
                                 <div className={`px-6 py-4 flex justify-between items-center ${isCorrect ? 'bg-emerald-50' : 'bg-red-50'}`}>
-                                    <span className="font-black text-slate-800 text-sm">Questão {idx + 1}</span>
+                                    <span className="font-black text-slate-800 text-sm">{t('question')} {idx + 1}</span>
                                     <span className={`px-3 py-1 rounded-full text-[10px] font-black ${isCorrect ? 'bg-emerald-200 text-emerald-800' : 'bg-red-200 text-red-800'}`}>
-                                        {isCorrect ? 'ACERTO' : 'ERRO'}
+                                        {isCorrect ? t('correct') : t('wrong')}
                                     </span>
                                 </div>
                                 <div className="p-8">
@@ -601,7 +596,7 @@ export default function Simulator({ session }) {
 
                                     <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
                                         <h4 className="font-black text-blue-900 mb-1 flex items-center gap-2 text-sm">
-                                            <Lightbulb size={18} /> Explicação Detalhada
+                                            <Lightbulb size={18} /> {t('detail_explain')}
                                         </h4>
                                         <div className="space-y-4">
                                             {typeof q.explanation === 'string' ? (
@@ -610,19 +605,19 @@ export default function Simulator({ session }) {
                                                 <>
                                                     {q.explanation?.papoReto && (
                                                         <div className="bg-white/60 p-4 rounded-xl border border-blue-100/50">
-                                                            <p className="text-xs font-black text-blue-800 uppercase mb-2">Papo Reto</p>
+                                                            <p className="text-xs font-black text-blue-800 uppercase mb-2">{t('straight_talk_title')}</p>
                                                             <p className="text-sm text-slate-600 leading-relaxed no-copy">{q.explanation.papoReto}</p>
                                                         </div>
                                                     )}
                                                     {q.explanation?.puloDoGato && (
                                                         <div className="bg-amber-100/30 p-4 rounded-xl border border-amber-100">
-                                                            <p className="text-xs font-black text-amber-800 uppercase mb-2">Pulo do Gato</p>
+                                                            <p className="text-xs font-black text-amber-800 uppercase mb-2">{t('pro_tip_title')}</p>
                                                             <p className="text-sm text-amber-900/80 leading-relaxed no-copy">{q.explanation.puloDoGato}</p>
                                                         </div>
                                                     )}
                                                     {q.explanation?.cascasDeBanana && (
                                                         <div className="bg-red-50/50 p-4 rounded-xl border border-red-100">
-                                                            <p className="text-xs font-black text-red-800 uppercase mb-2">Cascas de Banana</p>
+                                                            <p className="text-xs font-black text-red-800 uppercase mb-2">{t('pitfalls_title')}</p>
                                                             <div className="space-y-2">
                                                                 {Array.isArray(q.explanation.cascasDeBanana) ? (
                                                                     q.explanation.cascasDeBanana.map((item, i) => (
@@ -637,7 +632,7 @@ export default function Simulator({ session }) {
                                                     {q.explanation?.dicaOuro && (
                                                         <div className="bg-gradient-to-r from-amber-100 to-amber-50 p-4 rounded-xl border border-amber-200">
                                                             <p className="text-xs font-black text-amber-700 uppercase mb-1 flex items-center gap-2">
-                                                                <Trophy size={14} /> Dica de Ouro
+                                                                <Trophy size={14} /> {t('golden_tip_title')}
                                                             </p>
                                                             <p className="text-sm text-amber-900 font-bold leading-relaxed no-copy">{q.explanation.dicaOuro}</p>
                                                         </div>
@@ -701,10 +696,10 @@ export default function Simulator({ session }) {
           {paywallReached ? (
             <div className="max-w-2xl mx-auto mt-20 p-8 bg-white border border-slate-200 rounded-3xl shadow-xl text-center">
                 <Target size={64} className="text-amber-500 mx-auto mb-6" />
-                <h2 className="text-3xl font-black text-slate-800 mb-4">Limite Gratuito Atingido</h2>
-                <p className="text-slate-600 text-lg mb-8 font-medium">As próximas questões fazem parte do conjunto Premium do simulador. Não pare agora, você está no caminho da aprovação!</p>
+                <h2 className="text-3xl font-black text-slate-800 mb-4">{t('paywall_title')}</h2>
+                <p className="text-slate-600 text-lg mb-8 font-medium">{t('paywall_desc')}</p>
                 <button onClick={() => navigate('/')} className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg w-full py-4 rounded-xl font-bold transition-colors">
-                    Fazer Meu Upgrade Para Premium
+                    {t('upgrade_btn')}
                 </button>
             </div>
           ) : (
@@ -713,7 +708,7 @@ export default function Simulator({ session }) {
                 <div className="mb-6">
                 <div className="flex items-center gap-2 mb-4">
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 text-[10px] font-black rounded-full uppercase tracking-wider">
-                        Questão {currentQuestionIndex + 1} de {questions.length}
+                        {t('question')} {currentQuestionIndex + 1} {t('of')} {questions.length}
                     </span>
                     <span className="px-3 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded-full uppercase tracking-tight">
                         {currentQuestion.domain || 'Microsoft Power Platform'}
@@ -780,7 +775,7 @@ export default function Simulator({ session }) {
                     : 'bg-slate-300 opacity-50 cursor-not-allowed'
                     }`}
                 >
-                    {mode === 'exam' ? (currentQuestionIndex === questions.length - 1 ? 'Finalizar Prova Real' : 'Próxima Questão') : 'Confirmar Resposta'}
+                    {mode === 'exam' ? (currentQuestionIndex === questions.length - 1 ? t('finish_exam') : t('next_question')) : t('confirm_answer')}
                 </button>
                 )}
 
@@ -793,16 +788,16 @@ export default function Simulator({ session }) {
                         : 'bg-gradient-to-r from-red-400 to-red-500 text-white'
                         }`}>
                     {selectedOption === currentQuestion.correctAnswer ? (
-                        <><Check size={32} /> ACERTO EXATO!</>
+                        <><Check size={32} /> {t('success_match')}</>
                     ) : (
-                        <><X size={32} /> VOCÊ ERROU</>
+                        <><X size={32} /> {t('error_wrong')}</>
                     )}
                     </div>
 
                     <div className="bg-white rounded-[2rem] border border-slate-200 shadow-xl overflow-hidden mb-10">
                         <div className="p-6 border-b border-slate-100 bg-slate-50 flex items-center gap-3">
                             <BookOpen className="text-blue-600" size={24} />
-                            <h3 className="font-black text-slate-800 text-xl">Análise da Questão</h3>
+                            <h3 className="font-black text-slate-800 text-xl">{t('analysis_title')}</h3>
                         </div>
 
                         <div className="p-6 space-y-6 text-slate-700">
@@ -823,7 +818,7 @@ export default function Simulator({ session }) {
                                     {currentQuestion.explanation?.papoReto && (
                                     <div className="bg-blue-50 shadow-sm p-6 rounded-2xl border border-blue-100">
                                         <h4 className="font-black text-blue-900 flex items-center gap-2 mb-3">
-                                            <Target size={20} className="text-blue-600" /> Traduzindo para o "Papo Reto"
+                                            <Target size={20} className="text-blue-600" /> {t('straight_talk_title')}
                                         </h4>
                                         <p className="whitespace-pre-wrap leading-relaxed no-copy font-medium text-slate-700">{currentQuestion.explanation.papoReto}</p>
                                     </div>
@@ -833,7 +828,7 @@ export default function Simulator({ session }) {
                                     {currentQuestion.explanation?.puloDoGato && (
                                     <div className="bg-amber-50/50 p-6 rounded-2xl border border-amber-200">
                                         <h4 className="font-black text-amber-900 flex items-center gap-2 mb-3">
-                                            <Lightbulb size={20} className="text-amber-600" /> O Pulo do Gato (Por que essa é a certa?)
+                                            <Lightbulb size={20} className="text-amber-600" /> {t('pro_tip_title')}
                                         </h4>
                                         <p className="whitespace-pre-wrap leading-relaxed no-copy font-medium text-amber-900/80">{currentQuestion.explanation.puloDoGato}</p>
                                     </div>
@@ -843,7 +838,7 @@ export default function Simulator({ session }) {
                                     {currentQuestion.explanation?.cascasDeBanana && (
                                     <div className="bg-red-50/50 p-6 rounded-2xl border border-red-100">
                                         <h4 className="font-black text-red-900 flex items-center gap-2 mb-3">
-                                            <AlertCircle size={20} className="text-red-600" /> Cascas de Banana (Por que as outras estão erradas?)
+                                            <AlertCircle size={20} className="text-red-600" /> {t('pitfalls_title')}
                                         </h4>
                                         <div className="space-y-3">
                                             {Array.isArray(currentQuestion.explanation.cascasDeBanana) ? (
@@ -864,7 +859,7 @@ export default function Simulator({ session }) {
                                     {currentQuestion.explanation?.dicaOuro && (
                                     <div className="bg-gradient-to-r from-amber-100 to-amber-50 p-6 rounded-2xl border border-amber-200 shadow-sm">
                                         <h4 className="font-black text-amber-900 mb-2 flex items-center gap-2">
-                                            <Trophy size={20} className="text-amber-600" /> Dica de Ouro para a prova:
+                                            <Compass size={20} className="text-emerald-600" /> {t('golden_tip_title')}
                                         </h4>
                                         <p className="text-amber-900 font-bold text-lg leading-relaxed no-copy">{currentQuestion.explanation.dicaOuro}</p>
                                     </div>
@@ -880,7 +875,7 @@ export default function Simulator({ session }) {
                             onClick={() => setCurrentQuestionIndex(prev => prev + 1)}
                             className="w-full sm:w-auto bg-slate-900 text-white px-10 py-5 rounded-2xl font-black shadow-xl hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 group"
                         >
-                            PRÓXIMA QUESTÃO <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                            {t('next_q_upper')} <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </button>
                     )}
                 </div>
@@ -898,7 +893,7 @@ export default function Simulator({ session }) {
                         disabled={currentQuestionIndex === 0}
                         className="flex items-center gap-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 px-4 py-2 rounded-xl disabled:opacity-30 transition-all font-bold text-xs"
                     >
-                        <ArrowLeft size={16} /> QUESTÃO ANTERIOR
+                        <ArrowLeft size={16} /> {t('prev_q_upper')}
                     </button>
 
                     <button
@@ -914,7 +909,7 @@ export default function Simulator({ session }) {
                     disabled={!progress[currentQuestion.id] && !showExplanation} 
                     className="flex items-center gap-2 py-3 px-8 bg-slate-900 hover:bg-black disabled:bg-slate-300 text-white rounded-xl font-black shadow-lg transition-all text-xs"
                     >
-                    {currentQuestionIndex < questions.length - 1 ? 'PRÓXIMA QUESTÃO' : 'FINALIZAR SIMULADO'} <ChevronRight size={16} />
+                    {currentQuestionIndex < questions.length - 1 ? t('next_q_upper') : t('finish_upper')} <ChevronRight size={16} />
                     </button>
                 </div>
             </div>

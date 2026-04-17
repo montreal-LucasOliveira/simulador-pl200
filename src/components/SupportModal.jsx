@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { X, Send, AlertCircle, CheckCircle2, Loader2, MessageSquare } from 'lucide-react';
+import { LanguageContext } from '../contexts/LanguageContext';
+import { useContext } from 'react';
 
 export default function SupportModal({ isOpen, onClose, userSession, initialSubject = 'Suporte' }) {
+  const { t } = useContext(LanguageContext);
   const [subject, setSubject] = useState(initialSubject);
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState(userSession?.user?.email || '');
@@ -42,7 +45,7 @@ export default function SupportModal({ isOpen, onClose, userSession, initialSubj
 
     } catch (err) {
       console.error('Erro ao enviar suporte:', err);
-      setError('Ocorreu um erro ao enviar sua mensagem. Tente novamente em alguns instantes.');
+      setError(t('support_error_desc'));
     } finally {
       setLoading(false);
     }
@@ -78,8 +81,8 @@ export default function SupportModal({ isOpen, onClose, userSession, initialSubj
               <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle2 size={48} />
               </div>
-              <h3 className="text-2xl font-black text-slate-800 mb-2">Mensagem Enviada!</h3>
-              <p className="text-slate-500 font-medium">Recebemos sua solicitação e responderemos em breve.</p>
+              <h3 className="text-2xl font-black text-slate-800 mb-2">{t('support_success_title')}</h3>
+              <p className="text-slate-500 font-medium">{t('support_success_desc')}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -91,20 +94,20 @@ export default function SupportModal({ isOpen, onClose, userSession, initialSubj
 
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2">Assunto</label>
+                  <label className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2">{t('subject_label')}</label>
                   <select 
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     className="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all font-bold text-slate-700"
                   >
-                    <option value="Suporte">Dúvidas/Suporte</option>
-                    <option value="Problema">Relatar Problema</option>
-                    <option value="Financeiro">Pagamento/Assinatura</option>
-                    <option value="Sugestão">Sugestão de Melhoria</option>
+                    <option value="Suporte">{t('subject_support')}</option>
+                    <option value="Problema">{t('subject_problem')}</option>
+                    <option value="Financeiro">{t('subject_finance')}</option>
+                    <option value="Sugestão">{t('subject_suggestion')}</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2">Seu E-mail</label>
+                  <label className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2">{t('email_label')}</label>
                   <input 
                     type="email"
                     value={email}
@@ -118,13 +121,13 @@ export default function SupportModal({ isOpen, onClose, userSession, initialSubj
               </div>
 
               <div>
-                <label className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2">Sua Mensagem</label>
+                <label className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-2">{t('message_label')}</label>
                 <textarea 
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
                   rows="4"
-                  placeholder="Descreva aqui sua dúvida ou o problema que encontrou..."
+                  placeholder={t('message_placeholder')}
                   className="w-full p-6 bg-slate-50 border border-slate-200 rounded-3xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all font-medium text-slate-700 resize-none"
                 ></textarea>
               </div>
@@ -134,11 +137,11 @@ export default function SupportModal({ isOpen, onClose, userSession, initialSubj
                 disabled={loading}
                 className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black text-lg py-5 rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-xl shadow-slate-200 disabled:opacity-50"
               >
-                {loading ? <Loader2 className="animate-spin" /> : <><Send size={20} /> ENVIAR CHAMADO</>}
+                {loading ? <Loader2 className="animate-spin" /> : <><Send size={20} /> {t('send_request')}</>}
               </button>
               
               <p className="text-[10px] text-center text-slate-400 font-bold uppercase tracking-tighter">
-                Seu e-mail está seguro. Não compartilhamos seus dados com terceiros.
+                {t('email_secure_note')}
               </p>
             </form>
           )}

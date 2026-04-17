@@ -241,24 +241,24 @@ export default function Dashboard({ session }) {
       { 
           id: 'livro', 
           icone: <BookOpen size={28} className={history.length >= 10 ? "text-indigo-600" : "text-slate-300"}/>, 
-          titulo: 'Maratonista', 
-          desc: 'Completou mais de 10 simulados.', 
+          titulo: t('ach_marathon_title'), 
+          desc: t('ach_marathon_desc'), 
           grad: history.length >= 10 ? 'from-blue-400 to-indigo-600' : 'from-slate-100 to-slate-200',
           conquistado: history.length >= 10
       },
       { 
           id: 'alvo', 
           icone: <Target size={28} className={history.some(h => h.score >= 70) ? "text-teal-600" : "text-slate-300"}/>, 
-          titulo: 'Precisão', 
-          desc: 'Nota de corte batida pela primeira vez.', 
+          titulo: t('ach_precision_title'), 
+          desc: t('ach_precision_desc'), 
           grad: history.some(h => h.score >= 70) ? 'from-emerald-400 to-teal-500' : 'from-slate-100 to-slate-200',
           conquistado: history.some(h => h.score >= 70)
       },
       { 
           id: 'trofeu', 
           icone: <Trophy size={28} className={history.some(h => h.score === 100) ? "text-amber-500" : "text-slate-300"}/>, 
-          titulo: 'Perfeccionista', 
-          desc: 'Acertou 100% de um simulado.', 
+          titulo: t('ach_perfect_title'), 
+          desc: t('ach_perfect_desc'), 
           grad: history.some(h => h.score === 100) ? 'from-yellow-300 to-amber-500' : 'from-slate-100 to-slate-200',
           conquistado: history.some(h => h.score === 100)
       },
@@ -268,8 +268,8 @@ export default function Dashboard({ session }) {
              const hr = new Date(h.created_at).getHours();
              return hr >= 22 || hr <= 4;
         }) ? "text-purple-600" : "text-slate-300"}/>, 
-        titulo: 'Corujão', 
-        desc: 'Estudando madrugada adentro (22h - 04h).', 
+        titulo: t('ach_owl_title'), 
+        desc: t('ach_owl_desc'), 
         grad: history.some(h => {
             const hr = new Date(h.created_at).getHours();
             return hr >= 22 || hr <= 4;
@@ -285,8 +285,8 @@ export default function Dashboard({ session }) {
              const hr = new Date(h.created_at).getHours();
              return hr >= 5 && hr <= 9;
         }) ? "text-amber-500" : "text-slate-300"}/>, 
-        titulo: 'Madrugador', 
-        desc: 'Foco total nas primeiras horas do dia.', 
+        titulo: t('ach_sun_title'), 
+        desc: t('ach_sun_desc'), 
         grad: history.some(h => {
             const hr = new Date(h.created_at).getHours();
             return hr >= 5 && hr <= 9;
@@ -299,16 +299,16 @@ export default function Dashboard({ session }) {
       { 
         id: 'shield', 
         icone: <Shield size={28} className={streak >= 7 ? "text-blue-600" : "text-slate-300"}/>, 
-        titulo: 'Inabalável', 
-        desc: '7 dias seguidos de dedicação.', 
+        titulo: t('ach_shield_title'), 
+        desc: t('ach_shield_desc'), 
         grad: streak >= 7 ? 'from-blue-400 to-blue-700' : 'from-slate-100 to-slate-200',
         conquistado: streak >= 7
       },
        { 
         id: 'award', 
         icone: <Award size={28} className={history.some(h => h.exam_type === 'avançado' && h.passed) ? "text-red-600" : "text-slate-300"}/>, 
-        titulo: 'Mestre da Prova', 
-        desc: 'Aprovação confirmada no nível Avançado (Simulado Prova Real).', 
+        titulo: t('ach_award_title'), 
+        desc: t('ach_award_desc'), 
         grad: history.some(h => h.exam_type === 'avançado' && h.passed) ? 'from-red-400 to-red-700' : 'from-slate-100 to-slate-200',
         conquistado: history.some(h => h.exam_type === 'avançado' && h.passed)
       },
@@ -454,7 +454,7 @@ export default function Dashboard({ session }) {
                         {seloModal.desc}
                     </p>
                     <button onClick={() => setSeloModal(null)} className="mt-6 w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition-colors">
-                        Incrível! Voltar ao Painel
+                        {t('amazing_back')}
                     </button>
                 </div>
             </div>
@@ -466,7 +466,7 @@ export default function Dashboard({ session }) {
         <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex justify-end">
             <div className="bg-white w-full max-w-md h-full shadow-2xl flex flex-col animate-fade-in-up">
                 <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
-                    <h2 className="font-black text-xl flex items-center gap-2"><TrendingUp className="text-blue-600" /> Histórico Pleno</h2>
+                    <h2 className="font-black text-xl flex items-center gap-2"><TrendingUp className="text-blue-600" /> {t('history_plenary')}</h2>
                     <button onClick={() => setHistoricoCompletoAberto(false)} className="p-2 bg-slate-200 hover:bg-slate-300 rounded-full"><X size={18}/></button>
                 </div>
                 <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-slate-50">
@@ -478,11 +478,11 @@ export default function Dashboard({ session }) {
                          </div>
                          <div className="flex flex-col items-end">
                              <span className={`font-black text-xl ${h.passed ? 'text-emerald-500' : 'text-red-500'}`}>{h.score * 10}</span>
-                             <span className="text-[10px] text-slate-400 font-bold uppercase">{h.passed ? 'Passou' : 'Reprovou'}</span>
+                             <span className="text-[10px] text-slate-400 font-bold uppercase">{h.passed ? t('passed_simple') : t('failed_simple')}</span>
                          </div>
                      </div>
                     ))}
-                    {history.length === 0 && <p className="text-center text-slate-400 font-bold">Nenhum simulado finalizado.</p>}
+                    {history.length === 0 && <p className="text-center text-slate-400 font-bold">{t('no_pending_requests')}</p>}
                 </div>
             </div>
         </div>
@@ -668,7 +668,7 @@ export default function Dashboard({ session }) {
                 
                 <div className="h-[250px] w-full">
                     {radarData.length > 0 ? (
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer width="100%" height={250}>
                             <RadarChart cx="50%" cy="50%" outerRadius="55%" data={radarData}>
                                 <PolarGrid stroke="#e2e8f0" />
                                 <PolarAngleAxis dataKey="subject" tick={<RenderCustomTick />} />
@@ -904,9 +904,9 @@ export default function Dashboard({ session }) {
                             <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-slate-300">
                                 <Award size={40} />
                             </div>
-                            <h3 className="text-lg font-black text-slate-800 mb-2">Nenhum certificado disponível</h3>
+                            <h3 className="text-lg font-black text-slate-800 mb-2">{t('no_certs_title')}</h3>
                             <p className="text-sm text-slate-500 font-medium max-w-xs mx-auto leading-relaxed">
-                                Para conquistar seu certificado, você precisa atingir pelo menos <span className="text-blue-600 font-bold">80% de acerto</span> no Simulado Avançado (Modo Prova Real).
+                                {t('no_certs_desc')}
                             </p>
                             <button 
                                 onClick={() => {
@@ -915,14 +915,14 @@ export default function Dashboard({ session }) {
                                 }}
                                 className="mt-8 px-8 py-3 bg-blue-600 text-white font-black rounded-xl hover:bg-blue-700 transition-colors shadow-lg"
                             >
-                                Iniciar Prova Real Agora
+                                {t('start_real_now')}
                             </button>
                         </div>
                     )}
                 </div>
                 
                 <div className="p-6 bg-slate-50 border-t border-slate-100 flex justify-center">
-                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">Plataforma Certificada PL-200 Premium</p>
+                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">{t('certified_platform')}</p>
                 </div>
             </div>
         </div>

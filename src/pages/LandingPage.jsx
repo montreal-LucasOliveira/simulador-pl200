@@ -26,7 +26,7 @@ export default function LandingPage() {
         // Validação de Senha (Mín 6 chars, Letras e Números)
         const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$/;
         if (!passwordRegex.test(password)) {
-          throw new Error('A senha deve ter no mínimo 6 caracteres e conter letras e números.');
+          throw new Error(t('auth_pass_req'));
         }
 
         // Gerar apelido aleatório inicial
@@ -50,7 +50,7 @@ export default function LandingPage() {
         if (data.session) {
             navigate('/dashboard');
         } else {
-            alert('Cadastro realizado! Verifique seu e-mail para confirmar o acesso.');
+            alert(t('auth_signup_success'));
             setIsSignUp(false);
         }
       } else {
@@ -160,7 +160,7 @@ export default function LandingPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all font-medium text-slate-800"
-                    placeholder="ex: voce@empresa.com"
+                    placeholder={t('email_placeholder')}
                   />
                 </div>
                 <div>

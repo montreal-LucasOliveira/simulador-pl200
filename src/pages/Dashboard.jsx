@@ -49,7 +49,7 @@ const RenderCustomTick = ({ payload, x, y, textAnchor, stroke, radius }) => {
 
 export default function Dashboard({ session }) {
   const navigate = useNavigate();
-  const { t } = useContext(LanguageContext);
+  const { language, t } = useContext(LanguageContext);
   const [history, setHistory] = useState([]);
   const [streak, setStreak] = useState(0);
 
@@ -67,85 +67,99 @@ export default function Dashboard({ session }) {
   const [showCertificatesModal, setShowCertificatesModal] = useState(false);
   const [showSupport, setShowSupport] = useState(false);
   const [supportSubject, setSupportSubject] = useState('Suporte');
+  const [selectedHistoryItem, setSelectedHistoryItem] = useState(null);
 
   const fetchHistory = async () => {
     if (!session?.user?.id) return;
     
     setLoadingHistory(true);
-    const { data, error } = await supabase
-      .from('simulator_history')
-      .select('*')
-      .eq('user_id', session.user.id)
-      .order('created_at', { ascending: false });
+    try {
+      const { data, error } = await supabase
+        .from('simulator_history')
+        .select('*')
+        .eq('user_id', session.user.id)
+        .order('created_at', { ascending: false });
 
-    if (error) {
-      console.error("Erro ao buscar histórico:", error);
-    } else {
-      // Map dos tipos para nomes amigáveis
-      const mappedData = data.map(h => ({
-        id: h.id,
-        date: new Date(h.created_at).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' }),
-        type: h.exam_type.charAt(0).toUpperCase() + h.exam_type.slice(1),
-        score: h.score,
-        passed: h.passed,
-        domain_stats: h.domain_stats
-      }));
-      setHistory(mappedData);
+      if (error) {
+        console.error("Erro ao buscar histórico:", error);
+      } else {
+        // Map dos tipos para nomes amigáveis (Internacionalizado)
+        const mappedData = data.map(h => {
+          let displayType = h.exam_type;
+          if (h.exam_type === 'iniciante') displayType = t('beginner');
+          else if (h.exam_type === 'intermediario') displayType = t('intermediate');
+          else if (h.exam_type === 'avancado') displayType = t('advanced_sim');
+          else if (h.exam_type === 'geral') displayType = t('study_mode');
 
-      // NOVO: Processamento para o Gráfico de Radar (Etapa 3)
-      // Agregamos os últimos 5 simulados para ter uma média de desempenho por tema
-      const statsAggregator = {};
-      const recentTests = data.slice(0, 5);
-      
-      recentTests.forEach(test => {
-         if (test.domain_stats) {
-            Object.keys(test.domain_stats).forEach(domain => {
-               if (!statsAggregator[domain]) statsAggregator[domain] = { correct: 0, total: 0 };
-               statsAggregator[domain].correct += test.domain_stats[domain].correct;
-               statsAggregator[domain].total += test.domain_stats[domain].total;
-            });
-         }
-      });
+          return {
+            id: h.id,
+            date: new Date(h.created_at).toLocaleDateString(language === 'en' ? 'en-US' : 'pt-BR', { day: '2-digit', month: 'long', year: 'numeric' }),
+            type: displayType,
+            score: h.score,
+            passed: h.passed,
+            domain_stats: h.domain_stats
+          };
+        });
+        setHistory(mappedData);
 
-      const chartData = Object.keys(statsAggregator).map(domain => ({
-         subject: domain,
-         fullMark: 100,
-         A: Math.round((statsAggregator[domain].correct / statsAggregator[domain].total) * 100)
-      }));
-
-      setRadarData(chartData);
-
-      // NOVO: Cálculo de Ofensiva (Streak) Real
-      const calculateStreak = (historyData) => {
-        if (!historyData || historyData.length === 0) return 0;
+        // NOVO: Processamento para o Gráfico de Radar (Etapa 3)
+        // Agregamos os últimos 5 simulados para ter uma média de desempenho por tema
+        const statsAggregator = {};
+        const recentTests = data.slice(0, 5);
         
-        const dates = [...new Set(historyData.map(h => 
-          new Date(h.created_at).toISOString().split('T')[0]
-        ))].sort().reverse();
+        recentTests.forEach(test => {
+           if (test.domain_stats) {
+              Object.keys(test.domain_stats).forEach(domain => {
+                 if (!statsAggregator[domain]) statsAggregator[domain] = { correct: 0, total: 0 };
+                 statsAggregator[domain].correct += test.domain_stats[domain].correct;
+                 statsAggregator[domain].total += test.domain_stats[domain].total;
+              });
+           }
+        });
 
-        let currentStreak = 0;
-        const today = new Date().toISOString().split('T')[0];
-        const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+        const chartData = Object.keys(statsAggregator).map(domain => ({
+           subject: domain,
+           fullMark: 100,
+           A: Math.round((statsAggregator[domain].correct / statsAggregator[domain].total) * 100)
+        }));
 
-        if (dates[0] !== today && dates[0] !== yesterday) return 0;
+        setRadarData(chartData);
 
-        let checkDate = dates[0] === today ? new Date() : new Date(Date.now() - 86400000);
-        
-        for (let i = 0; i < dates.length; i++) {
-          const dateStr = checkDate.toISOString().split('T')[0];
-          if (dates.includes(dateStr)) {
-            currentStreak++;
-            checkDate.setDate(checkDate.getDate() - 1);
-          } else {
-            break;
+        // NOVO: Cálculo de Ofensiva (Streak) Real
+        const calculateStreak = (historyData) => {
+          if (!historyData || historyData.length === 0) return 0;
+          
+          const dates = [...new Set(historyData.map(h => 
+            new Date(h.created_at).toISOString().split('T')[0]
+          ))].sort().reverse();
+
+          let currentStreak = 0;
+          const today = new Date().toISOString().split('T')[0];
+          const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+
+          if (dates[0] !== today && dates[0] !== yesterday) return 0;
+
+          let checkDate = dates[0] === today ? new Date() : new Date(Date.now() - 86400000);
+          
+          for (let i = 0; i < dates.length; i++) {
+            const dateStr = checkDate.toISOString().split('T')[0];
+            if (dates.includes(dateStr)) {
+              currentStreak++;
+              checkDate.setDate(checkDate.getDate() - 1);
+            } else {
+              break;
+            }
           }
-        }
-        return currentStreak;
-      };
+          return currentStreak;
+        };
 
-      setStreak(calculateStreak(data));
+        setStreak(calculateStreak(data));
+      }
+    } catch (err) {
+      console.error("Erro fatal no fetchHistory:", err);
+    } finally {
+      setLoadingHistory(false);
     }
-    setLoadingHistory(false);
   };
 
   const fetchRanking = async () => {
@@ -164,9 +178,15 @@ export default function Dashboard({ session }) {
         
         if (hError) throw hError;
 
-        // Agregador de Pontos
+        // Agregador de Pontos Otimizado (O(N+M))
+        const historyMap = historyData.reduce((acc, curr) => {
+            if (!acc[curr.user_id]) acc[curr.user_id] = [];
+            acc[curr.user_id].push(curr);
+            return acc;
+        }, {});
+
         const userRanking = profilesData.map(p => {
-            const userStats = historyData.filter(h => h.user_id === p.id);
+            const userStats = historyMap[p.id] || [];
             const totalPoints = userStats.reduce((acc, curr) => acc + curr.correct_answers, 0);
             const bestScore = userStats.length > 0 ? Math.max(...userStats.map(h => h.score)) : 0;
             return {
@@ -194,6 +214,21 @@ export default function Dashboard({ session }) {
     fetchHistory();
     fetchProfile();
     fetchRanking();
+
+    // Auto-create profile if missing (Frontend fallback)
+    const checkAndCreateProfile = async () => {
+      if (!session?.user) return;
+      const { data } = await supabase.from('profiles').select('id').eq('id', session.user.id).single();
+      if (!data) {
+        await supabase.from('profiles').insert({
+          id: session.user.id,
+          email: session.user.email,
+          nickname: session.user.user_metadata?.nickname || `Aluno_${Math.floor(Math.random() * 9000) + 1000}`,
+          is_premium: true
+        });
+      }
+    };
+    checkAndCreateProfile();
   }, [session]);
 
   const handleLogout = async () => {
@@ -471,18 +506,115 @@ export default function Dashboard({ session }) {
                 </div>
                 <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-slate-50">
                     {history.map((h, i) => (
-                         <div key={i} className="flex items-center justify-between p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                         <div>
-                             <span className={`text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md ${h.type === 'Avançado' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}`}>{h.type}</span>
-                             <div className="font-bold text-slate-800 mt-1">{h.date}</div>
+                         <div 
+                            key={i} 
+                            onClick={() => setSelectedHistoryItem(h)}
+                            className="flex items-center justify-between p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-md transition-all cursor-pointer group"
+                         >
+                            <div className="flex items-center gap-4">
+                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${h.passed ? 'bg-emerald-100 text-emerald-600' : 'bg-red-100 text-red-600'}`}>
+                                    {h.passed ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
+                                </div>
+                                <div>
+                                    <span className={`text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md ${h.type === 'Avançado' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}`}>{h.type}</span>
+                                    <div className="font-bold text-slate-800 mt-1">{h.date}</div>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <div className="flex flex-col items-end">
+                                    <span className={`font-black text-xl ${h.passed ? 'text-emerald-500' : 'text-red-500'}`}>{h.score * 10}</span>
+                                    <span className="text-[10px] text-slate-400 font-bold uppercase">{h.passed ? t('passed_simple') : t('failed_simple')}</span>
+                                </div>
+                                <ChevronRight size={18} className="text-slate-300 group-hover:text-blue-500 transition-colors" />
+                            </div>
                          </div>
-                         <div className="flex flex-col items-end">
-                             <span className={`font-black text-xl ${h.passed ? 'text-emerald-500' : 'text-red-500'}`}>{h.score * 10}</span>
-                             <span className="text-[10px] text-slate-400 font-bold uppercase">{h.passed ? t('passed_simple') : t('failed_simple')}</span>
-                         </div>
-                     </div>
                     ))}
                     {history.length === 0 && <p className="text-center text-slate-400 font-bold">{t('no_pending_requests')}</p>}
+                </div>
+            </div>
+        </div>
+      )}
+
+      {/* MODAL DE DETALHES DO RESULTADO */}
+      {selectedHistoryItem && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[60] flex justify-center items-center p-4" onClick={() => setSelectedHistoryItem(null)}>
+            <div className="bg-white rounded-[2.5rem] w-full max-w-2xl overflow-hidden shadow-2xl transform transition-all animate-fade-in-up" onClick={e => e.stopPropagation()}>
+                <div className={`h-32 bg-gradient-to-br ${selectedHistoryItem.passed ? 'from-emerald-500 to-teal-600' : 'from-red-500 to-rose-600'} w-full relative flex justify-between items-center px-8`}>
+                    <div>
+                        <h3 className="text-white font-black text-2xl">{t('performance_report', 'Relatório de Desempenho')}</h3>
+                        <p className="text-white/80 font-bold text-sm uppercase tracking-widest">{selectedHistoryItem.type} • {selectedHistoryItem.date}</p>
+                    </div>
+                    <button onClick={() => setSelectedHistoryItem(null)} className="p-2 bg-white/20 hover:bg-white/30 rounded-full text-white transition-colors">
+                        <X size={20} />
+                    </button>
+                </div>
+
+                <div className="p-8">
+                    <div className="grid grid-cols-3 gap-6 mb-10">
+                        <div className="bg-slate-50 p-6 rounded-3xl text-center border border-slate-100">
+                            <p className="text-[10px] font-black text-slate-400 uppercase mb-1">{t('nota_final', 'Nota Final')}</p>
+                            <p className={`text-4xl font-black ${selectedHistoryItem.passed ? 'text-emerald-600' : 'text-red-600'}`}>{selectedHistoryItem.score * 10}</p>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-3xl text-center border border-slate-100">
+                            <p className="text-[10px] font-black text-slate-400 uppercase mb-1">{t('status', 'Status')}</p>
+                            <div className={`inline-flex px-3 py-1 rounded-lg text-[10px] font-black uppercase ${selectedHistoryItem.passed ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
+                                {selectedHistoryItem.passed ? t('passed_simple', 'Aprovado') : t('failed_simple', 'Reprovado')}
+                            </div>
+                        </div>
+                        <div className="bg-slate-50 p-6 rounded-3xl text-center border border-slate-100 flex flex-col items-center justify-center">
+                            <p className="text-[10px] font-black text-slate-400 uppercase mb-1">{t('target_score', 'Meta')}</p>
+                            <p className="text-xl font-black text-slate-800">700</p>
+                        </div>
+                    </div>
+
+                    <h4 className="font-black text-slate-800 mb-6 flex items-center gap-2 uppercase tracking-wider text-sm">
+                        <PieChart size={18} className="text-blue-600" /> {t('performance_domain')}
+                    </h4>
+
+                    <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+                        {selectedHistoryItem.domain_stats && Object.keys(selectedHistoryItem.domain_stats).map((domain, idx) => {
+                            const stats = selectedHistoryItem.domain_stats[domain];
+                            const percent = Math.round((stats.correct / stats.total) * 100);
+                            return (
+                                <div key={idx} className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                                    <div className="flex justify-between items-center mb-2">
+                                        <span className="font-bold text-slate-700 text-sm">{domain}</span>
+                                        <span className={`text-xs font-black ${percent >= 70 ? 'text-emerald-600' : 'text-amber-600'}`}>{percent}%</span>
+                                    </div>
+                                    <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden">
+                                        <div 
+                                            className={`h-full rounded-full transition-all duration-1000 ${percent >= 70 ? 'bg-emerald-500' : 'bg-amber-500'}`} 
+                                            style={{ width: `${percent}%` }}
+                                        ></div>
+                                    </div>
+                                    <p className="text-[10px] text-slate-400 mt-1 font-bold">{stats.correct} {t('corrects', 'Acertos')} de {stats.total} {t('total', 'Questões')}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="mt-10 flex gap-4">
+                        <button 
+                            onClick={() => setSelectedHistoryItem(null)}
+                            className="flex-1 py-4 bg-slate-100 text-slate-600 font-black rounded-2xl hover:bg-slate-200 transition-all"
+                        >
+                            {t('back', 'Voltar')}
+                        </button>
+                        <button 
+                            onClick={() => navigate(`/simulator/review?historyId=${selectedHistoryItem.id}`)}
+                            className="flex-1 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-black transition-all shadow-xl flex items-center justify-center gap-2"
+                        >
+                            <BookOpen size={18} /> {t('review_q', 'Revisar Questões')}
+                        </button>
+                        {selectedHistoryItem.score >= 80 && (
+                             <button 
+                                onClick={() => generateCertificate(profile?.full_name || userEmail.split('@')[0], selectedHistoryItem.score, selectedHistoryItem.date)}
+                                className="flex-1 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl flex items-center justify-center gap-2"
+                             >
+                                <Award size={18} /> {t('download_cert', 'Certificado')}
+                             </button>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

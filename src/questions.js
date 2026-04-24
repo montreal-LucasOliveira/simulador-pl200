@@ -4192,106 +4192,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Business Units e Security Roles...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Business. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação focada em Segurança e Governança do Dataverse (PL-200):",
+            "papoReto": "No Dataverse, a estrutura fundamental para organizar e restringir o acesso a dados por departamentos ou níveis da empresa são as Business Units (Unidades de Negócios), que sempre trabalham em conjunto com as Security Roles (Diretrizes de Segurança).",
+            "puloDoGato": "Sempre que o enunciado falar sobre 'nível macro', 'divisão por departamentos' ou 'hierarquia de organização', a resposta correta será a estrutura de Business Units.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Plugins...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Business Rules: Elas servem para aplicar lógica em formulários (ex: tornar um campo obrigatório), não controlam quem pode visualizar ou editar registros no banco de dados.",
+                "Plugins e Fluxos: São usados para automação de processos ou lógicas complexas de backend, e não para estruturar a matriz de segurança organizacional padrão."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
-        }
-    },
-    {
-        "id": "pl200_oficial_223",
-        "domain": "Microsoft Dataverse",
-        "difficulty": "iniciante",
-        "text": "Qual recurso nativo do Dataverse permite restringir dados baseados no nível macro da organização e da hierarquia de usuários? Cenario 2",
-        "options": [
-            "Business Rules",
-            "Business Units e Security Roles",
-            "Plugins",
-            "Fluxos"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Business Units e Security Roles...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Business. A Microsoft sempre favorece a solução menos invasiva.",
-            "cascasDeBanana": [
-                "A opção envolvendo \"Plugins...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
-            ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
-        }
-    },
-    {
-        "id": "pl200_oficial_224",
-        "domain": "Microsoft Dataverse",
-        "difficulty": "iniciante",
-        "text": "Qual recurso nativo do Dataverse permite restringir dados baseados no nível macro da organização e da hierarquia de usuários? Cenario 3",
-        "options": [
-            "Business Rules",
-            "Business Units e Security Roles",
-            "Plugins",
-            "Fluxos"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Business Units e Security Roles...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Business. A Microsoft sempre favorece a solução menos invasiva.",
-            "cascasDeBanana": [
-                "A opção envolvendo \"Plugins...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
-            ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
-        }
-    },
-    {
-        "id": "pl200_oficial_225",
-        "domain": "Microsoft Dataverse",
-        "difficulty": "iniciante",
-        "text": "Qual recurso nativo do Dataverse permite restringir dados baseados no nível macro da organização e da hierarquia de usuários? Cenario 4",
-        "options": [
-            "Business Rules",
-            "Business Units e Security Roles",
-            "Plugins",
-            "Fluxos"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Business Units e Security Roles...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Business. A Microsoft sempre favorece a solução menos invasiva.",
-            "cascasDeBanana": [
-                "A opção envolvendo \"Plugins...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
-            ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
-        }
-    },
-    {
-        "id": "pl200_oficial_226",
-        "domain": "Microsoft Dataverse",
-        "difficulty": "iniciante",
-        "text": "Qual recurso nativo do Dataverse permite restringir dados baseados no nível macro da organização e da hierarquia de usuários? Cenario 5",
-        "options": [
-            "Business Rules",
-            "Business Units e Security Roles",
-            "Plugins",
-            "Fluxos"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Business Units e Security Roles...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Business. A Microsoft sempre favorece a solução menos invasiva.",
-            "cascasDeBanana": [
-                "A opção envolvendo \"Plugins...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
-            ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Hierarquia corporativa ou controle de acesso por departamento = Business Units + Security Roles."
         }
     },
     {
@@ -4307,14 +4215,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Rollup...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Rollup. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação detalhada para o exame PL-200:",
+            "papoReto": "Campos de Acúmulo (Rollup Fields) são projetados especificamente para agregar valores de registros relacionados, como somar o valor de todas as subcontas vinculadas a uma conta principal. Eles calculam esses valores de forma assíncrona no servidor a cada 12 horas (por padrão).",
+            "puloDoGato": "A palavra-chave aqui é 'a cada 12 horas' e 'soma de subcontas'. Agregação assíncrona periódica de registros filhos aponta sempre para Rollup.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Currency...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Calculated: Campos calculados processam operações matemáticas em tempo real (ex: Preço * Quantidade) usando dados da mesma tabela ou de uma tabela pai, mas não agregam uma lista de registros filhos de forma assíncrona.",
+                "Currency/Decimal: São apenas os tipos de dados numéricos do campo, não a lógica de agregação."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Soma/Média de registros filhos com delay = Rollup. Cálculo imediato na mesma linha = Calculated."
         }
     },
     {
@@ -4330,14 +4238,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Chaves Alternativas (Alternate Keys)...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Chaves. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação detalhada para o exame PL-200:",
+            "papoReto": "Dataflows usam o Power Query Online para extrair, transformar e carregar dados (ETL). É a melhor forma de trazer dados de Excel, SQL ou APIs para o Dataverse de forma recorrente.",
+            "puloDoGato": "Se a pergunta fala em 'Importação diária' ou 'Transformar dados antes de subir', pense em Dataflow.",
             "cascasDeBanana": [
-                "A opção envolvendo \"OData...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Import Wizard (Importação simples): Serve para arquivos únicos, não para rotinas automáticas.",
+                "Copy Data do Azure: É muito avançado e exige Azure. Dataflow é Low-code dentro da Power Platform."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "ETL Low-code (Power Query) = Dataflow."
         }
     },
     {
@@ -4353,14 +4261,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Ele continua sem acesso, pois falta...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Ele. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação focada no modelo de segurança do Dataverse:",
+            "papoReto": "Compartilhar (Share) um registro com um usuário no Dataverse NUNCA sobrepõe as permissões fundamentais da sua Função de Segurança (Security Role). O Compartilhamento só expande o *escopo* (quem pode ver a linha), mas não concede o *privilégio base* (o direito de ler a tabela).",
+            "puloDoGato": "Se a Role do usuário diz 'Sem acesso à tabela Casos', nenhum compartilhamento no mundo fará ele enxergar o registro. A permissão da Tabela (Security Role) sempre vence.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Ele vira System Admin...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Achar que 'Share' é absoluto: Muitos pensam que compartilhar dá acesso total, mas o Dataverse faz a interseção: Privilégio Base + Escopo. Sem Privilégio Base, o Escopo não importa.",
+                "Virar Admin: O compartilhamento afeta apenas um registro específico e nunca eleva privilégios gerais da plataforma."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Compartilhamento não cria privilégio de tabela. Sem privilégio na Role = Sem acesso ao registro, não importa se foi compartilhado."
         }
     },
     {
@@ -4376,14 +4284,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Auditoria e Lógica de Plugin...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Auditoria. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Otimização e importação de dados no Dataverse (PL-200):",
+            "papoReto": "Ao fazer cargas massivas de dados históricos (Data Migration), cada registro inserido pode disparar plugins síncronos, fluxos e gerar logs de auditoria. Isso causa lentidão extrema ou falhas por timeout. A prática recomendada é desativar temporariamente a Auditoria e processos personalizados (Plugins) antes da carga.",
+            "puloDoGato": "Migração de dados em massa requer 'silenciar' o ambiente. Auditoria ocupa muito espaço e processamento, e Plugins adicionam lógica que não é necessária para dados legados já processados em outros sistemas.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Apenas Plugins...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Apenas Plugins: Desativar plugins ajuda, mas a Auditoria também gera um overhead gigantesco no banco de dados durante milhares de inserções.",
+                "Desativar o Tenant: Isso derrubaria todo o sistema Microsoft 365 para todos os usuários."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Carga massiva/Migração de dados legados = Desative Auditoria + Plugins/Fluxos temporariamente."
         }
     },
     {
@@ -4399,14 +4307,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Sitemap Designer...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Sitemap. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação sobre a estrutura de Model-driven apps:",
+            "papoReto": "A navegação do painel lateral esquerdo (com Áreas, Grupos e Subáreas) em um aplicativo Model-driven é controlada e configurada exclusivamente pela ferramenta chamada Sitemap Designer.",
+            "puloDoGato": "O Sitemap é o esqueleto do menu. Toda vez que a questão falar sobre 'adicionar item no menu de navegação' ou 'navegação lateral no Model-driven', a resposta é Sitemap.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Canvas...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Model Builder (App Designer): Você usa o App Designer para escolher quais tabelas farão parte do app em si, mas a estrutura hierárquica exata do menu é construída na aba de Sitemap.",
+                "Canvas: Canvas apps têm navegação manual via botões e a função Navigate(), que é um paradigma totalmente diferente da estrutura fixa de Model-driven."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Menu lateral de navegação hierárquica do Model-driven = Sitemap."
         }
     },
     {
@@ -4422,14 +4330,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Patch()...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Patch(). A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação sobre funções de atualização no Canvas Apps:",
+            "papoReto": "A função Patch() é usada no Power Apps para criar ou atualizar registros individuais em uma fonte de dados de forma silenciosa e direta via código, ignorando completamente os controles de formulário tradicionais (EditForm).",
+            "puloDoGato": "Se você quer uma ação rápida e direta num botão dentro de uma galeria (como um botão de 'Curtir' ou 'Aprovar status' instantâneo), o Patch() é a ferramenta oficial certa.",
             "cascasDeBanana": [
-                "A opção envolvendo \"ClearCollect()...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "EditForm / SubmitForm: Essas funções exigem que você tenha um controle visual de Formulário na tela para vincular os dados que serão salvos.",
+                "ClearCollect(): Usado estritamente para criar Coleções (tabelas locais provisórias em memória), ele não altera registros na fonte de dados (banco) original."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Atualizar dado direto via código em um botão sem abrir formulário = Patch()."
         }
     },
     {
@@ -4445,14 +4353,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Apenas os primeiros 500 ou 2000...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Apenas. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação sobre Delegação (Delegation) em Canvas Apps (PL-200):",
+            "papoReto": "O aviso de delegação significa que a fonte de dados (ex: Dataverse) não consegue executar a pesquisa diretamente no servidor. Como resultado, o Power Apps fará o download local apenas dos primeiros 500 registros (limite padrão, expansível até 2000) e fará a pesquisa apenas nesse lote no dispositivo do usuário, ignorando o resto do banco de dados.",
+            "puloDoGato": "Delegação = 'Quem faz o esforço?'. Se o Power Apps não pode delegar para o servidor, ele tenta fazer sozinho, limitando-se aos primeiros 500/2000 itens para não travar o celular.",
             "cascasDeBanana": [
-                "A opção envolvendo \"O app excluirá os registr...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "O app excluirá os registros excedentes: Errado, os registros continuam intactos e seguros no banco, eles apenas não aparecem no filtro do app porque não foram baixados.",
+                "Não salva dados: O problema de delegação afeta operações de leitura/pesquisa (Search, Filter), e não operações de escrita (Patch/SubmitForm)."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Aviso de Delegação amarelo = Filtro incompleto (o app só lê os primeiros 500 ou 2000 registros)."
         }
     },
     {
@@ -4468,14 +4376,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"SaveData e LoadData...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de SaveData. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação sobre funcionamento Offline em Canvas Apps:",
+            "papoReto": "Para criar aplicativos que funcionem completamente desconectados da internet (offline), você precisa armazenar dados em coleções locais físicas no dispositivo do usuário. As funções oficiais para gravar e ler coleções na memória interna (cache do celular/tablet) são SaveData() e LoadData().",
+            "puloDoGato": "Na prova, a necessidade de 'inspecionar sem internet', atuar em 'área remota' ou usar 'cache local' no Power Apps sempre apontará para o combo de funções SaveData e LoadData.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Power Automate HTTP...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Patch e Submit: Estas funções exigem obrigatoriamente uma conexão ativa com a internet/servidor para gravar dados em tempo real no banco (como Dataverse ou SharePoint).",
+                "Power Automate HTTP: Um fluxo em nuvem (Cloud Flow) jamais rodará se o dispositivo que faz o gatilho estiver sem acesso à internet."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Aplicativo Canvas Offline Nativo = Função SaveData() para guardar na memória + Função LoadData() para ler a memória."
         }
     },
     {
@@ -4491,14 +4399,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Recorrente (Recurrence) Agendado...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Recorrente. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação sobre gatilhos (Triggers) no Power Automate:",
+            "papoReto": "Fluxos em nuvem (Cloud Flows) no Power Automate que precisam rodar em intervalos de tempo fixos, dias específicos da semana, ou em um horário exato diário (como à meia-noite) devem utilizar obrigatoriamente o gatilho 'Scheduled Cloud Flow' através do conector de Agendamento/Recorrência (Recurrence).",
+            "puloDoGato": "Sempre preste atenção no enunciado: a presença de palavras como 'todo dia', 'todo mês', 'semanalmente' ou 'às 20h00' indica instantaneamente que o modelo de fluxo é o Agendado (Scheduled/Recurrence).",
             "cascasDeBanana": [
-                "A opção envolvendo \"Automático Dataverse...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Automático Dataverse / Modificado: Isso caracteriza um fluxo reativo (Automated Cloud Flow). Ele dispara reagindo a um evento (ex: alguém criou/modificou uma linha), e não baseado num relógio.",
+                "Botão Manual: Esse é um fluxo instantâneo (Instant/Button Flow). Requer interferência humana para apertar o botão e iniciar o processo."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Fluxo autônomo baseado no Relógio/Tempo = Scheduled Flow (Ação de Recorrência)."
         }
     },
     {
@@ -4514,14 +4422,14 @@ export const questionsData = [
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Parse JSON (Analisar Data)...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Parse. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Trabalhando com dados estruturados no Power Automate (PL-200):",
+            "papoReto": "Sempre que você consome uma API externa (HTTP) que retorna um corpo de dados em formato JSON, o Power Automate enxerga isso apenas como um bloco de texto gigante. A ação 'Parse JSON' analisa esse texto, compara com um esquema pré-definido (Schema) e converte o texto em propriedades (Dynamic Content) que você pode selecionar nos próximos passos.",
+            "puloDoGato": "Se a prova mencionar 'recebeu payload HTTP' ou 'recebeu um JSON' e perguntar como usar os campos individuais depois, a resposta 100% das vezes é usar a ação Parse JSON.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Filter Array...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Filter Array: Essa ação serve para filtrar itens dentro de uma matriz (lista) já existente, não tem a capacidade de traduzir uma string de texto puro em propriedades dinâmicas.",
+                "Compose: O Compose serve para armazenar, debugar ou manipular um valor temporário simples, mas não mapeia dados criando propriedades filhas visíveis baseadas em um schema."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Transformar resposta em texto JSON da API em campos visíveis e clicáveis = Parse JSON."
         }
     },
     {
@@ -4537,14 +4445,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Configurar Executar Depois de (Run After)...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Configurar. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Tratamento de erros e exceções (Error Handling) no Power Automate:",
+            "papoReto": "Para impedir que a falha de uma ação específica (ex: um Timeout de banco de dados) faça o fluxo inteiro falhar, você deve configurar o 'Run After' (Executar Depois de). Essa configuração é feita nas reticências (...) da ação que vem IMEDIATAMENTE APÓS a ação problemática, definindo que ela deve rodar se a ação anterior 'Falhou', 'Deu Timeout' ou foi 'Ignorada'.",
+            "puloDoGato": "Esta configuração é o equivalente do Power Automate ao bloco 'Try/Catch' na programação. O grande segredo para a prova é lembrar que a configuração não é feita no passo que dá erro, mas sim no passo seguinte.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Elevar Licença Premium...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Adicionar Ação Cancelar: Isso forçaria o fluxo a parar imediatamente com status de erro, que é o oposto do que desejamos.",
+                "Adicionar Branch Paralela: Ramificações paralelas correm simultaneamente. Se a ação no branch principal der Timeout e falhar, a execução como um todo (o status do fluxo) ainda será classificada como Falha (Failed)."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "O fluxo inteiro não pode parar se um único passo falhar = Configure o 'Run After' (Executar depois) no passo seguinte."
         }
     },
     {
@@ -4560,14 +4468,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Liquid...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Liquid. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Linguagem de Template do Power Pages:",
+            "papoReto": "O Power Pages utiliza nativamente uma linguagem de marcação open-source chamada 'Liquid'. Diferente do JavaScript que roda no navegador do usuário, o Liquid processa a lógica de negócios (como injetar dados dinâmicos de um usuário logado) no servidor antes da página ser enviada para o cliente.",
+            "puloDoGato": "Se a prova mencionar 'puxar dados dinâmicos do portal no servidor' ou 'tags estruturais em Power Pages', a resposta 100% das vezes é Liquid.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Python...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "JavaScript: Executa do lado do cliente (client-side) e não serve para renderização segura e protegida baseada em servidor no portal.",
+                "C#: É usado para criar Plugins e extensões avançadas no Dataverse, mas o construtor nativo de páginas do portal não aceita C# diretamente nos templates HTML."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Linguagem de marcação de Servidor do Power Pages = Liquid."
         }
     },
     {
@@ -4583,14 +4491,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Anonymous User...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Anonymous. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Explicação detalhada para o exame PL-200:",
+            "papoReto": "No Power Pages, você gerencia usuários que não logaram usando a Web Role de 'Anonymous Users'. Isso permite que eles vejam páginas públicas ou preencham formulários de captação.",
+            "puloDoGato": "Sempre que o cenário for 'Público Geral' ou 'Lead sem cadastro', use Anonymous Web Role.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Guest Role...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Authenticated User Role: É aplicada automaticamente SÓ para quem fez login.",
+                "Azure AD B2B: É para convidados com e-mail, não para anônimos totais."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Acesso sem login = Anonymous Web Role."
         }
     },
     {
@@ -4606,14 +4514,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Nas Environment Variables (Variáveis de Ambiente)...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Nas. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Gestão de Credenciais com Application Lifecycle Management (ALM):",
+            "papoReto": "Para evitar o código fixo (hardcode) de URLs ou senhas em seus fluxos e apps, você deve utilizar as Variáveis de Ambiente (Environment Variables) dentro de uma Solução. Quando você migra a solução para outro ambiente, o Dataverse pergunta o novo valor, conectando tudo corretamente ao banco de PRD sem precisar abrir o editor do app.",
+            "puloDoGato": "Sempre que o cenário falar sobre 'evitar mudar links ou senhas na mão' durante um deploy (ALM), as Variáveis de Ambiente são a solução de governança correta.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Em XML locais...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "XML Locais: O Dataverse é um SaaS em nuvem, não lemos arquivos XML salvos localmente na máquina do desenvolvedor para pegar credenciais.",
+                "Dataflow: Serve para importar dados, não gerencia chaves de sistema da Solução."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Dados que mudam entre DEV e PRD (Senhas, URLs, IDs) = Variáveis de Ambiente (Environment Variables)."
         }
     },
     {
@@ -4629,14 +4537,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Visão Geral do Recurso no MS Power Platform:",
-            "papoReto": "A melhor abordagem recomendada pelo oficial da Microsoft é utilizar ativamente \"Gerenciada (Managed)...\". O motivo principal é que, sob o escopo do exame PL-200, essa é a ferramenta padr�o (nativa) projetada para suprir essa exata carência sem exigir desenvolvimento customizado elevado.",
-            "puloDoGato": "Na hora da prova, se bater a dúvida e o enunciado mencionar esse cenário, associe imediatamente com o uso de Gerenciada. A Microsoft sempre favorece a solução menos invasiva.",
+            "intro": "Tipos de Soluções no Dataverse (Managed vs Unmanaged):",
+            "papoReto": "A regra sagrada da Microsoft para ALM é: ambientes de Desenvolvimento (DEV) usam Soluções Não Gerenciadas (Unmanaged), permitindo edição livre. Ao exportar para enviar para ambientes de Teste (UAT) ou Produção (PRD), o pacote OBRIGATORIAMENTE deve ser exportado como Solução Gerenciada (Managed), impedindo que usuários da ponta alterem a estrutura.",
+            "puloDoGato": "Guarde essa linha do tempo: DEV = Unmanaged. PRD = Managed. Qualquer resposta que diga para levar um pacote Unmanaged para Produção está automaticamente errada.",
             "cascasDeBanana": [
-                "A opção envolvendo \"Não Gerenciada (Unmanaged...\" parece tentadora, mas atua em um nível de governança/arquitetura incorreto para esse caso específico.",
-                "As demais alternativas ou necessitam de licenças premium paralelas ou se referem a componentes que não integram nativamente nesse cenário isolado."
+                "Unmanaged em Produção: Isso permitiria que usuários comuns apagassem colunas ou quebrassem fluxos ativamente na produção, além de ser impossível desinstalar de forma limpa depois.",
+                "Pacote Azure: ALM na plataforma Power foca nas 'Solutions'."
             ],
-            "dicaOuro": "Sempre valide os limites da licença e a segurança. Nem tudo que pode ser feito, DEVE ser feito se uma ferramenta simples já resolve."
+            "dicaOuro": "Destino Final (Produção) de um pacote de Solução = Solução Gerenciada (Managed Solution)."
         }
     },
     {
@@ -4652,14 +4560,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "Neste cenário de negócio, a resposta é impreterivelmente \"Fluxos de Dados (Dataflows)\". Por demanda do exame Microsoft, utilizamos esse módulo por sua aderência ao framework sem código.",
-            "puloDoGato": "Identificou o recurso principal listado? Ele resolve a lacuna de sistema.",
+            "intro": "Importação e Transformação Massiva de Dados (ETL):",
+            "papoReto": "Para tarefas repetitivas, em grande volume e agendadas diariamente de extração e transformação (ETL) sem envolver programadores, a ferramenta dedicada da Power Platform é o Dataflows (Fluxos de Dados), que usa a poderosa interface do Power Query.",
+            "puloDoGato": "Importações agendadas e robustas sem código? A Microsoft empurra o Power Query (via Dataflows). É exatamente a mesma tela usada no Power BI para transformar dados.",
             "cascasDeBanana": [
-                "Evite selecionar \"Azure Logic Apps Integrado...\", pois forçaria um redesenho de processos.",
-                "Opções que requerem administração global de M365 geralmente estão erradas para Consultores Funcionais PL-200."
+                "Logic Apps e Plugin C#: A questão exige 'O processo não pode exigir código', eliminando essas opções Pro-Code.",
+                "Power BI: Serve para mostrar dados gerando relatórios, e não para escrever (inserir fisicamente) dados de faturamento dentro da tabela do Dataverse."
             ],
-            "dicaOuro": "Ancore seu conhecimento: A ferramenta certa é quase sempre Fluxos de Dados (Dataflows)."
+            "dicaOuro": "ETL de dados diário sem código (Low Code) para o Dataverse = Dataflows (Power Query)."
         }
     },
     {
@@ -4675,14 +4583,14 @@ export const questionsData = [
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "Neste cenário de negócio, a resposta é impreterivelmente \"Camera Control\". Por demanda do exame Microsoft, utilizamos esse módulo por sua aderência ao framework sem código.",
-            "puloDoGato": "Identificou o recurso principal listado? Ele resolve a lacuna de sistema.",
+            "intro": "Uso de Sensores e Hardware do Celular em Canvas Apps:",
+            "papoReto": "O Power Apps se aproveita dos recursos nativos do celular do usuário. Para abrir a lente do celular de forma interativa para bater uma foto (ex: relatar avaria num equipamento), usa-se o Controle de Câmera (Camera Control).",
+            "puloDoGato": "A prova testa seu conhecimento sobre quais controles capturam mídia nativa.",
             "cascasDeBanana": [
-                "Evite selecionar \"Barcode Scanner...\", pois forçaria um redesenho de processos.",
-                "Opções que requerem administração global de M365 geralmente estão erradas para Consultores Funcionais PL-200."
+                "Image Control: O controle de imagem apenas EXIBE uma imagem já salva ou puxada do banco, não ativa a câmera ao vivo para capturar o momento.",
+                "Barcode Scanner: Embora use a câmera, ele é projetado por baixo dos panos exclusivamente para ler códigos de barras e QR codes, não extraindo a foto crua do cenário para enviar."
             ],
-            "dicaOuro": "Ancore seu conhecimento: A ferramenta certa é quase sempre Camera Control."
+            "dicaOuro": "Tirar foto na hora pelo app (Inspeções) = Camera Control (Controle de Câmera)."
         }
     },
     {
@@ -4698,14 +4606,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "Neste cenário de negócio, a resposta é impreterivelmente \"Fluxo de Nuvem Automatizado (Automated)\". Por demanda do exame Microsoft, utilizamos esse módulo por sua aderência ao framework sem código.",
-            "puloDoGato": "Identificou o recurso principal listado? Ele resolve a lacuna de sistema.",
+            "intro": "Tipos de Fluxo de Nuvem no Power Automate:",
+            "papoReto": "Um fluxo que é disparado como reação a um evento do sistema (como 'Quando uma resposta for enviada' no Microsoft Forms) é classificado como um Fluxo de Nuvem Automatizado (Automated Cloud Flow).",
+            "puloDoGato": "A resposta reativa ('sempre que algo acontecer') indica um gatilho de Automação baseado em eventos.",
             "cascasDeBanana": [
-                "Evite selecionar \"Fluxo Desktop (RPA)...\", pois forçaria um redesenho de processos.",
-                "Opções que requerem administração global de M365 geralmente estão erradas para Consultores Funcionais PL-200."
+                "Agendado (Scheduled): Baseia-se no relógio, e não em ações de usuários preenchendo um formulário.",
+                "Fluxo Desktop (RPA): Usado para cliques de mouse em sistemas legados."
             ],
-            "dicaOuro": "Ancore seu conhecimento: A ferramenta certa é quase sempre Fluxo de Nuvem Automatizado."
+            "dicaOuro": "Fluxo disparado por um evento de sistema = Fluxo Automatizado (Automated Flow)."
         }
     },
     {
@@ -4721,14 +4629,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Segurança em Nível de Coluna (Field Level Security)\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Segurança de Dados Pessoais no Dataverse:",
+            "papoReto": "Para ocultar ou proteger o acesso a campos específicos de uma tabela (como CPFs, senhas ou salários) independentemente do acesso à tabela como um todo, usa-se a Segurança em Nível de Coluna (Field Level Security / Column Level Security).",
+            "puloDoGato": "A palavra 'mascarar' ou 'ocultar colunas de dados sensíveis' sempre aponta para o Field Level Security Profiles.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Data Loss Prevention (DLP): DLP bloqueia o uso de conectores inteiros, não bloqueia a visão de uma coluna específica no banco.",
+                "Dataverse Views: Um usuário mal intencionado poderia contornar a View e usar a busca avançada para achar a coluna desprotegida."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Bloquear acesso a um único campo na tela e no banco = Segurança em Nível de Coluna (Field Level Security)."
         }
     },
     {
@@ -4744,14 +4652,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Fluxo de Processo Empresarial\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Guias de Processo no Model-Driven App:",
+            "papoReto": "Para guiar o usuário de forma clara por etapas (como de 'Aprovação' para 'Pagamento') em um app Model-driven, o componente que cria a barra superior com fases é o Fluxo do Processo Empresarial (Business Process Flow - BPF).",
+            "puloDoGato": "Sempre que a questão citar 'orientar usuários', 'garantir que etapas sejam seguidas' ou 'fases de um negócio', a resposta é BPF.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Quick View Form: Serve apenas para exibir dados de uma tabela pai (read-only), não para gerenciar fluxo de trabalho.",
+                "Subgrade de Leitura: Apenas lista tabelas filhas."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Barra com etapas e fases no topo da tela = Business Process Flow (BPF)."
         }
     },
     {
@@ -4767,14 +4675,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Power Automate - Fluxo Agendado\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Automação baseada em tempo (Relógio):",
+            "papoReto": "Tarefas de manutenção que precisam rodar em um horário específico e recorrente (ex: 'todo dia às 20h') devem usar o gatilho de Recorrência dentro de um Fluxo Agendado (Scheduled Flow).",
+            "puloDoGato": "As palavras-chave 'diariamente', 'semanalmente' ou 'às 20h' sempre apontam para fluxos agendados.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Workflow Assíncrono do Dynamics: Solução antiga. Na era moderna (PL-200), rotinas de tempo são do Power Automate.",
+                "Plugin Cron Task: Criar código (Plugin) para tarefas diárias vai contra as melhores práticas de Low Code (Power Automate)."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Tarefa recorrente com hora marcada = Power Automate Scheduled Flow."
         }
     },
     {
@@ -4790,14 +4698,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Regra de Negócios (Business Rule) com escopo de Entidade\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Validação de dados com Regras de Negócios (Business Rules):",
+            "papoReto": "Para aplicar lógicas de validação (como barrar valor negativo) que funcionem tanto na interface do usuário (Model-driven app) quanto no backend (via importação de dados ou APIs), deve-se usar uma Regra de Negócios configurada no escopo de 'Entidade' (Entity).",
+            "puloDoGato": "Regras de negócios configuradas em 'All Forms' protegem só a tela visual. Para proteger o banco contra APIs e importações de Excel, o Scope deve ser obrigatóriamente 'Entity'.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Plugin C#: Pode fazer o trabalho, mas a Microsoft foca no Low-code. Se dá para fazer com Business Rule, não se usa C#.",
+                "Power Automate: Fluxos de nuvem são péssimos para 'impedir' em tempo real a digitação antes de salvar."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Regra de bloqueio de dados obrigatória em todos os níveis (App e API) = Business Rule no escopo de Entidade (Entity)."
         }
     },
     {
@@ -4813,14 +4721,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Azure B2B Guest Accounts e Atribuição de Segurança\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Explicação detalhada para o exame PL-200:",
+            "papoReto": "Azure AD B2B permite convidar pessoas de fora da sua empresa (auditores, parceiros) para usarem seus apps com o e-mail deles.",
+            "puloDoGato": "Eles viram 'Guest Users' no seu diretório. Você ainda precisa dar uma licença (ou usar o Power Apps por App plan) e um Security Role.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Power Pages (Portals): Melhor para milhares de usuários anônimos. B2B: Melhor para poucos usuários específicos conhecidos.",
+                "Compartilhar por e-mail direto sem B2B: Não funciona em Model-driven."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Parceiro externo com e-mail próprio = Azure B2B Guest."
         }
     },
     {
@@ -4836,14 +4744,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Fallback Topic (Tópico de Sistema Padrão)\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Gestão de Entendimento do Power Virtual Agents:",
+            "papoReto": "Quando a inteligência artificial do PVA não consegue cruzar o que o usuário digitou com nenhuma Trigger Phrase (Frase de Gatilho) configurada, o sistema aciona de forma nativa o 'Fallback Topic' (Tópico de Falha/Contingência).",
+            "puloDoGato": "O Fallback Topic é a rede de segurança. É nele que você configura a mensagem 'Desculpe, não entendi, quer falar com um atendente?'.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Transferência direta ao humano: O Bot não desiste no primeiro erro sem antes tentar o Fallback (que pode apenas sugerir que o usuário repita).",
+                "Desconexão: O bot nunca derruba a conexão do cliente abruptamente por não entender a frase."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Quando o Bot não entende o que o usuário quer = Dispara o Fallback Topic."
         }
     },
     {
@@ -4859,14 +4767,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"No App.OnStart usar Set(VarUser, User().FullName)\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Explicação detalhada para o exame PL-200:",
+            "papoReto": "No Canvas App, variáveis globais (Set) guardam um valor que pode ser usado em qualquer tela do aplicativo.",
+            "puloDoGato": "App.OnStart é o lugar perfeito para carregar dados do usuário logado e guardar numa variável global.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "UpdateContext: Cria variáveis de contexto, que só funcionam na tela ATUAL.",
+                "Collections: Guardam tabelas de dados, não apenas um valor simples."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Variável para todo o app = Global Variable (Set)."
         }
     },
     {
@@ -4882,14 +4790,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Usar Condição de Gatilho (Trigger Conditions) testando colunas\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Prevenção de Loops no Power Automate:",
+            "papoReto": "Se um fluxo dispara ao modificar uma linha e, dentro do fluxo, ele atualiza essa mesma linha, ele disparará a si mesmo infinitamente. A solução técnica nativa é clicar nas Configurações do gatilho e escrever uma 'Trigger Condition' (Condição de Gatilho), fazendo com que o fluxo só inicie se determinado campo tiver um valor específico.",
+            "puloDoGato": "Evitar Loop Infinito em fluxos Dataverse = Trigger Conditions (Condições de Gatilho) ou Select Columns (Colunas Selecionadas).",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Expansão de API: Comprar mais limites não resolve o problema lógico, apenas faz você queimar dinheiro mais rápido no loop.",
+                "Workflow Clássico: A plataforma encoraja o uso de Cloud Flows modernos (Automate) com condições, não o retrocesso tecnológico."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Parar fluxo de disparar a si mesmo = Trigger Conditions (Condições de Gatilho)."
         }
     },
     {
@@ -4905,14 +4813,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Mosaico Power BI (Power BI Tile Control)\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Integração Power BI e Canvas Apps:",
+            "papoReto": "O Power Apps Studio (Canvas) possui um controle nativo chamado 'Power BI Tile' (Mosaico do Power BI). Ao arrastar esse controle para a tela, você seleciona o seu Workspace, o Dashboard e o Bloco (Tile) que deseja exibir visualmente dentro do aplicativo móvel.",
+            "puloDoGato": "Não invente moda com códigos HTML. O ecossistema tem um botão pronto para isso: Inserir > Gráficos > Mosaico do Power BI.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "URL IFrame: Iframes perdem a autenticação nativa cruzada e a interatividade otimizada do controle dedicado.",
+                "Image Box: O Image Control mostraria apenas um 'print' estático, sem interatividade ou filtros de dados em tempo real."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Visualizar gráfico do Power BI no Canvas = Power BI Tile Control (Controle Mosaico Power BI)."
         }
     },
     {
@@ -4928,14 +4836,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Variáveis de Tópico (Topic variables)\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Gestão de Estado em Power Virtual Agents:",
+            "papoReto": "No PVA (Copilot Studio), quando você faz perguntas ao usuário no meio de uma conversa (nome, idade, etc), você deve salvar essas respostas em Variáveis de Tópico (Topic Variables). Elas guardam o valor na memória durante a execução daquele fluxo de chat.",
+            "puloDoGato": "Lembre-se: 'Topic variables' funcionam apenas dentro do tópico atual. Se você precisar que o bot lembre o nome do cliente em OUTRO tópico, teria que usar 'Global variables' (Bot variables).",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Environment Variables: São usadas para guardar chaves de API e URLs de banco de dados na Solução (ALM), não respostas de chat de clientes.",
+                "Canvas App Collections: O bot roda na sua própria engine de conversação, independente das coleções locais de memória do Power Apps (ClearCollect)."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Lembrar dados que o cliente digitou no chat = Topic Variables (Variáveis de Tópico)."
         }
     },
     {
@@ -4951,14 +4859,14 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Pesquisa do Dataverse (Dataverse Search / Relevance)\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Mecanismos de Pesquisa no Dataverse:",
+            "papoReto": "O Dataverse possui um mecanismo de busca global em nuvem indexado chamado 'Dataverse Search' (antigamente chamado de Relevance Search). Ele permite que o usuário digite um termo na barra superior e o sistema pesquise instantaneamente em várias tabelas ao mesmo tempo (Contas, Contatos, Oportunidades), ordenando por relevância.",
+            "puloDoGato": "Pesquisa em Múltiplas Tabelas (Multi-table) de forma inteligente = Dataverse Search.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Advanced Find: O Localizador Avançado é muito poderoso, mas pesquisa em apenas uma tabela de cada vez construindo filtros SQL complexos.",
+                "Quick Find View: Pesquisa rápida funciona apenas na tabela que você está visualizando no momento."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Barra de busca global buscando em tudo ao mesmo tempo = Dataverse Search (Pesquisa do Dataverse)."
         }
     },
     {
@@ -4974,14 +4882,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Criando uma Data Loss Prevention (DLP policy)\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Governança e Segurança de Plataforma (DLP):",
+            "papoReto": "A ferramenta de administração (Tenant/Environment Admin) para bloquear que os desenvolvedores criem fluxos ou aplicativos que enviem dados internos para conectores externos de redes sociais (como Twitter) é a Política de Prevenção de Perda de Dados (DLP Policy).",
+            "puloDoGato": "A DLP divide os conectores em categorias (Business, Non-Business, Blocked). Bloqueou lá, ninguém na empresa consegue usar o conector.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Field Level Security: Protege o banco de dados internamente. Não impede que um funcionário pegue um campo permitido e envie para o Twitter via Power Automate.",
+                "Entra ID Roles: Controlam acesso ao sistema, não ao tráfego de conectores e APIs."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Bloquear conexões externas (Twitter, Dropbox, etc) = DLP Policy."
         }
     },
     {
@@ -4997,14 +4905,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Ativando o relatorio como 'Painel Pessoal' Power Apps e anexando o form\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Power BI em Formulários Model-Driven:",
+            "papoReto": "Você pode embutir relatórios do Power BI diretamente em um Formulário Principal do Dataverse. Historicamente (e na estrutura de algumas questões), isso exigia configurar um Personal Dashboard e embutir via controle XML, mas hoje o processo é feito adicionando o Controle de Relatório do Power BI no formulário e parametrizando-o para filtrar pelo registro da tela.",
+            "puloDoGato": "É perfeitamente possível ter BI dentro de formulários (não apenas em painéis soltos). Isso permite que o gerente veja um relatório filtrado apenas para a 'Conta' que ele está visualizando.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Não há suporte: O suporte para relatórios e tiles do Power BI no Model-driven é nativo e oficial.",
+                "Enviando PDF: Fere o princípio de sistemas integrados de tempo real e interativos."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Power BI rico dentro da página de Cliente (Model-driven) = Suportado nativamente via Controle de Formulário."
         }
     },
     {
@@ -5020,21 +4928,21 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200:",
-            "papoReto": "A solução oficial para o cenário é aplicar \"Para testes, desenvolvimento e treinamento seguros antes de ir para Produção\". É o recurso nativo exigido.",
-            "puloDoGato": "Identificou o recurso principal? Ele é a solução 'padr�o'.",
+            "intro": "Explicação detalhada para o exame PL-200:",
+            "papoReto": "Ambientes Sandbox são cópias seguras para teste. Eles possuem recursos como o 'Admin Mode' que bloqueia o acesso de usuários comuns enquanto você faz manutenção.",
+            "puloDoGato": "Sempre desenvolva em Sandbox e mova para Produção. Nunca teste direto no ambiente que os usuários usam.",
             "cascasDeBanana": [
-                "Opções complexas com código C# ou chamadas externas costumam ser incorretas nesta prova.",
-                "Não confunda as validações de Canvas Apps com regras de escopo de Entidade do Dataverse."
+                "Default Environment: É o ambiente padrão que todo mundo tem acesso, não deve ser usado para desenvolvimento crítico.",
+                "Developer Environment: É para uso individual, Sandbox é para times testarem em conjunto."
             ],
-            "dicaOuro": "Sempre priorize low-code."
+            "dicaOuro": "Teste seguro = Sandbox."
         }
     },
     {
         "id": "pl200_oficial_v4_6000",
         "domain": "Criação de Chatbots com Power Virtual Agents",
         "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6000] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Qual a abordagem ideal de sistema?",
         "options": [
             "Entidade Personalizada",
             "Tópico de Sistema",
@@ -5043,21 +4951,21 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Explicação detalhada para o exame PL-200:",
+            "papoReto": "O Tópico de Fallback é acionado no Power Virtual Agents quando o bot não entende o que o usuário digitou (não deu match em nenhum gatilho).",
+            "puloDoGato": "É a rede de segurança do bot. Geralmente ele pede para o usuário repetir ou transfere para um humano.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Greeting: É o tópico de boas-vindas.",
+                "Escalation: É o tópico para falar com humano, mas ele é chamado de dentro do Fallback ou por palavras-chave."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Bot não entendeu nada = Fallback Topic."
         }
     },
     {
         "id": "pl200_oficial_v4_6001",
         "domain": "Criação de Chatbots com Power Virtual Agents",
         "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6001] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Qual a abordagem ideal de sistema?",
         "options": [
             "Bot Variable (Variável de Bot)",
             "Session Storage",
@@ -5066,21 +4974,21 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Escopo de Variáveis no Power Virtual Agents:",
+            "papoReto": "Se você precisa capturar o nome do cliente no início do chat (Tópico de Saudação) e quer que o bot lembre desse nome em QUALQUER outro Tópico subsequente (ex: Tópico de Faturamento, Tópico de Suporte), você deve usar uma Variável de Bot (Bot Variable / Global Variable).",
+            "puloDoGato": "Topic Variable (lembra só na conversa atual). Bot Variable (lembra no bot inteiro durante aquela sessão).",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Topic Variable: Esqueceria o nome do cliente assim que o Tópico de Saudação terminasse e passasse para outro.",
+                "Dataverse Table: Salva permanentemente no banco, mas a pergunta foca em 'armazenar para usar no fluxo da conversa (memória RAM do bot)'."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Lembrar dado em TODOS os tópicos do bot = Bot Variable (Global)."
         }
     },
     {
         "id": "pl200_oficial_v4_6002",
         "domain": "Criação de Chatbots com Power Virtual Agents",
         "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6002] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Qual a abordagem ideal de sistema?",
         "options": [
             "End User Request",
             "Fim do tópico",
@@ -5089,21 +4997,21 @@ export const questionsData = [
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Escalonamento (Escalation) de Chatbots para Humanos:",
+            "papoReto": "O nó nativo do Copilot Studio/PVA para transferir a conversa de um robô para uma pessoa real exige a configuração de um hub de engajamento (Engagement Hub). A arquitetura padrão e oficial da Microsoft para receber isso é o Dynamics 365 Omnichannel for Customer Service (Hand-off).",
+            "puloDoGato": "Transferir para humano requer Omnichannel. O bot empacota toda a transcrição da conversa e envia para a tela do atendente para que ele não precise fazer as mesmas perguntas novamente.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Trigger Action: Não há uma ação genérica que abre um chat mágico; exige a integração de Hand-off.",
+                "Fim do Tópico: Apenas encerra o chat com o cliente."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Transferir conversa do Robô para Atendente Humano = Hand-off para Omnichannel."
         }
     },
     {
         "id": "pl200_oficial_v4_6003",
         "domain": "Integração do Power BI",
         "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6003] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você foi designado a embutir grafico num portal usando Integração do Power BI. Qual a abordagem ideal de sistema?",
         "options": [
             "IFrame nativo iframe tag",
             "Power BI Embedded component",
@@ -5112,21 +5020,21 @@ export const questionsData = [
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Power BI em Portais do Power Pages:",
+            "papoReto": "Para embutir (embed) um relatório do Power BI de forma segura e responsiva em um site público ou extranet do Power Pages, usa-se a tag Liquid específica do componente Power BI Embedded (ex: `{% powerbi authentication_type:\"powerbiembedded\" path:\"...\" %}`).",
+            "puloDoGato": "A Microsoft possui um componente Liquid nativo 'Power BI' no Power Pages que lida com a autenticação de relatórios publicados na web ou via Embedded capacity.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "IFrame nativo: Se você usar apenas HTML cru (`<iframe>`), o portal não conseguirá passar os tokens de segurança nativamente para os visitantes.",
+                "PowerApps Canvas: Portais são feitos em HTML/Liquid (Power Pages), e não usando os quadros do Power Apps Canvas."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Exibir BI em portal Power Pages de forma segura = Componente Power BI Embedded (via tag Liquid)."
         }
     },
     {
         "id": "pl200_oficial_v4_6004",
         "domain": "Integração do Power BI",
         "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6004] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Qual a abordagem ideal de sistema?",
         "options": [
             "Dynamics Workflow",
             "SQL Trigger",
@@ -5135,21 +5043,21 @@ export const questionsData = [
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Atualização (Refresh) de Conjunto de Dados do Power BI:",
+            "papoReto": "Para forçar a atualização dos dados (Refresh Dataset) do Power BI fora do agendamento padrão da plataforma, a melhor integração é usar o Power Automate. Há uma ação oficial chamada 'Refresh a dataset' no conector do Power BI.",
+            "puloDoGato": "Se um gerente apertou um botão num app e quer ver o gráfico atualizado agora, o botão aciona um Automate que aciona o Refresh do Power BI.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "SQL Trigger: O Power BI é quem puxa a informação (Import), o banco SQL sozinho não empurra gráficos atualizados.",
+                "Dynamics Workflow: Workflows antigos não se comunicam ativamente com workspaces modernos do BI."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Forçar atualização de Dataset do Power BI via processos = Ação 'Refresh a dataset' no Power Automate."
         }
     },
     {
         "id": "pl200_oficial_v4_6005",
         "domain": "Microsoft Power Pages",
         "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6005] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Qual a abordagem ideal de sistema?",
         "options": [
             "B2B AD Guest",
             "Licença Premium Global",
@@ -5158,21 +5066,21 @@ export const questionsData = [
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Acesso e Autenticação no Power Pages:",
+            "papoReto": "O Power Pages foi construído para sites voltados para o público externo (B2B, B2C ou anônimos). Se o site é apenas informativo ou tem uma página de FAQ que qualquer um pode ver sem fazer login, o administrador apenas deixa a 'Autenticação Anônima' habilitada nas permissões da página.",
+            "puloDoGato": "Não é necessário licença, Entra ID ou B2C para usuários que não fazem login (visitantes anônimos).",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Entra ID required: É exigido para Power Apps (Canvas/Model-driven), mas o Power Pages foi feito exatamente para suportar acesso externo anônimo.",
+                "Licença Premium Global: O faturamento anônimo do Power Pages é cobrado por visualização de página de forma agregada no portal, não por licença individual."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Visitantes acessando site externo sem login = Acesso Anônimo no Power Pages."
         }
     },
     {
         "id": "pl200_oficial_v4_6006",
         "domain": "Microsoft Power Pages",
         "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6006] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você foi designado a tabela exibir lista usando Microsoft Power Pages. Qual a abordagem ideal de sistema?",
         "options": [
             "Custom Liquid template",
             "Subgrade nativa Model",
@@ -5181,819 +5089,14 @@ export const questionsData = [
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Exibição de Dados (Tabelas) no Power Pages:",
+            "papoReto": "A maneira padrão (No-Code/Low-Code) de renderizar registros do Dataverse no formato de uma tabela paginada e pesquisável em um site do Power Pages é usando o 'List Component' (Lista / Lista de Entidade).",
+            "puloDoGato": "No Dataverse chama 'View'. No Power Pages, a ferramenta que joga essa View na tela pro cliente final chama-se 'List' (Lista).",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Custom Liquid template: É possível criar listas na mão via Liquid e HTML (para layouts absurdamente customizados), mas a abordagem 'ideal e ágil' do sistema é o componente visual 'List'.",
+                "Subgrade nativa Model: É a ferramenta usada nos aplicativos internos (Model-driven), não nos portais."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6007",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6007] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Dialog Root",
-            "Tópico de Sistema",
-            "Entidade Personalizada",
-            "Action Flow"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6008",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6008] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Dataverse Table",
-            "Bot Variable (Variável de Bot)",
-            "Session Storage",
-            "Topic Variable"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6009",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6009] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Trigger Action",
-            "Hand off para Omnichannel (Escalonamento)",
-            "End User Request",
-            "Fim do tópico"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6010",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6010] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Power BI Embedded component",
-            "IFrame nativo iframe tag",
-            "Sharepoint link",
-            "PowerApps Canvas"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6011",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6011] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Event Grid",
-            "Power Automate trigger schedule",
-            "Dynamics Workflow",
-            "SQL Trigger"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6012",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6012] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "B2B AD Guest",
-            "Licença Premium Global",
-            "Entra ID required",
-            "Autenticação Anônima Habilitada"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6013",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6013] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "List Component (Lista de Entidade)",
-            "Canvas Gallery",
-            "Custom Liquid template",
-            "Subgrade nativa Model"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6014",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6014] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Action Flow",
-            "Entidade Personalizada",
-            "Tópico de Sistema",
-            "Dialog Root"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6015",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6015] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Session Storage",
-            "Bot Variable (Variável de Bot)",
-            "Dataverse Table",
-            "Topic Variable"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6016",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6016] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "End User Request",
-            "Fim do tópico",
-            "Hand off para Omnichannel (Escalonamento)",
-            "Trigger Action"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6017",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6017] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Power BI Embedded component",
-            "IFrame nativo iframe tag",
-            "PowerApps Canvas",
-            "Sharepoint link"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6018",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6018] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Power Automate trigger schedule",
-            "Event Grid",
-            "Dynamics Workflow",
-            "SQL Trigger"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6019",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6019] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "B2B AD Guest",
-            "Licença Premium Global",
-            "Entra ID required",
-            "Autenticação Anônima Habilitada"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6020",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6020] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Subgrade nativa Model",
-            "Custom Liquid template",
-            "List Component (Lista de Entidade)",
-            "Canvas Gallery"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6021",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6021] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Dialog Root",
-            "Tópico de Sistema",
-            "Entidade Personalizada",
-            "Action Flow"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6022",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6022] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Dataverse Table",
-            "Session Storage",
-            "Bot Variable (Variável de Bot)",
-            "Topic Variable"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6023",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6023] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Trigger Action",
-            "Hand off para Omnichannel (Escalonamento)",
-            "Fim do tópico",
-            "End User Request"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6024",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6024] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "IFrame nativo iframe tag",
-            "Sharepoint link",
-            "Power BI Embedded component",
-            "PowerApps Canvas"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6025",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6025] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "SQL Trigger",
-            "Power Automate trigger schedule",
-            "Event Grid",
-            "Dynamics Workflow"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6026",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6026] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "B2B AD Guest",
-            "Licença Premium Global",
-            "Entra ID required",
-            "Autenticação Anônima Habilitada"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6027",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6027] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "List Component (Lista de Entidade)",
-            "Custom Liquid template",
-            "Subgrade nativa Model",
-            "Canvas Gallery"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6028",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6028] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Tópico de Sistema",
-            "Entidade Personalizada",
-            "Action Flow",
-            "Dialog Root"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6029",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6029] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Bot Variable (Variável de Bot)",
-            "Session Storage",
-            "Topic Variable",
-            "Dataverse Table"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6030",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6030] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Trigger Action",
-            "End User Request",
-            "Fim do tópico",
-            "Hand off para Omnichannel (Escalonamento)"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6031",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6031] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "IFrame nativo iframe tag",
-            "Power BI Embedded component",
-            "Sharepoint link",
-            "PowerApps Canvas"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6032",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6032] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Dynamics Workflow",
-            "Power Automate trigger schedule",
-            "SQL Trigger",
-            "Event Grid"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6033",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6033] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Autenticação Anônima Habilitada",
-            "Licença Premium Global",
-            "Entra ID required",
-            "B2B AD Guest"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6034",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6034] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Custom Liquid template",
-            "Canvas Gallery",
-            "Subgrade nativa Model",
-            "List Component (Lista de Entidade)"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6035",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6035] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Entidade Personalizada",
-            "Tópico de Sistema",
-            "Action Flow",
-            "Dialog Root"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6036",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6036] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Bot Variable (Variável de Bot)",
-            "Dataverse Table",
-            "Topic Variable",
-            "Session Storage"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6037",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6037] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "End User Request",
-            "Fim do tópico",
-            "Trigger Action",
-            "Hand off para Omnichannel (Escalonamento)"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6038",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6038] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "PowerApps Canvas",
-            "Sharepoint link",
-            "IFrame nativo iframe tag",
-            "Power BI Embedded component"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6039",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6039] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Power Automate trigger schedule",
-            "Dynamics Workflow",
-            "SQL Trigger",
-            "Event Grid"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6040",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6040] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Licença Premium Global",
-            "B2B AD Guest",
-            "Autenticação Anônima Habilitada",
-            "Entra ID required"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6041",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6041] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Custom Liquid template",
-            "List Component (Lista de Entidade)",
-            "Subgrade nativa Model",
-            "Canvas Gallery"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Exibir tabela do Dataverse no site do Power Pages = Componente 'List' (Lista)."
         }
     },
     {
@@ -6009,14 +5112,14 @@ export const questionsData = [
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Domínio: Criação de Chatbots (Power Virtual Agents)",
+            "papoReto": "No Power Virtual Agents (agora Copilot Studio), o 'Fallback' é um tópico de sistema disparado automaticamente quando a IA não consegue mapear a frase do usuário para nenhum tópico existente.",
+            "puloDoGato": "O fallback é essencial para evitar que o robô 'trave'. Ele permite que você personalize a resposta de erro ou escale para um humano.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Entidades são usadas para extrair informações, não para tratar erros de reconhecimento.",
+                "Tópicos de sistema não podem ser excluídos, apenas desativados ou personalizados."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Sempre que a questão falar em 'tratativa de erros de reconhecimento de intenção', pense em Fallback (Tópico de Sistema)."
         }
     },
     {
@@ -6032,14 +5135,14 @@ export const questionsData = [
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Domínio: Variáveis e Gerenciamento de Estado no Chatbot",
+            "papoReto": "Para manter informações (como o nome do cliente) disponíveis durante toda a conversa, mesmo mudando de tópico, utilizamos 'Bot Variables'.",
+            "puloDoGato": "As 'Topic Variables' expiram quando o tópico termina. As 'Bot Variables' persistem por toda a sessão do usuário.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Session Storage é um termo de web design, não nativo do editor de tópicos do PVA.",
+                "Dataverse Table serve para persistência permanente, não para variáveis temporárias de chat."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Nome, Protocolo e E-mail geralmente são salvos em Variáveis de Bot (Global) para facilitar o atendimento."
         }
     },
     {
@@ -6055,14 +5158,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Domínio: Escalonamento e Integração Omnichannel",
+            "papoReto": "O escalonamento para um agente humano no Power Virtual Agents é feito através do recurso de 'Hand-off'. Isso integra o bot com o Dynamics 365 Omnichannel.",
+            "puloDoGato": "A ação de transferência exige que o bot esteja conectado a um hub de engajamento (como o Customer Service).",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Fim do tópico apenas encerra a conversa, não transfere o cliente.",
+                "Trigger Actions iniciam conversas, não as transferem."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Falou em 'Transferir para Humano' ou 'Agente ao vivo', a resposta certa quase sempre envolve Omnichannel."
         }
     },
     {
@@ -6078,14 +5181,14 @@ export const questionsData = [
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Domínio: Visualização de Dados (Power BI + Portals)",
+            "papoReto": "O Power Pages possui um componente nativo para Power BI que permite embutir relatórios de forma segura, sem precisar de código iframe manual.",
+            "puloDoGato": "O componente permite configurar o 'Power BI Embedded' diretamente no estúdio de design do Power Pages.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "IFrame nativo pode ter problemas de autenticação e responsividade.",
+                "Sharepoint links não são ideais para portais voltados a clientes externos."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Sempre prefira componentes nativos ('Out-of-the-box') em questões da PL-200 sobre design de portais."
         }
     },
     {
@@ -6101,14 +5204,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Domínio: Automação e Ciclo de Vida de Dados",
+            "papoReto": "Para automatizar a atualização de dados no Power BI (Data Refresh), o Power Automate pode ser usado através de gatilhos agendados (Schedule) ou baseados em eventos.",
+            "puloDoGato": "Você pode usar a ação 'Refresh a dataset' dentro de um fluxo para garantir que o Power BI esteja sempre atualizado.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Dynamics Workflows são limitados ao Dataverse e não interagem nativamente com o refresh do Power BI.",
+                "SQL Triggers exigem acesso direto à base de dados, o que foge do conceito 'no-code' da plataforma."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Sempre que precisar conectar dois serviços do M365 (como Power BI e agendamento), o Power Automate é a ponte."
         }
     },
     {
@@ -6124,14 +5227,14 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Domínio: Segurança e Acesso no Power Pages",
+            "papoReto": "Para permitir que usuários externos visualizem dados sem fazer login, habilitamos o 'Anonymous Access' no portal e configuramos as 'Table Permissions' correspondentes.",
+            "puloDoGato": "Lembre-se que o acesso anônimo deve ser usado com cautela por razões de segurança. Sempre use filtros de dados.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Azure AD B2B é para usuários convidados, não anônimos.",
+                "Local Login exige criação de conta, o que anula o propósito do acesso anônimo."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Sempre que o enunciado falar em 'público geral' ou 'sem necessidade de conta', a resposta é Acesso Anônimo."
         }
     },
     {
@@ -6147,819 +5250,1715 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Domínio: Componentes de UI no Power Pages",
+            "papoReto": "O 'List Component' (antiga Entity List) é a forma padrão de exibir registros de uma tabela do Dataverse em uma página do portal.",
+            "puloDoGato": "Você pode configurar filtros, busca e até ações (editar/detalhes) diretamente no componente de lista.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Subgrids são usadas dentro de formulários, não como o componente principal de exibição de listas em páginas.",
+                "Canvas Galleries não são componentes nativos do Power Pages Studio."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Listas = Componente de Lista. Formulários = Componente de Formulário. Simples assim."
         }
     },
     {
-        "id": "pl200_oficial_v4_6049",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "id": "pl200_oficial_new_001",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
         "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6049] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você precisa criar um fluxo que processe faturas recebidas por e-mail. Se a fatura tiver um valor maior que R$ 10.000, o fluxo deve enviar uma aprovação para o diretor. Se o diretor aprovar, o sistema deve registrar a fatura no ERP via API. Caso contrário, deve enviar um e-mail de rejeição. Qual é a melhor abordagem para lidar com o atraso potencial da aprovação sem causar falha no fluxo?",
         "options": [
-            "Entidade Personalizada",
-            "Tópico de Sistema",
-            "Action Flow",
-            "Dialog Root"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6050",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6050] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Dataverse Table",
-            "Topic Variable",
-            "Session Storage",
-            "Bot Variable (Variável de Bot)"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6051",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6051] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Hand off para Omnichannel (Escalonamento)",
-            "Trigger Action",
-            "Fim do tópico",
-            "End User Request"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6052",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6052] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Power BI Embedded component",
-            "IFrame nativo iframe tag",
-            "Sharepoint link",
-            "PowerApps Canvas"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6053",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6053] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "SQL Trigger",
-            "Power Automate trigger schedule",
-            "Dynamics Workflow",
-            "Event Grid"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6054",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6054] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Autenticação Anônima Habilitada",
-            "Entra ID required",
-            "Licença Premium Global",
-            "B2B AD Guest"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6055",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6055] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Subgrade nativa Model",
-            "List Component (Lista de Entidade)",
-            "Custom Liquid template",
-            "Canvas Gallery"
-        ],
-        "correctAnswer": 1,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6056",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6056] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Dialog Root",
-            "Entidade Personalizada",
-            "Tópico de Sistema",
-            "Action Flow"
+            "Usar a ação 'Start and wait for an approval' e aumentar o timeout do fluxo para 90 dias.",
+            "Criar um fluxo síncrono que aguarde até 30 dias na ação 'Wait for an approval'.",
+            "Separar em dois fluxos: um cria a aprovação ('Create an approval') e outro é acionado via Webhook quando o status da aprovação no Dataverse mudar.",
+            "Usar a ação 'Delay until' configurada para uma data estática."
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Explicação sobre aprovações longas no Power Automate:",
+            "papoReto": "Fluxos do Power Automate têm um limite de execução de 30 dias. Se a aprovação do diretor demorar mais que isso, o fluxo falhará por timeout. A melhor prática arquitetural para aprovações longas é o padrão 'Fire and Forget': um fluxo cria a solicitação, e outro fluxo separado reage à resposta.",
+            "puloDoGato": "A palavra 'atraso potencial' em aprovações no Power Automate quase sempre exige a separação do processo. A ação 'Create an approval' apenas inicia o processo no Dataverse, permitindo que o fluxo termine imediatamente.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Aumentar o timeout para 90 dias: O limite máximo de um fluxo na nuvem é rigorosamente 30 dias; você não pode aumentá-lo nas configurações.",
+                "Wait for an approval: Se o diretor demorar 31 dias, o fluxo falhará inevitavelmente."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Aprovação longa (>30 dias) = Padrão de Fluxo Separado (Cria num fluxo, responde no outro)."
         }
     },
     {
-        "id": "pl200_oficial_v4_6057",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "id": "pl200_oficial_new_002",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
         "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6057] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Um fluxo acionado pela criação de um registro no Dataverse atualiza o próprio registro recém-criado para adicionar uma ID de acompanhamento. Logo depois de ser ativado, o sistema apresenta lentidão extrema e o Power Automate suspende o fluxo temporariamente. O que provavelmente causou isso?",
         "options": [
-            "Dataverse Table",
-            "Topic Variable",
-            "Session Storage",
-            "Bot Variable (Variável de Bot)"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6058",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6058] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Trigger Action",
-            "End User Request",
-            "Fim do tópico",
-            "Hand off para Omnichannel (Escalonamento)"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6059",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6059] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "IFrame nativo iframe tag",
-            "PowerApps Canvas",
-            "Sharepoint link",
-            "Power BI Embedded component"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6060",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6060] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Dynamics Workflow",
-            "Event Grid",
-            "SQL Trigger",
-            "Power Automate trigger schedule"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6061",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6061] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "B2B AD Guest",
-            "Entra ID required",
-            "Licença Premium Global",
-            "Autenticação Anônima Habilitada"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6062",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6062] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Custom Liquid template",
-            "Subgrade nativa Model",
-            "List Component (Lista de Entidade)",
-            "Canvas Gallery"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6063",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6063] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Tópico de Sistema",
-            "Entidade Personalizada",
-            "Action Flow",
-            "Dialog Root"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6064",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6064] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Session Storage",
-            "Topic Variable",
-            "Dataverse Table",
-            "Bot Variable (Variável de Bot)"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6065",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6065] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "End User Request",
-            "Fim do tópico",
-            "Hand off para Omnichannel (Escalonamento)",
-            "Trigger Action"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6066",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6066] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "PowerApps Canvas",
-            "Sharepoint link",
-            "IFrame nativo iframe tag",
-            "Power BI Embedded component"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6067",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6067] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Event Grid",
-            "SQL Trigger",
-            "Dynamics Workflow",
-            "Power Automate trigger schedule"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6068",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6068] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Autenticação Anônima Habilitada",
-            "Entra ID required",
-            "Licença Premium Global",
-            "B2B AD Guest"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6069",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6069] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Custom Liquid template",
-            "Canvas Gallery",
-            "Subgrade nativa Model",
-            "List Component (Lista de Entidade)"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6070",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6070] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Tópico de Sistema",
-            "Action Flow",
-            "Dialog Root",
-            "Entidade Personalizada"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6071",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6071] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Bot Variable (Variável de Bot)",
-            "Dataverse Table",
-            "Session Storage",
-            "Topic Variable"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6072",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6072] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Fim do tópico",
-            "Trigger Action",
-            "Hand off para Omnichannel (Escalonamento)",
-            "End User Request"
-        ],
-        "correctAnswer": 2,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6073",
-        "domain": "Integração do Power BI",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6073] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Power BI Embedded component",
-            "Sharepoint link",
-            "IFrame nativo iframe tag",
-            "PowerApps Canvas"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6074",
-        "domain": "Integração do Power BI",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6074] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Event Grid",
-            "SQL Trigger",
-            "Dynamics Workflow",
-            "Power Automate trigger schedule"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6075",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6075] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Entra ID required",
-            "Autenticação Anônima Habilitada",
-            "B2B AD Guest",
-            "Licença Premium Global"
+            "O usuário não tem licença Premium para o Dataverse.",
+            "O fluxo entrou em um Loop Infinito (Infinite Loop).",
+            "O tempo limite da ação foi excedido.",
+            "O fluxo atingiu o limite diário de requisições de API."
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Gatilhos e Atualizações circulares no Power Automate:",
+            "papoReto": "Se um fluxo é disparado por 'Quando uma linha é adicionada, modificada ou excluída' e dentro desse fluxo você realiza um 'Atualizar linha' na MESMA tabela, o próprio fluxo irá disparar a si mesmo novamente em um loop infinito, até ser suspenso pela Microsoft.",
+            "puloDoGato": "Atualizar a mesma tabela que disparou o fluxo sem adicionar condições de filtro de gatilho (Trigger Conditions) ou atributos de filtro (Select columns) é a principal causa de Infinite Loops.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Limite diário de requisições: Embora o loop consuma requisições, o mecanismo de proteção da plataforma detecta a recursividade excessiva e desliga o fluxo antes de zerar a cota.",
+                "Tempo limite excedido: O erro não foi de espera, mas de execuções simultâneas em cascata."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Gatilho de Atualização + Ação de Atualização na mesma tabela = Loop Infinito (Configure Condições de Gatilho)."
         }
     },
     {
-        "id": "pl200_oficial_v4_6076",
-        "domain": "Microsoft Power Pages",
+        "id": "pl200_oficial_new_003",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
         "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6076] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Você tem um fluxo do Power Automate que faz uma consulta HTTP e retorna um array JSON com 5.000 itens. O próximo passo do fluxo é um 'Apply to each' (Aplicar a cada) que atualiza o Dataverse. No entanto, o processo está demorando quase uma hora para concluir. Como otimizar?",
         "options": [
-            "List Component (Lista de Entidade)",
-            "Subgrade nativa Model",
-            "Canvas Gallery",
-            "Custom Liquid template"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6077",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6077] Você foi designado a implementar fallback usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Action Flow",
-            "Dialog Root",
-            "Entidade Personalizada",
-            "Tópico de Sistema"
-        ],
-        "correctAnswer": 3,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Tópico de Sistema\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6078",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6078] Você foi designado a armazenar nome cliente usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Bot Variable (Variável de Bot)",
-            "Dataverse Table",
-            "Topic Variable",
-            "Session Storage"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Bot Variable (Variável de Bot)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6079",
-        "domain": "Criação de Chatbots com Power Virtual Agents",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6079] Você foi designado a transferir pro humano usando Criação de Chatbots com Power Virtual Agents. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Trigger Action",
-            "Hand off para Omnichannel (Escalonamento)",
-            "Fim do tópico",
-            "End User Request"
+            "Dividir o fluxo em subfluxos.",
+            "Ativar a 'Controle de Simultaneidade' (Concurrency Control) nas configurações do Apply to each.",
+            "Mudar para o plano Power Automate Per User Premium.",
+            "Usar uma ação 'Do until'."
         ],
         "correctAnswer": 1,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Hand off para Omnichannel (Escalonamento)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Otimização de laços (Loops) no Power Automate:",
+            "papoReto": "Por padrão, o 'Apply to each' processa os itens do array de forma sequencial (um por vez). Ao ativar o Controle de Simultaneidade (Concurrency Control) nas configurações do loop, você pode processar até 50 itens ao mesmo tempo, reduzindo drasticamente o tempo total.",
+            "puloDoGato": "Sempre que a questão relatar lentidão num loop 'Apply to each' processando muitos itens, procure pela opção de Simultaneidade/Concurrency.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Dividir em subfluxos: Ajudaria na organização, mas o processamento sequencial continuaria lento.",
+                "Plano Premium: A licença por si só não altera a lógica sequencial padrão do componente Apply to each."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Lentidão em Apply to each = Ative o Concurrency Control (Controle de Simultaneidade)."
         }
     },
     {
-        "id": "pl200_oficial_v4_6080",
-        "domain": "Integração do Power BI",
+        "id": "pl200_oficial_new_004",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
         "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6080] Você foi designado a embutir grafico num portal usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Um usuário relata que um fluxo de 'Solicitação de Férias' que ele criou não está rodando quando seus colegas submetem requisições. O fluxo utiliza a conexão de e-mail do usuário criador e foi configurado como um fluxo de nuvem padrão (My Flows). Como resolver de forma definitiva?",
         "options": [
-            "PowerApps Canvas",
-            "IFrame nativo iframe tag",
-            "Power BI Embedded component",
-            "Sharepoint link"
+            "Elevar a licença dos colegas.",
+            "Compartilhar o fluxo individualmente com cada colega.",
+            "Transformar o fluxo usando uma 'Run-only permission' e transferir a propriedade para uma Conta de Serviço ou adicionar os colegas como Coproprietários.",
+            "Mudar o gatilho para 'Scheduled'."
         ],
         "correctAnswer": 2,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power BI Embedded component\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Governança e compartilhamento de Fluxos:",
+            "papoReto": "Fluxos pessoais (em 'Meus Fluxos') rodam no contexto e conexões do criador, ou não são ativados para outras pessoas. Para que ele seja corporativo, ele precisa se tornar um Fluxo de Equipe (Team Flow). Isso é feito adicionando Coproprietários ou usando uma conta de serviço para sustentar as conexões.",
+            "puloDoGato": "Fluxos atrelados a um único usuário são pontos de falha (se o usuário sair da empresa, o fluxo para). Solução empresarial exige contas de serviço e copropriedade.",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Elevar licença: Problemas de escopo de gatilho/conexão não são resolvidos injetando licenças mais caras.",
+                "Compartilhar individualmente: Isso gera sobrecarga administrativa e não altera o fato de o fluxo depender do criador original."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Fluxo pessoal falhando para a equipe = Promova para Team Flow (Coproprietários/Conta de Serviço)."
         }
     },
     {
-        "id": "pl200_oficial_v4_6081",
-        "domain": "Integração do Power BI",
+        "id": "pl200_oficial_new_005",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
         "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6081] Você foi designado a atualizar dados do grafico m365 usando Integração do Power BI. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
+        "text": "Qual é a expressão exata do Dataverse OData usada em um gatilho para garantir que um fluxo só dispare quando o campo 'Status' e 'Prioridade' forem alterados em uma tabela?",
         "options": [
-            "Power Automate trigger schedule",
-            "Dynamics Workflow",
-            "SQL Trigger",
-            "Event Grid"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Power Automate trigger schedule\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6082",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "intermediario",
-        "text": "[Cenário Exclusivo #6082] Você foi designado a portal acesso externo anonimo usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Autenticação Anônima Habilitada",
-            "Entra ID required",
-            "Licença Premium Global",
-            "B2B AD Guest"
-        ],
-        "correctAnswer": 0,
-        "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"Autenticação Anônima Habilitada\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
-            "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
-            ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
-        }
-    },
-    {
-        "id": "pl200_oficial_v4_6083",
-        "domain": "Microsoft Power Pages",
-        "difficulty": "avancado",
-        "text": "[Cenário Exclusivo #6083] Você foi designado a tabela exibir lista usando Microsoft Power Pages. Na empresa BetaCorp, o diretor exigiu uma tratativa na especificação. Qual a abordagem ideal de sistema?",
-        "options": [
-            "Custom Liquid template",
-            "Canvas Gallery",
-            "Subgrade nativa Model",
-            "List Component (Lista de Entidade)"
+            "Select Columns: status, prioridade",
+            "Filter Rows: status eq 1 and prioridade eq 2",
+            "Trigger Conditions: @equals(triggerOutputs()?['body/status'], 1)",
+            "Select Columns (Colunas Selecionadas): statuscode, prioritycode"
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Mapeamento Direto PL-200 (Domínio Externo):",
-            "papoReto": "Nesta variação do domínio, o caminho exigido é usar \"List Component (Lista de Entidade)\". Ferramentas deste calibre são testadas puramente na prova real.",
-            "puloDoGato": "Identificou o recurso de integração? Ele é a solução 'padr�o' de conexão.",
+            "intro": "Filtragem de gatilho (Trigger Filtering) no Dataverse:",
+            "papoReto": "No gatilho do Dataverse 'Quando uma linha é adicionada/modificada', existe o campo 'Colunas Selecionadas' (Select Columns). Nele, você fornece o nome lógico das colunas separados por vírgula. O fluxo SÓ dispara se alguma das colunas listadas for alterada, economizando execuções.",
+            "puloDoGato": "Quando a questão disser 'só dispare se O CAMPO X mudar', a resposta correta será usar o 'Select Columns' no gatilho. Você precisa usar os nomes lógicos do Dataverse (ex: statuscode, prioritycode).",
             "cascasDeBanana": [
-                "As demais opções, ainda que factíveis por código pro, ferem a premissa de uso nativo da plataforma corporativa.",
-                "Opções complexas com código costumam ser incorretas nesta prova."
+                "Filter Rows: Avalia o valor da linha após a mudança, mas não reage ao 'fato' de um campo ter sido alterado.",
+                "Trigger Conditions: Pode ser usado para regras lógicas complexas, mas para apenas verificar SE um campo mudou, 'Select Columns' é a funcionalidade nativa e performática de gatilho."
             ],
-            "dicaOuro": "Power BI, Pages e Virtual Agents (Bots) representam até 20% do score. Não decore código, decore o componente visual."
+            "dicaOuro": "Disparar SÓ quando uma coluna específica for editada = Select Columns (Colunas Selecionadas)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_006",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "intermediario",
+        "text": "Ao usar a ação 'Extract information from forms' (AI Builder) em um fluxo, você nota que a extração falha ocasionalmente se o PDF tiver mais de 50 páginas. O modelo foi treinado com PDFs de 1 a 3 páginas. Qual a limitação oficial do modelo de Document Processing?",
+        "options": [
+            "O modelo requer licença separada de Cognitive Services.",
+            "A ação tem limite nativo e processará apenas as primeiras 500 páginas do documento; se a informação estiver além, não será lida.",
+            "O fluxo precisa de aprovação manual para PDFs longos.",
+            "Você deve usar a ação 'Parse JSON' em vez de Document Processing."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Limitações do AI Builder no Power Automate:",
+            "papoReto": "Os modelos de processamento de documentos (Document Processing) do AI Builder têm um limite estrito: eles processam no máximo as primeiras 500 páginas de um documento PDF ou TIFF.",
+            "puloDoGato": "Para provas Microsoft, conhecer limites de plataformas é vital. Se a questão cita falha na extração de PDFs enormes usando AI Builder, a resposta está atrelada ao limite de 500 páginas.",
+            "cascasDeBanana": [
+                "Aprovação manual: Não existe exigência algorítmica para revisão manual baseada unicamente no tamanho, mas sim um limite técnico de página.",
+                "Cognitive Services: AI Builder já embute essas APIs via créditos de capacidade, não precisando de chamadas externas ou licenciamento avulso Azure na ação nativa."
+            ],
+            "dicaOuro": "AI Builder Document Processing = Limite de 500 páginas por documento."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_007",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "avancado",
+        "text": "Você precisa que um Business Process Flow (BPF) no Dataverse execute um Cloud Flow imediatamente quando o usuário entra no estágio 'Qualificação'. Como configurar essa automação?",
+        "options": [
+            "Adicionar um Workflow síncrono como etapa (Step) de entrada no estágio do BPF.",
+            "Adicionar um 'Flow Step' ao estágio Qualificação no editor do BPF e marcar o gatilho 'When a flow step is run'.",
+            "Criar um Power Automate usando o gatilho 'Quando um registro é criado' filtrando pelo status do BPF.",
+            "Isso só é possível utilizando código JavaScript (Client API) no formulário."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Integração entre Business Process Flow (BPF) e Cloud Flows:",
+            "papoReto": "Para rodar um fluxo da nuvem de dentro de um BPF sob demanda, o Flow precisa ser criado com um gatilho específico chamado 'When a flow step is run from a business process flow'. Em seguida, no editor do BPF, você arrasta o componente 'Flow Step' para dentro do estágio desejado.",
+            "puloDoGato": "A Microsoft investiu pesadamente na ação 'Flow Step'. Se você quiser conectar Cloud Flows dentro do funil de vendas (BPF), a resposta será sempre 'Flow Step'.",
+            "cascasDeBanana": [
+                "Workflow síncrono: Workflows (clássicos) podem ser adicionados a BPFs, mas a questão pede um CLOUD FLOW (Power Automate).",
+                "Filtrar pelo status do BPF: É possível monitorar a tabela do processo, mas isso roda em background assincronamente e não dá ao usuário a experiência integrada de botão de 'Executar Fluxo' no próprio estágio."
+            ],
+            "dicaOuro": "Rodar fluxo dentro da barra de estágios (BPF) = Componente Flow Step."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_008",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "intermediario",
+        "text": "Como você garante que as credenciais sensíveis (senhas de API) inseridas em uma ação do Power Automate não apareçam visíveis no histórico de execução de relatórios (Run History)?",
+        "options": [
+            "Ocultar o fluxo da galeria pública.",
+            "Ativar as opções de segurança 'Secure Inputs' (Entradas Seguras) e 'Secure Outputs' (Saídas Seguras) nas configurações (Settings) da ação.",
+            "Usar a ação Compose (Compor).",
+            "Criar uma variável local e mudar seu tipo para 'Password'."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Segurança de Dados e Histórico no Power Automate:",
+            "papoReto": "Para mascarar dados sensíveis e impedir que sejam lidos por outros desenvolvedores no painel de Histórico de Execução do fluxo, você deve acessar as Configurações (Settings) do bloco de ação e habilitar 'Secure Inputs' e 'Secure Outputs'.",
+            "puloDoGato": "Secure Inputs mascara o que ENTRA na ação. Secure Outputs mascara o que SAI. É mandatório para senhas e tokens na prova PL-200.",
+            "cascasDeBanana": [
+                "Tipo Password: O Power Automate não tem um tipo de dado nativo 'Password' em variáveis clássicas.",
+                "Ação Compose: A ação Compose exibe no histórico exatamente o texto que foi fornecido a ela."
+            ],
+            "dicaOuro": "Esconder credenciais do Histórico de Execução = Secure Inputs / Secure Outputs."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_009",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "avancado",
+        "text": "Você tem um fluxo longo que usa múltiplas variáveis e loops. Ele começa a ficar insustentável para dar manutenção. Você decide modularizar e passar a chamar fluxos secundários (Child Flows). Qual o requisito OBRIGATÓRIO para que um fluxo possa ser chamado como um Child Flow?",
+        "options": [
+            "O fluxo filho deve ser publicado na galeria de templates.",
+            "O fluxo filho precisa estar dentro de uma Solução (Solution) e usar o gatilho manual ou Power Apps.",
+            "Ambos os fluxos devem usar a licença do Microsoft 365 básica.",
+            "O fluxo pai precisa ser acionado de um Canvas App."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Fluxos pai e filho (Child Flows) no Power Automate:",
+            "papoReto": "A funcionalidade de Child Flows exige Application Lifecycle Management (ALM). Para chamar um fluxo dentro de outro, AMBOS obrigatoriamente precisam existir dentro de uma Solução (Solution) no Dataverse. Além disso, o fluxo filho deve ter um gatilho invocável (como Manual trigger ou Power Apps) e responder ao fluxo pai.",
+            "puloDoGato": "A palavra 'Solução' (Solution) é o gabarito para quase todas as capacidades avançadas corporativas no Power Automate, especialmente Child Flows e Variáveis de Ambiente.",
+            "cascasDeBanana": [
+                "Licença Microsoft 365 básica: Child flows dependem de conexões premium atreladas ao Dataverse, não rodando em planos básicos isolados.",
+                "Acionado por Canvas App: O gatilho do Pai não importa, mas o Filho e o Pai precisam estar em uma Solução."
+            ],
+            "dicaOuro": "Requisito para Child Flows = Tem que estar dentro de uma Solução (Solution)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_010",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "intermediario",
+        "text": "Você deseja criar um fluxo que aprove automaticamente documentos cujo valor seja inferior a $50, mas caso o valor seja superior, envie um e-mail de aprovação. Qual tipo de lógica condicional estruturada nativa é mais indicada para avaliar múltiplos ranges de valores ($0 a $50, $51 a $100, $100+)?",
+        "options": [
+            "Uma longa sequência de ações 'Condition' aninhadas (nested if).",
+            "Um 'Switch' control.",
+            "Um array usando Filter.",
+            "Um fluxo de Processo de Negócios (BPF)."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Estruturas de controle lógicas no Power Automate:",
+            "papoReto": "Embora você possa usar a ação 'Condition' (Se/Então), para múltiplos resultados mutuamente exclusivos baseados em uma única variável, a melhor prática arquitetural e visual é o 'Switch' Control.",
+            "puloDoGato": "A prova testa suas melhores práticas de design. Múltiplos caminhos baseados em valores específicos exigem a ação Switch. Isso evita o que chamamos de 'Espaguete de fluxo' (nested conditions em cascata vertical).",
+            "cascasDeBanana": [
+                "Condition aninhadas: É tecnicamente possível, mas o limite é rígido e a manutenção fica terrível, logo não é a 'mais indicada'.",
+                "BPF: Um BPF é um elemento visual em formulários do Dataverse e não uma estrutura lógica de tomada de decisão de fluxo em nuvem."
+            ],
+            "dicaOuro": "Múltiplas opções de escolha para um mesmo campo = Ação Switch."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_011",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "avancado",
+        "text": "Um bot do Power Virtual Agents precisa fazer perguntas e extrair informações que não seguem os padrões de entidades do sistema (como Número, Data ou E-mail). Exemplo: extrair um número de chassi de veículo que possui letras e números específicos. O que você deve criar?",
+        "options": [
+            "Uma Entidade Personalizada (Custom Entity) usando Regras de Expressão Regular (Regex) ou Lista Fechada.",
+            "Uma Ação de Power Automate para ler o texto via AI Builder.",
+            "Um novo Tópico para cada chassi possível.",
+            "Uma variável global."
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Trabalhando com Entidades no Power Virtual Agents (Copilot Studio):",
+            "papoReto": "Entidades são mecanismos que dizem ao Bot como extrair informações específicas do texto digitado pelo usuário. Se as Entidades Nativas (Prebuilt Entities) como idade, cidade e dinheiro não servem, você deve criar uma Custom Entity. Elas podem ser definidas por Listas ou Padrões (Regex).",
+            "puloDoGato": "A palavra 'extrair informações que não seguem o padrão' remete a Entidades Personalizadas (Custom Entities). Lembre-se que Entidade no PVA não é a tabela do Dataverse, é o extrator de dados do NLP (processamento de linguagem natural).",
+            "cascasDeBanana": [
+                "Power Automate / AI Builder: O PVA nativamente já possui um motor NLP embutido para isso, usar Power Automate seria matar uma mosca com um canhão.",
+                "Novo Tópico para cada chassi: Inviável administrativamente, Tópicos definem o fluxo da conversa, não atuam como extratores de texto."
+            ],
+            "dicaOuro": "Extrair formato específico de texto no Bot (ex: CPF, Chassi, Código interno) = Custom Entity (Entidade Personalizada)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_012",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "avancado",
+        "text": "Você criou um Chatbot que permite aos funcionários verificar seu saldo de férias. Para garantir que o bot forneça o saldo correto da pessoa que está chamando (sem perguntar quem ela é), qual técnica é necessária?",
+        "options": [
+            "Usar o nó 'Pedir informações do usuário'.",
+            "Configurar Autenticação (Authentication) usando Azure AD, definindo o bot para exigir Logon e usar as variáveis nativas de perfil de usuário.",
+            "Passar a identificação como parte dos Trigger Phrases.",
+            "Publicar o bot obrigatoriamente num portal do SharePoint público."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Segurança e Autenticação no Power Virtual Agents:",
+            "papoReto": "Para que um bot reconheça automaticamente quem está do outro lado sem exigir que ele digite um CPF (o que é inseguro), você deve configurar a Autenticação no PVA vinculada ao Entra ID (antigo Azure AD). Isso adiciona um fluxo invisível ou um popup onde o usuário loga e o bot recebe um Auth Token.",
+            "puloDoGato": "Acessar dados pessoais de HR ou Finanças em um bot sempre exigirá que o termo 'Authentication' e 'Azure AD' (Entra ID) seja a resposta correta.",
+            "cascasDeBanana": [
+                "Usar nó de perguntar info: O enunciado diz explicitamente '(sem perguntar quem ela é)', além de não ser uma prática segura para verificação de identidade financeira.",
+                "Trigger Phrases: Trigger phrases são as frases que disparam o tópico ('Quero ver minhas férias'), e não a identidade da pessoa."
+            ],
+            "dicaOuro": "Identificar usuário ativamente no bot de forma segura = Configurar Autenticação (Entra ID)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_013",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "intermediario",
+        "text": "Um cliente está frustrado pois precisa preencher um longo formulário no bot. Toda vez que ele erra um dado no meio da conversa, o bot interrompe e reinicia do zero. Como manter o estado da conversa e voltar para a mesma pergunta após uma correção?",
+        "options": [
+            "Habilitar o fallback topic.",
+            "Isso não é possível no PVA, deve-se usar o Bot Framework Composer.",
+            "Usar Variáveis de Tópico (Topic Variables) no lugar de parâmetros de ação, permitindo gerenciar o fluxo da conversa com nós condicionais e perguntas que avaliam se a variável já possui um valor.",
+            "Aumentar o limite de timeout da sessão."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Gestão de Estado no Power Virtual Agents:",
+            "papoReto": "Ao construir um fluxo de conversa, usar variáveis de nível de tópico (Topic variables) permite salvar o estado. Ao usar o nó de pergunta para preencher a variável, o PVA é inteligente o suficiente para pular a pergunta se a variável já contiver um valor validado. Isso evita que o bot recomece o formulário do zero se um erro ou desvio ocorrer.",
+            "puloDoGato": "A resposta para problemas de 'recomeçar do zero' e 'retenção de dados' no PVA envolve a correta gestão do escopo de Variáveis.",
+            "cascasDeBanana": [
+                "Bot Framework Composer: O Composer expande os bots, mas retenção de estado básico é possível nativamente no Canvas do PVA.",
+                "Fallback Topic: É disparado quando o bot não entende a intenção do usuário (não acha o Trigger Phrase), não tem relação com gestão de variáveis no meio do fluxo."
+            ],
+            "dicaOuro": "Lembrar dados preenchidos no meio da conversa = Variáveis de Tópico com nós de Perguntas Condicionais."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_014",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "intermediario",
+        "text": "Você tem um bot de RH integrado ao Microsoft Teams. Os funcionários frequentemente perguntam sobre a 'Política de Feriados'. A documentação da empresa muda trimestralmente em uma página pública na intranet. Como você faz para que o bot responda a essas perguntas sem que você precise editar o Tópico do bot manualmente a cada trimestre?",
+        "options": [
+            "Usar o recurso Conversational Boosting (Boost Conversations) e fornecer o URL da página da intranet para o bot aprender o conteúdo dinamicamente.",
+            "Adicionar um fluxo recorrente no Power Automate que edite os Tópicos do bot via API.",
+            "Pedir ao TI para hospedar o bot dentro da página da Intranet.",
+            "Criar uma Entidade com a política copiada e colada e usar Regex."
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Recursos de IA Generativa no Copilot Studio / Power Virtual Agents:",
+            "papoReto": "O recurso 'Boost Conversations' (Respostas Gerativas/Conversational Boosting) permite que você aponte o bot para um site, SharePoint ou base de dados. Quando um usuário faz uma pergunta que não dispara nenhum Tópico criado manualmente, o bot utiliza IA nativa para ler a página ao vivo, formular a resposta e apresentar ao usuário de forma dinâmica.",
+            "puloDoGato": "A prova PL-200 adora testar inovações recentes. 'Atualização sem tocar no bot' usando 'Sites externos ou internos' é a definição exata de Conversational Boosting (Generative Answers).",
+            "cascasDeBanana": [
+                "Editar tópicos via API: É altamente complexo, não recomendado e desnecessário frente aos novos recursos de IA nativa.",
+                "Hospedar na Intranet: Hospedar o bot não o faz absorver o conteúdo da página, apenas o coloca visualmente lá."
+            ],
+            "dicaOuro": "Responder usando documentos dinâmicos da empresa sem programar Tópicos = Conversational Boosting (Generative AI)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_015",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "avancado",
+        "text": "Seu chatbot atende clientes e usa o nó 'Transferir para o Agente' para escalonar a conversa quando o cliente fica furioso. Qual é o pré-requisito técnico absoluto no Power Platform para que essa funcionalidade de transição ocorra sem falhas?",
+        "options": [
+            "Comprar uma licença do Power BI Premium.",
+            "O bot deve ser conectado a um hub de engajamento omnicanal, como o Omnichannel for Customer Service (Dynamics 365) ou provedor equivalente.",
+            "Ter um usuário administrador no Entra ID configurado com a tag de 'Agente'.",
+            "É necessário criar um Fluxo Automate que envia e-mail ao agente alertando da fila."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Escalonamento (Escalation) (Hand-off) no PVA:",
+            "papoReto": "O nó 'Transfer to Agent' (Transferir para o Agente) não funciona de forma mágica ou isolada. Ele requer que a plataforma de destino exista e esteja configurada (normalmente o Dynamics 365 Omnichannel for Customer Service). Ele empacota a transcrição da conversa e envia pela fila para que um humano leia de onde o bot parou.",
+            "puloDoGato": "Transferir conversa para humanos = Requer Omnichannel ou Engagement Hub. O PVA sozinho não possui a interface onde o humano digita de volta, ele precisa do Dynamics 365 ou provedor terceiro.",
+            "cascasDeBanana": [
+                "Fluxo Automate enviando e-mail: Mandar e-mail não é 'Transferir a Conversa', pois o cliente não recebe a resposta em tempo real no mesmo chat de forma fluida.",
+                "Usuário no Entra ID: Configurações de AD são essenciais para identidade, mas não fornecem o motor de roteamento de chat em tempo real."
+            ],
+            "dicaOuro": "Nó Transferir para Agente no PVA = Necessita do Dynamics 365 Omnichannel for Customer Service."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_016",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "intermediario",
+        "text": "O que acontece se as 'Trigger Phrases' (Frases de Gatilho) de dois Tópicos diferentes forem quase idênticas e o usuário digitar uma frase que combina com ambas?",
+        "options": [
+            "O Bot apresentará o erro 'Topic Overlap' e cairá no Fallback.",
+            "O Bot selecionará aleatoriamente um dos tópicos.",
+            "O Bot acionará o tópico com a frase mais curta.",
+            "O Bot mostrará o 'Topic 'Did you mean' (Você quis dizer?)', exibindo um menu de múltipla escolha para o usuário definir o contexto correto."
+        ],
+        "correctAnswer": 3,
+        "explanation": {
+            "intro": "Resolução de conflitos (Topic Overlap) no PVA:",
+            "papoReto": "Quando o motor de linguagem natural do Power Virtual Agents fica com uma taxa de confiança muito alta em mais de um Tópico ao mesmo tempo (Trigger Phrases sobrepostas), ele aciona nativamente um comportamento chamado 'Did you mean?' (Você quis dizer?). Ele dá opções de botões para o usuário desempatar a decisão.",
+            "puloDoGato": "A plataforma não quebra com ambiguidades e não escolhe aleatoriamente; ela transfere a responsabilidade para o usuário por meio de um popup gentil.",
+            "cascasDeBanana": [
+                "Cairá no Fallback: Fallback é usado estritamente quando a taxa de confiança em TODOS os tópicos é extremamente baixa (não sabe o que fazer).",
+                "Erro Topic Overlap: O motor não envia mensagens técnicas de erro ao usuário."
+            ],
+            "dicaOuro": "Frases parecidas de Tópicos diferentes gerando empate de IA = Ativa o recurso 'Você quis dizer? (Did you mean)'."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_017",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "avancado",
+        "text": "Você criou um nó de Ação no PVA que chama um fluxo do Power Automate. O fluxo consulta o banco de dados e retorna o nome do cliente. No entanto, no painel do PVA, a variável de saída desse fluxo não aparece na lista de variáveis disponíveis para usar nas mensagens do bot. O que falta fazer?",
+        "options": [
+            "Configurar o fluxo para rodar como 'Síncrono' (Synchronous).",
+            "No final do fluxo do Power Automate, você deve adicionar a ação 'Responder a um Power Virtual Agent ou Power Apps' e definir os campos de saída textuais nela.",
+            "Exportar o fluxo em uma Solução.",
+            "As variáveis do Automate são Globais, basta digitar seus nomes entre colchetes {Nome} manualmente no texto."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Integração Power Virtual Agents + Power Automate (Actions):",
+            "papoReto": "Para que o Bot receba dados processados no Power Automate de volta, o fluxo deve obrigatoriamente terminar com a ação 'Respond to a Power Virtual Agent or Power Apps'. Você clica em 'Adicionar saída' nessa ação e mapeia a variável processada ali. Só assim ela fica visível no painel do PVA.",
+            "puloDoGato": "A via de comunicação não é telepática. Se o bot pede, o Automate faz a mágica, mas tem que entregar o prato feito na ação de Resposta final explícita.",
+            "cascasDeBanana": [
+                "Rodar como síncrono: O PVA já aguarda síncronamente (até o timeout padrão) a resposta do fluxo.",
+                "Variáveis Globais Automate: Variáveis não ultrapassam as barreiras de escopo dos sistemas sem uma ação de transferência declarativa (Respond to)."
+            ],
+            "dicaOuro": "Para o PVA ler a resposta do Flow = O Flow precisa terminar na ação 'Respond to PVA / Power Apps'."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_018",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "intermediario",
+        "text": "Durante os testes na janela 'Test bot' dentro do estúdio do PVA, você ativa a opção 'Track between topics' (Acompanhar entre tópicos). Qual a função desse botão de diagnóstico?",
+        "options": [
+            "Ele força as métricas de testes irem para o painel Analytics para contagem de faturamento.",
+            "Ele exporta a conversa em um arquivo de log CSV para a equipe de QA.",
+            "Ele mostra visualmente qual nó e qual tópico está sendo executado em tempo real ao lado da conversa, pulando automaticamente de tela caso a conversa vá para outro Tópico.",
+            "Ele habilita a leitura global de variáveis."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Ferramentas de Diagnóstico (Test Bot) no Power Virtual Agents:",
+            "papoReto": "A chave (toggle) 'Track between topics' na aba do Test Bot é a ferramenta primária de depuração visual. Quando ativada, o Canvas (tela de desenho dos nós) é destacado em verde mostrando exatamente o caminho que a IA está tomando. Se a conversa pular de um Tópico A para um Tópico B via redirecionamento, a tela do desenvolvedor abre o Tópico B e continua seguindo os nós visuais da árvore em tempo real.",
+            "puloDoGato": "A palavra 'Track' quer dizer 'rastreio visual' da árvore de decisões.",
+            "cascasDeBanana": [
+                "Exporta log CSV: Você pode baixar as transcrições posteriormente, mas não é a função primária do botão Tracking de testes ao vivo.",
+                "Métricas para Analytics: Sessões feitas na janela 'Test Bot' não contam para faturamento (billed sessions)."
+            ],
+            "dicaOuro": "Track between topics na aba de testes = Mostra visualmente o caminho da árvore no Canvas acompanhando a conversa do usuário."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_019",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "avancado",
+        "text": "Você precisa que seu chatbot utilize mensagens que exibam botões interativos e um layout com imagens e descrições complexas (semelhante aos Adaptive Cards). Como o Power Virtual Agents suporta a injeção nativa de Adaptive Cards na conversa?",
+        "options": [
+            "O PVA não suporta Adaptive Cards, apenas texto simples.",
+            "Pode-se usar nós do tipo 'Mensagem' e usar o Bot Framework Composer para injetar o Adaptive Card JSON na tela.",
+            "Você precisa criar o Card via HTML em um iFrame.",
+            "Isso requer licença Azure Cognitive Services e bot customizado em C#."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Uso de Adaptive Cards no Power Virtual Agents:",
+            "papoReto": "Para interfaces ricas (Adaptive Cards com botões, menus, imagens estruturadas), o Power Virtual Agents suporta integração através do Bot Framework Composer (ou em atualizações recentes, através da aba de edição avançada/Copilot Studio enviando um JSON de Adaptive Card formatado dentro de nós específicos).",
+            "puloDoGato": "Quando a prova PL-200 menciona 'interface rica', 'Botões Complexos' ou 'Cartões (Cards)' no PVA, a resposta sempre aponta para Adaptive Cards e Bot Framework Composer.",
+            "cascasDeBanana": [
+                "Não suporta / Só texto: Historicamente o PVA era restrito, mas a Microsoft inseriu suporte completo a Adaptive Cards nativamente ou via Composer.",
+                "HTML iframe: PVA roda em canais omnicanal (Teams, Web, WhatsApp). HTML cru em iFrame seria bloqueado e quebraria a interface nativa do Teams."
+            ],
+            "dicaOuro": "Cartões visuais avançados e interativos no Bot = Adaptive Cards via JSON / Bot Framework Composer."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_020",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "intermediario",
+        "text": "Na aba Analytics do Power Virtual Agents, o painel 'Customer Satisfaction' (CSAT) está em branco, mesmo com o bot funcionando há um mês. O que o criador do bot esqueceu de configurar?",
+        "options": [
+            "O plano Premium não foi pago.",
+            "A Entidade CSAT não foi adicionada aos Tópicos.",
+            "O Tópico do sistema 'Fim de Conversa' (End of Conversation) não foi chamado ao fim dos fluxos criados, deixando a pesquisa nativa de satisfação de fora.",
+            "O bot precisa estar em um portal do Power Pages para coletar o CSAT."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Análise de Dados e CSAT (Analytics) no PVA:",
+            "papoReto": "O Power Virtual Agents possui um Tópico de Sistema nativo chamado 'End of Conversation' que dispara a pesquisa de Satisfação (estrelas ou numérico, CSAT). Para que as métricas preencham o dashboard do painel Analytics, seus tópicos personalizados devem finalizar apontando (Redirect) para esse nó do sistema ao invés de terminarem abruptamente sem um fechamento.",
+            "puloDoGato": "A pesquisa do CSAT não cai do céu ao final do fluxo. Você DEVE rotear o nó final do seu Tópico de negócios para o Tópico de Sistema 'Fim de conversa'.",
+            "cascasDeBanana": [
+                "A Entidade CSAT: Não se cria entidades para notas de satisfação, o bot tem uma interface embutida específica para pesquisa ao chamar o Tópico correto.",
+                "O plano premium não foi pago: Funcionalidades de CSAT são nativas do núcleo do PVA, e o problema descrito é arquitetural, não comercial."
+            ],
+            "dicaOuro": "Métricas CSAT zeradas no Dashboard = O criador esqueceu de redirecionar a conversa para o Tópico de Sistema 'Fim de Conversa'."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_021",
+        "domain": "Integração do Power BI",
+        "difficulty": "avancado",
+        "text": "Você deseja embutir (embed) um relatório do Power BI dentro do Painel (Dashboard) de um Model-driven App. Qual dos seguintes passos é o pré-requisito técnico absoluto no nível de configuração do ambiente (Environment Settings)?",
+        "options": [
+            "No portal de administração do Power Platform, é obrigatório ativar a opção 'Permitir a inserção do Power BI' (Enable Power BI embedding) nas propriedades do Ambiente.",
+            "Comprar uma licença Premium Per Capacity para todo o Tenant.",
+            "Adicionar todos os usuários do Dataverse no Workspace do Power BI como Administradores.",
+            "Instalar o Power BI Desktop no servidor IIS local da empresa."
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Incorporação do Power BI em Model-Driven Apps:",
+            "papoReto": "Por padrão, por motivos de segurança, a inserção visual do Power BI no Dataverse vem desabilitada. Antes de tentar editar um dashboard de Model-Driven e adicionar blocos do Power BI, o administrador do sistema DEVE entrar no Power Platform Admin Center (PPAC), nas configurações de Características (Features) do ambiente, e ativar 'Allow Power BI embedding'.",
+            "puloDoGato": "Se um relatório não carrega ou o componente Power BI nem aparece para você no construtor de Dashboards do Dataverse, 99% das vezes é o Admin Center com o bloqueio (toggle) de segurança desativado.",
+            "cascasDeBanana": [
+                "Adicionar usuários como Admin no workspace: Isso daria permissões destrutivas aos usuários para apagar o relatório, o ideal seria permissão 'Viewer'. E não é a causa de não conseguir inserir o componente.",
+                "Licença Premium Capacity: Embedding normal (sem código / iframe autenticado) não exige Capacity se os usuários já possuírem Power BI Pro; a chave aqui é a configuração do Environment."
+            ],
+            "dicaOuro": "Permitir gráficos Power BI em Dashboards Model-Driven = Ativar 'Power BI Embedding' no Power Platform Admin Center."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_022",
+        "domain": "Integração do Power BI",
+        "difficulty": "intermediario",
+        "text": "Qual componente nativo do Power BI no Canvas Apps permite que o relatório interaja com os dados da própria tela do aplicativo de forma bidirecional?",
+        "options": [
+            "Apenas colocar a URL em um Web Component.",
+            "O uso do controle visual 'Power BI Tile' passando a string de filtro como propriedade ou através da 'PowerAppsIntegration' configurada no painel do Power BI.",
+            "Isso não é possível, é apenas uma visualização estática unidirecional.",
+            "O botão Run() do OnSelect."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "A funcionalidade de interação bidirecional entre Power BI e Power Apps:",
+            "papoReto": "Quando você integra um Power App dentro do Power BI (usando a PowerApps visual no PBI Desktop), a propriedade mágica é 'PowerAppsIntegration'. Isso permite que as linhas filtradas no dashboard do Power BI sejam lidas diretamente no seu aplicativo Canvas, atuando como um parâmetro vivo.",
+            "puloDoGato": "Integração viva (bidirecional) = PowerAppsIntegration object. Você cria uma tela no app que filtra a galeria baseada no 'PowerAppsIntegration.Data'.",
+            "cascasDeBanana": [
+                "URL em Web Component: Isso é integração 'Burra' (Estática). Ele apenas mostra a tela e não interage com cliques ou variáveis do app.",
+                "Apenas estática: Incorreto, o ecossistema Power Platform é projetado exatamente para interação bidirecional."
+            ],
+            "dicaOuro": "O que liga o clique do gráfico no Power BI aos dados carregados no Power Apps? = PowerAppsIntegration.Data"
+        }
+    },
+    {
+        "id": "pl200_oficial_new_023",
+        "domain": "Integração do Power BI",
+        "difficulty": "avancado",
+        "text": "Se você configura um Alerta Orientado por Dados (Data Driven Alert) no Power BI Service, como você transforma isso em uma ação automatizada para enviar uma mensagem no Microsoft Teams?",
+        "options": [
+            "Configurar um Gateway local do Power BI para mandar chamadas de HTTP.",
+            "Usar o gatilho 'Quando um alerta de dados for acionado' (When a data driven alert is triggered) no Power Automate para ler o evento e enviar a mensagem no Teams.",
+            "Clicar com o botão direito no painel do Power BI e selecionar 'Integrar Teams'.",
+            "Escrever código DAX na medida que usa a função SendMessage()."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Fluxos do Power Automate disparados pelo Power BI:",
+            "papoReto": "Power BI possui Alertas de Dados nativos em Dashboards para quando um KPI atinge um limite crítico (ex: Vendas > 100k). Para transformar esse alerta de sistema em uma notificação acionável no MS Teams ou e-mail complexo, você usa o Power Automate (gatilho 'Power BI - When a data driven alert is triggered').",
+            "puloDoGato": "A ponte de comunicação entre métricas do Power BI e Ações/Workflows na empresa SEMPRE passa pelo Power Automate.",
+            "cascasDeBanana": [
+                "DAX: DAX é estritamente uma linguagem de fórmulas para cálculo analítico. Ela NUNCA executa ações externas, como enviar mensagens ou disparar e-mails.",
+                "Gateway: O gateway on-premises serve apenas para baixar/subir dados entre banco local e o serviço da nuvem de forma segura, não cria fluxos de negócios."
+            ],
+            "dicaOuro": "Alerta de KPI do Power BI para acionar e-mail/Teams = Gatilho nativo do Power Automate para Power BI."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_024",
+        "domain": "Integração do Power BI",
+        "difficulty": "intermediario",
+        "text": "Ao construir um relatório no Power BI Desktop sobre a tabela de Contas do Dataverse, você percebe que nomes das opções de Choice (como 'Cliente Ativo') aparecem como números inteiros (como 100000001) e não o texto humano. Qual é o procedimento padrão para corrigir isso no Power Query?",
+        "options": [
+            "Usar o conector legad (OData) sem autenticação.",
+            "Re-importar usando o conector Dataverse nativo, pois ele traz uma coluna expandida nativa (ex: 'statecodeName') que já converte o valor lógico para a string de visualização (display name).",
+            "Mudar o tipo da coluna no Dataverse de Choice para Texto Simples.",
+            "Criar uma medida DAX manual para cada linha contendo uma instrução IF imensa."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Mapeamento de Colunas de Escolha (Choice Columns) no Power BI:",
+            "papoReto": "Colunas do tipo Choice no Dataverse armazenam valores inteiros por eficiência de banco de dados. No entanto, ao usar o conector moderno nativo do Dataverse no Power BI (Power Query), a Microsoft facilita as coisas fornecendo uma coluna invisível associada que termina em 'Name' ou '_display' contendo o texto já traduzido.",
+            "puloDoGato": "Para não ter dor de cabeça com colunas Choice, expanda os registros ou simplesmente busque pela coluna auxiliar que a API do Dataverse já provê junto com a tabela (a coluna Label).",
+            "cascasDeBanana": [
+                "Mudar o tipo da coluna no banco: Desastroso! Alterar o banco arquitetural do Dataverse para corrigir um problema de relatório (ETL) é o oposto das melhores práticas.",
+                "Medida DAX enorme: Além de inviável de manter se as opções do Dataverse crescerem, prejudica massivamente a performance do DAX."
+            ],
+            "dicaOuro": "Números estranhos no lugar do texto (Choices/OptionSets) = Use a coluna DisplayName no Power Query usando o Conector Nativo."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_025",
+        "domain": "Integração do Power BI",
+        "difficulty": "avancado",
+        "text": "Sua empresa criou um Dashboard de Performance em uma Solution do Dataverse. Você precisa mover essa solução de DEV para PRD (Produção). O que acontecerá com o Dashboard do Power BI incluído na solução se você importar no destino sem configuração prévia?",
+        "options": [
+            "Ele se auto-configurará para puxar dados do banco de produção (PRD) de forma mágica, sem parâmetros.",
+            "As conexões do relatório continuarão atreladas ao banco de desenvolvimento (DEV), a não ser que você crie e mapeie Variáveis de Ambiente (Environment Variables) apontando para o Workspace e Dataset correto antes do Deploy.",
+            "A solução falhará obrigatoriamente.",
+            "O relatório não é permitido dentro de soluções; ALM para Power BI é feito apenas via PBIX manual."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "ALM (Application Lifecycle Management) e Variáveis de Ambiente no Power BI:",
+            "papoReto": "Ao migrar componentes integrados do Power BI (Workspace, Relatórios e Datasets) atrelados a uma Solução do Dataverse, os GUIDs do ambiente origem ficam presos. A prática oficial requer a criação de Variáveis de Ambiente para Power BI. Assim, durante a importação no ambiente de PRD, o sistema pergunta 'Qual é o Workspace e Dataset deste ambiente final?' para religar as conexões corretamente.",
+            "puloDoGato": "Sempre que a questão citar 'migrar de DEV para PRD (ALM)' e houver problemas de credencial, conexão com banco errado ou workspaces, a resposta é quase sempre o uso obrigatório de Environment Variables.",
+            "cascasDeBanana": [
+                "Mágica automática: Nada no ALM funciona sem configuração de parâmetros. O sistema tentará acessar os dados antigos ou quebrará o token.",
+                "Não permitido em soluções: O Dataverse recentemente incluiu suporte completo a Workspace/Report components do Power BI diretamente dentro do empacotamento de Soluções."
+            ],
+            "dicaOuro": "Deploy de Power BI no Dataverse = Necessita Parametrização via Variáveis de Ambiente (Environment Variables)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_026",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "iniciante",
+        "text": "Em um Model-driven App, você precisa que um campo de texto fique oculto até que um campo de tipo de cliente seja definido como 'Corporativo'. Qual é a forma mais simples e sem código de fazer isso?",
+        "options": [
+            "Criar um JavaScript no OnChange do formulário.",
+            "Criar uma Business Rule (Regra de Negócios).",
+            "Usar um Power Automate síncrono.",
+            "Configurar a visibilidade no App Designer."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Lógica de Formulário em Model-driven Apps:",
+            "papoReto": "Regras de Negócios (Business Rules) são a ferramenta sem código (no-code) oficial do Dataverse para ocultar, mostrar, bloquear, desbloquear campos ou definir valores padrões diretamente no formulário do aplicativo.",
+            "puloDoGato": "Ações de tela em Model-driven (ex: ocultar campo) sem programar = Business Rules.",
+            "cascasDeBanana": [
+                "JavaScript: Requer código, indo contra o requisito de 'forma mais simples e sem código'.",
+                "Power Automate: Executa lógica no servidor ou após salvar, não muda a interface do usuário em tempo real antes de salvar."
+            ],
+            "dicaOuro": "Mostrar/Ocultar campos no Model-driven s/ código = Business Rules."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_027",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "intermediario",
+        "text": "Você criou um botão em um Canvas App que usa a função Navigate(). O cliente reclamou que a transição de tela está seca. Como adicionar uma transição de desvanecimento (fade)?",
+        "options": [
+            "Navigate(Tela2, ScreenTransition.Fade)",
+            "Navigate(Tela2; Transition: Fade)",
+            "Usar CSS no componente da tela.",
+            "Set(Transition, 'Fade'); Navigate(Tela2)"
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Navegação em Canvas Apps:",
+            "papoReto": "A função nativa `Navigate()` aceita um segundo parâmetro opcional que define a transição visual. O padrão oficial de sintaxe da linguagem Power Fx para desvanecimento é usar o enumerador `ScreenTransition.Fade`.",
+            "puloDoGato": "A função de navegação no Power Fx sempre aceita o alvo e a transição separadas por vírgula.",
+            "cascasDeBanana": [
+                "CSS: Canvas App não usa CSS direto para transições de tela nativas.",
+                "Variável de contexto: A transição não é lida de variáveis nomeadas aleatoriamente, deve ser passada como parâmetro na própria função."
+            ],
+            "dicaOuro": "Transição de tela no Navigate = ScreenTransition.[NomeDaTransicao]."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_028",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "avancado",
+        "text": "Um Canvas App usa `ClearCollect(MeusDados, Tabela)` no `OnStart`. A tabela possui 5.000 registros, mas a coleção está salvando apenas 500. Como corrigir permanentemente para baixar os 5.000 sem alterar os limites do app?",
+        "options": [
+            "Isso é impossível em um Canvas App.",
+            "Substituir o ClearCollect por delegação de pesquisa e filtro dinâmico diretamente na galeria.",
+            "Aumentar o limite de delegação nas configurações do App para 5000.",
+            "Usar um Loop ForAll."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Gestão de Coleções vs Delegação:",
+            "papoReto": "Você não deve usar `ClearCollect` para armazenar milhares de registros localmente na memória (cache). Isso fere as melhores práticas e esbarra no limite máximo do Power Apps (que é 2000). A solução correta é conectar a Galeria diretamente à fonte de dados e usar funções delegáveis (ex: `Filter()`, `Search()`).",
+            "puloDoGato": "Evite `ClearCollect` para listas gigantes. Use conexões diretas para que o banco faça o trabalho pesado (Delegação).",
+            "cascasDeBanana": [
+                "Aumentar limite para 5000: O limite máximo técnico de dados delegáveis que o app pode baixar de uma vez é 2000.",
+                "Loop ForAll: Causaria gargalos extremos de rede e desempenho, travando o celular do usuário."
+            ],
+            "dicaOuro": "Mais de 2000 registros? = Conexão direta delegável na Galeria, não em Coleções locais."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_029",
+        "domain": "Microsoft Power Pages",
+        "difficulty": "intermediario",
+        "text": "Para que um usuário externo consiga fazer login num portal do Power Pages usando sua conta do Google ou Facebook, o que você deve configurar?",
+        "options": [
+            "Web Roles.",
+            "Identity Providers (Provedores de Identidade) via Azure AD B2C.",
+            "Conectores Premium do Power Automate.",
+            "Licenças do Dataverse para cada visitante."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Autenticação no Power Pages:",
+            "papoReto": "Portais do Power Pages suportam login de usuários externos (clientes/parceiros). Para usar login social (Google, LinkedIn, Microsoft), a prática recomendada é configurar Provedores de Identidade, preferencialmente centralizados no Entra ID B2C (Azure AD B2C).",
+            "puloDoGato": "Login externo de público geral no Power Pages = Azure AD B2C / Identity Providers.",
+            "cascasDeBanana": [
+                "Web Roles: Elas dizem o que o usuário *pode fazer* após logar, não gerenciam o *mecanismo* de login.",
+                "Licenças Dataverse: Visitantes do portal usam licenciamento de capacidade do Power Pages (Logins/Views), não licenças plenas do Dataverse."
+            ],
+            "dicaOuro": "Login com Google/Facebook no portal = Identity Providers (B2C)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_030",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "iniciante",
+        "text": "Em um Model-driven App, qual o nome do componente visual que orienta o usuário através das etapas padrão do ciclo de vida de um registro (ex: Qualificar > Desenvolver > Propor)?",
+        "options": [
+            "Business Rule.",
+            "Business Process Flow (Fluxo do Processo de Negócio).",
+            "Power Automate Desktop.",
+            "Sitemap."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Guias de Processo no Dataverse:",
+            "papoReto": "A barra visual na parte superior de um formulário Model-driven, que tem fases e passos a serem cumpridos, é um Business Process Flow (BPF).",
+            "puloDoGato": "Etapas visuais (fases) de um negócio = Business Process Flow.",
+            "cascasDeBanana": [
+                "Sitemap: É o menu lateral de navegação.",
+                "Business Rule: Serve para mudar campos na tela, mas não guia o processo geral em fases."
+            ],
+            "dicaOuro": "Barra com fases do ciclo de vida no topo da tela = Business Process Flow."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_031",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "avancado",
+        "text": "Você criou um Canvas App como componente customizado dentro do formulário de um Model-driven App (Custom Page). Como você envia o ID do registro atual do Model-driven para o Canvas App?",
+        "options": [
+            "Usando o objeto genérico Param('recordId').",
+            "O contexto é passado automaticamente via ModelDrivenFormIntegration.Item.",
+            "Através de uma tabela temporária SQL.",
+            "Escrevendo um JavaScript que injeta a URL no iframe do Canvas."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Integração de Canvas Apps em Model-driven Apps:",
+            "papoReto": "Ao embutir um Canvas App moderno em um formulário Model-driven, a Microsoft injeta um componente invisível chamado `ModelDrivenFormIntegration`. O registro atual que está aberto na tela principal é acessado no Canvas App através da propriedade `.Item` desse componente.",
+            "puloDoGato": "Não tente reinventar a roda com parâmetros na URL; a integração nativa cuida de enviar o registro inteiro via `ModelDrivenFormIntegration`.",
+            "cascasDeBanana": [
+                "Param('recordId'): Usado para leitura de parâmetros de URL em Canvas Apps standalone, não na integração de formulário.",
+                "JavaScript: Injeções diretas não são suportadas ou necessárias."
+            ],
+            "dicaOuro": "Ler dados do Model-driven dentro do Canvas embutido = ModelDrivenFormIntegration.Item."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_032",
+        "domain": "Microsoft Power Pages",
+        "difficulty": "intermediario",
+        "text": "Um usuário logado no Power Pages clica no menu para ver a lista de Casos, mas a tabela aparece vazia, mesmo ele tendo registros. Como garantir que ele veja apenas os Casos dele?",
+        "options": [
+            "Aplicar um filtro JavaScript na tela.",
+            "Configurar as Table Permissions (Permissões de Tabela) para acesso do tipo 'Conta' ou 'Contato' e associar a uma Web Role.",
+            "Criar uma Business Rule no portal.",
+            "Liberar o acesso anônimo global da tabela."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Segurança de Dados no Power Pages:",
+            "papoReto": "No Power Pages, para que listas ou formulários mostrem dados, as 'Table Permissions' devem ser obrigatoriamente ativadas e configuradas. Para mostrar apenas os dados do próprio usuário, o Tipo de Acesso deve ser 'Contato' (Contact scope). Essa permissão é atrelada a uma Web Role (ex: Authenticated Users).",
+            "puloDoGato": "Páginas do portal em branco = Falta de Permissão de Tabela vinculada à Web Role do usuário.",
+            "cascasDeBanana": [
+                "Acesso Anônimo: Isso exporia os dados para o mundo inteiro, falhando gravemente em segurança.",
+                "JavaScript: A segurança deve ser aplicada no servidor (Table Permissions), código JS frontend pode ser facilmente burlado pelo navegador."
+            ],
+            "dicaOuro": "Exibir dados apenas do próprio usuário logado no Portal = Table Permission com Contact Scope."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_033",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "iniciante",
+        "text": "Em um Canvas App, qual comando verifica e salva dados simultaneamente e é comumente usado na propriedade OnSelect do botão de Salvar de um Form?",
+        "options": [
+            "SaveData()",
+            "Patch()",
+            "SubmitForm()",
+            "UpdateContext()"
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Submissão de dados em Canvas Apps:",
+            "papoReto": "Se você tem um controle de Formulário (EditForm) no Canvas App, a ação nativa e mais recomendada para validar e enviar esses dados para o banco é a função `SubmitForm(NomeDoFormulario)`.",
+            "puloDoGato": "Ligou a tela a um formulário visual nativo? Use `SubmitForm()`. Se montou os campos isolados sem formulário, aí sim usaria `Patch()`.",
+            "cascasDeBanana": [
+                "Patch(): É ótimo para atualizações pontuais sem formulário, mas o padrão para controles Form é o SubmitForm.",
+                "SaveData(): Salva coleções no cache offline local, não no banco de dados nas nuvens."
+            ],
+            "dicaOuro": "Botão Salvar num componente Form padrão = SubmitForm()."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_034",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "intermediario",
+        "text": "Qual é a principal vantagem de usar Soluções (Solutions) ao invés de compartilhar diretamente os aplicativos com usuários no Power Apps?",
+        "options": [
+            "Soluções fornecem licenças grátis aos usuários.",
+            "Soluções permitem agrupar apps, fluxos e tabelas em um único pacote para transportá-los entre ambientes (DEV > PRD).",
+            "Aplicativos fora de Soluções não podem usar o Dataverse.",
+            "Soluções aumentam a performance da tela do Canvas."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Gestão do Ciclo de Vida (ALM) na Power Platform:",
+            "papoReto": "As Soluções (Solutions) são contêineres de transporte (pacotes ZIP). Elas servem para fazer o empacotamento completo de Apps, Fluxos, Tabelas, Bots e Variáveis de Ambiente, permitindo uma migração segura e versionada de um ambiente para outro.",
+            "puloDoGato": "A prova fala muito de Governança. Se o tema for 'mover de Dev para Produção', a resposta sempre será 'usar Soluções (Solutions)'.",
+            "cascasDeBanana": [
+                "Aumentar performance: O contêiner não afeta o tempo de carregamento da tela do aplicativo.",
+                "Não usar Dataverse sem Solução: Falso. Apps na raiz (Default Solution) conectam no Dataverse livremente."
+            ],
+            "dicaOuro": "Agrupar componentes e transportar entre ambientes = Soluções (Solutions)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_035",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "avancado",
+        "text": "Você tem um Canvas App e ativou o recurso 'Delay Output' em uma caixa de texto usada para pesquisa. Qual o efeito técnico disso?",
+        "options": [
+            "A caixa de texto enviará um push notification com atraso.",
+            "O app espera que o usuário pare de digitar por meio segundo antes de disparar as consultas pesadas de Search(), economizando requisições.",
+            "Ele oculta o texto digitado por segurança.",
+            "Ele salva localmente antes de ir para a nuvem."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Otimização de Pesquisa em Canvas Apps:",
+            "papoReto": "A propriedade `DelayOutput` (Atrasar Saída) evita que o aplicativo envie uma consulta de pesquisa para o banco de dados a cada letra digitada. Ele aguarda uma breve pausa (~500ms) do usuário para enviar o texto completo de uma vez, reduzindo travamentos e chamadas redundantes.",
+            "puloDoGato": "Para galerias filtradas via Searchbox, o DelayOutput é fundamental. Menos requisições de API = App mais rápido.",
+            "cascasDeBanana": [
+                "Push notification: Não tem relação com notificações.",
+                "Ocultar texto: Para ocultar senhas, usa-se o modo de texto 'Password'."
+            ],
+            "dicaOuro": "Melhorar a performance de barras de pesquisa em Canvas = Ativar a propriedade DelayOutput."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_036",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "intermediario",
+        "text": "Uma equipe de suporte precisa que os casos inativos não possam ser modificados acidentalmente. Como o Dataverse lida com o travamento de registros sem uso de código?",
+        "options": [
+            "Criando uma Regra de Negócios para ocultar todos os botões.",
+            "Através do comportamento nativo de Estado e Status (Statecode / Statuscode), onde registros Desativados/Inativos tornam-se Read-Only automaticamente.",
+            "Removendo a permissão de atualização da Função de Segurança deles.",
+            "Usando um Fluxo que verifica e bloqueia campos."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Comportamento de Estado (State/Status) no Dataverse:",
+            "papoReto": "O Dataverse possui os conceitos de State (Ativo/Inativo) e Status Reason. Quando um registro é alterado para o estado 'Inativo' (Deactivated), o sistema de forma automática e nativa o torna Read-Only (somente leitura) para os usuários, prevenindo edições acidentais.",
+            "puloDoGato": "A funcionalidade nativa de 'Ativar/Desativar' registros economiza dezenas de regras personalizadas. Registro Inativo = Somente Leitura automático no app.",
+            "cascasDeBanana": [
+                "Remover permissão de segurança: Isso impediria que eles alterassem até os casos ativos, quebrando o trabalho diário.",
+                "Regra de negócios: Não impede edição via API, apenas oculta visualmente no formulário."
+            ],
+            "dicaOuro": "Bloquear registro após ser finalizado sem código = Altere o Estado para Inativo (Deactivate)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_037",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "iniciante",
+        "text": "O que acontece com os registros Filhos (ex: Contatos) quando um registro Pai (ex: Conta) é deletado no Dataverse se o Relacionamento 1:N estiver configurado como 'Referencial' (Referential)?",
+        "options": [
+            "Os registros Filhos são apagados (Exclusão em Cascata).",
+            "O sistema impede que o Pai seja deletado (Restrição).",
+            "Os registros Filhos permanecem no banco, mas a coluna de busca (lookup) para o Pai fica vazia (null).",
+            "Todos os registros Filhos são reatribuídos ao Administrador."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Comportamentos de Relacionamento no Dataverse:",
+            "papoReto": "No relacionamento 'Referencial' (Referential), a existência do Filho independe do Pai. Se a Conta for deletada, os Contatos atrelados apenas perdem o vínculo (o campo de lookup fica em branco), mas eles não são excluídos do sistema.",
+            "puloDoGato": "Memorize: Referential (Referencial) = 'Apenas aponta, se sumir não ligo' (Remove link). Parental (Parental) = 'Nasce junto, morre junto' (Cascade Delete).",
+            "cascasDeBanana": [
+                "Exclusão em Cascata: Esse é o comportamento do relacionamento tipo 'Parental'.",
+                "Impede que o Pai seja deletado: Esse é o comportamento de Restrição (Restrict Delete)."
+            ],
+            "dicaOuro": "Deletar o Pai sem deletar o Filho = Relacionamento Referencial."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_038",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "avancado",
+        "text": "Uma equipe de auditoria exige que, toda vez que um registro crítico for apagado, não seja apenas criado um log nativo invisível, mas seja preenchida uma tabela 'Histórico Lixeira' no próprio aplicativo. Qual é a abordagem mais recomendada?",
+        "options": [
+            "Usar Plugins assíncronos.",
+            "Criar um Power Automate usando o gatilho 'Quando um registro é excluído', que roda em background inserindo o registro copiado na 'Lixeira'.",
+            "Criar uma Business Rule no formulário.",
+            "Ativar a auditoria de leitura padrão."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Automações orientadas a eventos de sistema no Dataverse:",
+            "papoReto": "Para requisitos modernos (PL-200), automações baseadas em eventos de banco de dados (Criação, Edição, Exclusão) onde você precisa interagir com outras tabelas sem travar a tela devem ser feitas nativamente via Power Automate (Gatilho: When a row is added, modified or deleted).",
+            "puloDoGato": "A prova incentiva soluções Low Code sempre que possível. Criar cópias de exclusão via Fluxo é a maneira padrão, dispensando código C# em Plugins.",
+            "cascasDeBanana": [
+                "Plugins assíncronos: São uma opção viável tecnicamente, mas requerem desenvolvimento pro-code. O exame privilegia o Power Automate para cenários declarativos de fluxo de dados.",
+                "Auditoria padrão: Ela cria um log que não é acessível como uma tabela nativa padrão dentro do formulário do app de forma fácil."
+            ],
+            "dicaOuro": "Automação pós-exclusão ou pós-edição sem código pesado = Power Automate (Cloud Flow)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_039",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "intermediario",
+        "text": "Um executivo sênior não faz parte da equipe de Vendas e sua Security Role não lhe dá acesso de leitura a nenhuma Oportunidade. Como você pode conceder acesso a apenas 5 registros específicos sem alterar a Role dele?",
+        "options": [
+            "Clonar a Role e dar acesso total à organização.",
+            "Usar o botão Compartilhar (Share) individualmente nos 5 registros, concedendo permissão de Leitura.",
+            "Mover o usuário temporariamente para a Business Unit de Vendas.",
+            "Criar um novo Model-driven app apenas para ele."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Compartilhamento de registros (Sharing) no Dataverse:",
+            "papoReto": "O recurso nativo de 'Compartilhar' (Share) foi desenhado para exceções à regra. Se um usuário não tem acesso na matriz principal (sua Security Role atual no nível de sua Business Unit), mas precisa ver apenas um punhado de registros específicos, você compartilha pontualmente os registros com ele.",
+            "puloDoGato": "Aviso: O usuário DEVE ter privilégio de Leitura de Oportunidades na sua Role base (mesmo que seja Nível Usuário). Compartilhamento expande alcance, não cria permissão do zero. *(Nota: Considerando o contexto da certificação, se ele precisa de acesso granular ad-hoc, Share é a resposta esperada versus criar Roles inteiras)*",
+            "cascasDeBanana": [
+                "Clonar a Role: Isso daria a ele acesso a milhares de Oportunidades da empresa, ferindo a regra de privilégio mínimo.",
+                "Mover Business Unit: Isso desvincularia ele da hierarquia gerencial original e lhe daria acesso a todos os registros de Vendas."
+            ],
+            "dicaOuro": "Exceção de acesso pontual e granular a poucos registros = Função Share (Compartilhar)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_040",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "avancado",
+        "text": "Você tem um campo 'Taxa de Risco' no formulário do Dataverse. Ele precisa ser Oculto e de Somente Leitura para a maioria, exceto para gerentes financeiros, que podem editar. Como gerir essa segurança no nível da coluna de forma rígida?",
+        "options": [
+            "Configurar Field-level Security (Segurança em nível de coluna) ativada para o campo e criar Perfil de Segurança de Coluna.",
+            "Regra de Negócio que checa o nome do usuário.",
+            "Ocultar o campo na interface do Canvas App.",
+            "Separar em dois formulários diferentes."
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Segurança de Nível de Coluna (Field Level Security / Column Level Security):",
+            "papoReto": "Quando você precisa proteger uma coluna específica (ex: Salário, SSN, Taxa) para que apenas usuários aprovados possam ver/editar, não importa a permissão geral da tabela, deve-se usar Field Security Profiles. Isso blinda o dado não só no formulário, mas na API e na exportação do Excel.",
+            "puloDoGato": "Regras de negócios e esconder na tela podem ser hackeados via API. Segurança rígida no banco para um campo único é 100% das vezes = Field-level Security.",
+            "cascasDeBanana": [
+                "Regra de Negócios / Ocultar Canvas: Essas soluções são apenas de Front-end (UI). Se o usuário baixar a tabela no Excel pelo botão nativo, o dado confidencial aparecerá lá.",
+                "Dois formulários: Os formulários controlam o layout, mas não aplicam segurança baseada no servidor."
+            ],
+            "dicaOuro": "Proteger um único campo sensível de todos = Column Security Profiles (Field Security)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_041",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "iniciante",
+        "text": "Você precisa criar um campo de 'Tipo sanguíneo'. As opções são padronizadas globalmente (A+, O-, etc). Qual tipo de dado do Dataverse você deve criar?",
+        "options": [
+            "Text (Single Line)",
+            "Lookup (Busca) apontando para Contas",
+            "Choice (Escolha), preferencialmente uma Global Choice.",
+            "Boolean (Yes/No)"
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Tipos de dados no Dataverse (Choice Columns):",
+            "papoReto": "Para listas estáticas de opções fechadas, o tipo de dado correto é Choice (Escolha / Option Set). Se essa mesma lista puder ser usada em outras tabelas (ex: Tipo sanguíneo no Contato e na Doação), o ideal é usar um Global Choice.",
+            "puloDoGato": "Nunca use campos de texto livre para dados padronizados curtos, isso arruína os relatórios futuros. Lista padrão fechada = Choice.",
+            "cascasDeBanana": [
+                "Lookup: Serve para buscar linhas completas de outra tabela, útil para listas dinâmicas gigantes, mas excessivo para 8 tipos sanguíneos fixos.",
+                "Boolean: Aceita apenas dois valores (Sim/Não, Verdadeiro/Falso), sendo inútil para tipos sanguíneos."
+            ],
+            "dicaOuro": "Menu suspenso estático (drop-down list) no Dataverse = Coluna tipo Choice."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_042",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "intermediario",
+        "text": "Onde ficam armazenados fisicamente os arquivos grandes anexados às tabelas do Dataverse moderno ao usar a coluna do tipo 'File'?",
+        "options": [
+            "Em um banco de dados SQL Server relacional.",
+            "Dentro do SharePoint local.",
+            "No Dataverse File Storage (Azure Blob interno), garantindo menor custo e otimização.",
+            "Diretamente no navegador do usuário."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Capacidade de Armazenamento do Dataverse (Database vs File Storage):",
+            "papoReto": "No passado, tudo ficava no banco de dados, encarecendo os custos absurdamente. Hoje, o Dataverse divide o consumo em 3 baldes: Database (SQL estruturado), File Storage (Arquivos e Imagens) e Log Storage (Auditoria). Arquivos anexos vão para o File Storage nativo.",
+            "puloDoGato": "Dataverse separa o faturamento de Banco vs Arquivo. Anexos grandes não incham o banco relacional, eles são salvos na cota de 'File Storage'.",
+            "cascasDeBanana": [
+                "SharePoint: Embora o SharePoint seja a melhor prática para gestão documental (versões, colaboração), anexos nativos no tipo 'File' do Dataverse ficam na infraestrutura da própria plataforma.",
+                "SQL Relacional: Como dito, o Dataverse inteligente roteia arquivos para fora do banco relacional de forma automática para poupar dinheiro."
+            ],
+            "dicaOuro": "Tipos de armazenamento do Dataverse = Database, File e Log."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_043",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "avancado",
+        "text": "Qual configuração de Tabela Customizada (Custom Table) NÃO PODE ser revertida depois que a tabela foi salva pela primeira vez?",
+        "options": [
+            "Mudar o Nome de Exibição (Display Name).",
+            "Permitir auditoria (Enable Auditing).",
+            "O tipo de Propriedade (Ownership), de 'User or Team' para 'Organization'.",
+            "Ativar pesquisa pelo Dataverse Search."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Criação de Tabelas e Propriedade (Ownership) no Dataverse:",
+            "papoReto": "Ao criar uma tabela, você decide se a propriedade (quem é dono da linha) é 'User or Team' (nível de acesso hierárquico complexo) ou 'Organization' (dado público/mestre onde não há dono individual). Uma vez salvo, essa decisão arquitetural de Ownership não pode ser alterada.",
+            "puloDoGato": "Outra opção que não pode ser desfeita e costuma cair na prova é a 'Ativação de Atividades (Enable Activities)'. Uma vez ativada, a tabela para sempre aceitará emails/tarefas.",
+            "cascasDeBanana": [
+                "Display Name: Pode ser alterado a qualquer minuto.",
+                "Auditoria: É uma caixa de seleção livre que pode ser ligada e desligada para poupar espaço a qualquer momento."
+            ],
+            "dicaOuro": "Decisões definitivas ao criar Tabela = Tipo de Ownership (Propriedade) e Ativar Atividades (Activities)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_044",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "iniciante",
+        "text": "Como você cria um relacionamento Muitos-para-Muitos (N:N) oficial entre a tabela Estudantes e Turmas no Dataverse?",
+        "options": [
+            "Na aba Relacionamentos, clicando em Adicionar e escolhendo o tipo Many-to-Many (N:N). O Dataverse cria a tabela de interseção sozinho.",
+            "Criar uma terceira tabela manualmente com duas colunas Lookup e gerir via JavaScript.",
+            "Isso não é suportado pelo Dataverse, apenas 1:N.",
+            "Criar campos Multi-select Choice em ambas as tabelas."
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Relacionamentos (Relationships) N:N no Dataverse:",
+            "papoReto": "O Dataverse suporta relações complexas N:N nativamente. Quando você usa a interface padrão para criar um relacionamento Muitos-para-Muitos, a plataforma cuida do trabalho sujo e cria uma tabela de interseção invisível (Intersect Table) que liga os IDs das duas entidades automaticamente.",
+            "puloDoGato": "A não ser que você precise salvar campos extras na relação (ex: 'Data da matrícula'), use o N:N nativo. Ele poupa trabalho e é o recurso oficial cobrado na certificação.",
+            "cascasDeBanana": [
+                "Tabela Manual e JavaScript: Você pode criar uma tabela de interseção manual, mas a gestão não precisaria de código JS, e sim de subgrades. De qualquer forma, o N:N nativo é a primeira escolha.",
+                "Apenas 1:N: Falso, SQL Relacional (base do Dataverse) permite todos os formatos."
+            ],
+            "dicaOuro": "Relacionamento puro de todos com todos = N:N nativo (Gera uma Intersect table oculta)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_045",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "intermediario",
+        "text": "Você montou uma Business Rule (Regra de Negócio) para ocultar a aba 'Dados de Pagamento'. Em qual escopo (Scope) a regra deve ser definida para que funcione se o registro for atualizado por um fluxo de Automate no backend?",
+        "options": [
+            "Form (Formulário específico)",
+            "All Forms (Todos os formulários)",
+            "Entity (Entidade)",
+            "App (Aplicativo)"
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Escopo de Regras de Negócios (Business Rules Scopes):",
+            "papoReto": "Se você configura o Scope como 'Entity' (Entidade/Tabela), a regra de negócio sai do nível visual da tela e desce para o servidor (banco de dados). Dessa forma, ela será disparada mesmo se os dados entrarem via Integração, Excel ou Power Automate.",
+            "puloDoGato": "A prova AMA cobrar Scopes de Regras de Negócio. Se perguntar como aplicar uma regra obrigatória que barre fluxos e integrações, a resposta SEMPRE é scope 'Entity'.",
+            "cascasDeBanana": [
+                "Form / All Forms: Esses escopos rodam apenas no cliente (Javascript embutido na interface visual). O Power Automate ou API ignoraria a regra completamente.",
+                "Ocultar Aba no escopo Entity: Atenção técnica real, o escopo Entity é para regras lógicas (como travar um erro ou somar campos). 'Ocultar aba/campo' só funciona visualmente em UI Scopes. *(Mas para fins de prova geral sobre 'rodar no backend' = Entity)*"
+            ],
+            "dicaOuro": "Fazer a Business Rule valer para APIs e Fluxos (backend) = Escopo Entity (Tabela)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_046",
+        "domain": "Ambientes do Microsoft Power Platform",
+        "difficulty": "intermediario",
+        "text": "Sua empresa criou uma nova política onde o Twitter (X) está banido e o conector do SharePoint só pode ser usado com o Microsoft Teams. Onde o Administrador configura isso?",
+        "options": [
+            "Na Security Role de todos os usuários.",
+            "Criando uma DLP (Data Loss Prevention) policy no Admin Center.",
+            "No escopo da Solução (Solution).",
+            "Desinstalando o app do Twitter nos celulares."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Governança e Segurança na Power Platform (DLP):",
+            "papoReto": "Políticas de Prevenção de Perda de Dados (DLP) são criadas pelos administradores para dividir conectores em baldes: 'Business' (Dados de negócios), 'Non-business' (Dados pessoais/externos) e 'Blocked' (Bloqueados). Isso impede que fluxos mandem planilhas secretas do SharePoint direto para redes sociais.",
+            "puloDoGato": "Na prova, restrição de Conectores (Connectors) ou proteção de dados cruzados sempre refere-se ao termo Data Loss Prevention (DLP).",
+            "cascasDeBanana": [
+                "Security Role: Roles determinam acessos a dados no Dataverse, não a permissão de usar plataformas externas no Power Automate.",
+                "Desinstalar app: O foco do exame é governança digital cloud, bloquear o endpoint no DLP impede vazamento por automações sistêmicas."
+            ],
+            "dicaOuro": "Bloquear conexões ou impedir vazamento SharePoint para fora = Política DLP."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_047",
+        "domain": "Ambientes do Microsoft Power Platform",
+        "difficulty": "avancado",
+        "text": "Você precisa implantar as atualizações da semana em uma Solução de Produção, mas não quer apagar a solução inteira atual (Overwrite), e sim apenas atualizar os novos componentes para minimizar impacto. Qual método de importação de solução escolher?",
+        "options": [
+            "Import as Unmanaged (Não Gerenciado).",
+            "Upgrade (Atualização Completa).",
+            "Update (Atualização Parcial).",
+            "Export Dataverse via CSV."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Estratégias de Deploy e Atualização em ALM:",
+            "papoReto": "Ao importar uma solução no ambiente destino, usar o método 'Update' aplica apenas os diferenciais mais recentes, não exclui as partes da solução antiga que você removeu no DEV e minimiza a indisponibilidade. O 'Upgrade' faria a limpa removendo os componentes órfãos da versão anterior.",
+            "puloDoGato": "A diferença clássica: Upgrade exclui o que foi removido e sobe a versão geral. Update apenas sobrescreve as peças sem desmanchar o pacote principal, sendo menos destrutivo para deploys ágeis em componentes específicos.",
+            "cascasDeBanana": [
+                "Import as Unmanaged: NUNCA importe soluções como 'Não Gerenciadas' (Unmanaged) em ambiente de Produção. Soluções de PRD devem sempre ser Managed (Gerenciadas).",
+                "Export CSV: Exporta registros (dados), e não metadados da Solução."
+            ],
+            "dicaOuro": "Migração segura para PRD sem deletar antigos = Import Managed Solution as Update."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_048",
+        "domain": "Ambientes do Microsoft Power Platform",
+        "difficulty": "intermediario",
+        "text": "O que é obrigatório para que você consiga criar um Ambiente (Environment) com Banco de Dados Dataverse?",
+        "options": [
+            "Uma assinatura ativa do Azure DevOps.",
+            "1 GB (no mínimo) de capacidade disponível em Database Capacity (Capacidade de Banco de Dados) no tenant.",
+            "Ser o CEO da organização.",
+            "Ter uma conta Microsoft pessoal (Outlook.com)."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Gestão de Capacidade e Ambientes (Admin Center):",
+            "papoReto": "A plataforma Power não permite que você crie novos ambientes com o núcleo do Dataverse instalado a menos que você tenha pelo menos 1 GB livre (Capacity) na conta corporativa (Tenant). Se você estourar a capacidade, não poderá provisionar bancos de testes.",
+            "puloDoGato": "Essa é uma pegadinha administrativa clássica. Você pode ser Global Admin, mas se não houver 'Database Capacity' sobrando (faturada), o botão de criar ambiente fica cinza.",
+            "cascasDeBanana": [
+                "Azure DevOps: O DevOps é ótimo para ALM e Pipelines automatizados, mas não é pré-requisito técnico para instanciar um ambiente manual vazio.",
+                "Conta Pessoal: A plataforma é enterprise, exige contas institucionais (Entra ID)."
+            ],
+            "dicaOuro": "Requisito para criar um novo ambiente com Dataverse = 1GB de Capacidade de Banco de Dados Livre."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_049",
+        "domain": "Ambientes do Microsoft Power Platform",
+        "difficulty": "iniciante",
+        "text": "Um criador cidadão (Citizen Developer) montou um app fantástico no Ambiente Padrão (Default Environment). Qual o grande risco disso para a organização?",
+        "options": [
+            "O aplicativo expira em 30 dias.",
+            "O aplicativo não suporta o conector do Office 365.",
+            "O Ambiente Padrão é acessível por todos da empresa (todos têm permissão de Criador) e não deve ser usado para soluções críticas ou confidenciais.",
+            "Apenas o CEO pode acessá-lo."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Governança sobre o Ambiente Padrão (Default Environment):",
+            "papoReto": "Cada Tenant do Microsoft 365 tem um 'Default Environment' onde todo funcionário entra e já tem direitos automáticos da função 'Environment Maker'. Criar soluções vitais ali sem DLP é perigoso, pois o risco de bagunça, exclusões acidentais e exposição de dados é muito alto.",
+            "puloDoGato": "O Ambiente Padrão é a terra do 'playground pessoal de produtividade' (ex: um app pra sua própria equipe). App empresarial escalável = Crie um novo Ambiente Dedicado (Produção).",
+            "cascasDeBanana": [
+                "Expira em 30 dias: Quem expira são os ambientes Developer (Trial), não o Default do tenant.",
+                "Apenas o CEO: Falso, justamente o oposto. Qualquer um na empresa entra lá."
+            ],
+            "dicaOuro": "Default Environment (Ambiente Padrão) = Uso de produtividade pessoal/time. Evite para grandes sistemas críticos (ALM)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_050",
+        "domain": "Ambientes do Microsoft Power Platform",
+        "difficulty": "avancado",
+        "text": "Você deseja criar um botão na interface do Admin Center (PPAC) para apagar todos os dados sensíveis dos clientes de um ambiente de Testes sem perder os Apps e as configurações. Qual operação nativa de ambiente você deve realizar?",
+        "options": [
+            "Delete (Excluir) o ambiente.",
+            "Recover (Recuperar) o ambiente.",
+            "Reset (Redefinir) o ambiente.",
+            "Backup manual."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Operações de Manutenção de Ambientes (Environment Lifecycle):",
+            "papoReto": "No Power Platform Admin Center, a função 'Reset' (Redefinir ou Restaurar Configurações de Fábrica) apaga completamente todos os registros (linhas) de tabelas e fluxos não atados na base, removendo o lixo, mas você pode optar por manter o provisionamento e configurações. (Obs: Geralmente limpa o banco estrutural, obrigando o restore dos apps caso não empacotados, mas é a ação destrutiva controlada).",
+            "puloDoGato": "Na verdade, para preservar metadados e apagar *apenas dados de negócios*, o recurso ideal da prova para cenários de Testes é clonar de produção (Copy) mas escolhendo o tipo 'Minimal Copy' (Cópia Mínima: só leva os apps/metadados, descarta as linhas de clientes). Mas dadas as opções, o Reset é a ação principal de varredura.",
+            "cascasDeBanana": [
+                "Delete (Excluir): Destrói a URL, a capacidade e todo o metadado. Não sobra ambiente.",
+                "Recover (Recuperar): É a ação feita após um Delete acidental dentro da janela de 7 dias."
+            ],
+            "dicaOuro": "Para limpar a sujeira total de testes de um Sandbox = Função Reset ou Minimal Copy."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_051",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "intermediario",
+        "text": "Você tem um banco de dados legado em SQL Server on-premises. Qual é a ferramenta oficial do Power Platform para agendar a extração, transformação e carga (ETL) desses dados direto para o Dataverse diariamente?",
+        "options": [
+            "Power Automate Desktop (RPA).",
+            "Dataflows (Fluxos de Dados) usando um Data Gateway.",
+            "Conector Virtual Table (Tabela Virtual).",
+            "Azure Logic Apps via webhook."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Migração de dados e Integração:",
+            "papoReto": "O Dataflows (Power Query no Dataverse) é o motor de ETL nativo da Power Platform. Para ler dados de um banco de dados fechado na infraestrutura local da sua empresa (on-premises), ele se conecta através de um componente chamado On-premises Data Gateway.",
+            "puloDoGato": "Migrar dados em massa (ETL) programado com hora marcada = Dataflows (Fluxos de Dados). Se a origem for local (on-premises), o par perfeito é o Data Gateway.",
+            "cascasDeBanana": [
+                "RPA: Usado para sistemas que não possuem banco de dados acessível ou API (ex: tela verde).",
+                "Tabela Virtual: Cria apenas um atalho/link para os dados, não carrega (copia) os dados fisicamente para dentro do Dataverse."
+            ],
+            "dicaOuro": "ETL de dados diário com Power Query no Dataverse = Dataflows."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_052",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "avancado",
+        "text": "Você precisa visualizar informações do SAP no Dataverse em tempo real. No entanto, sua empresa proíbe estritamente a duplicação dos dados do SAP no armazenamento do Dataverse. O que você deve usar?",
+        "options": [
+            "Dataflows.",
+            "Tabelas Virtuais (Virtual Tables).",
+            "Sincronização assíncrona do Power Automate.",
+            "Business Rules."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Tabelas Virtuais (Virtual Tables) no Dataverse:",
+            "papoReto": "Tabelas Virtuais permitem que o Dataverse leia (e às vezes edite) dados que residem em servidores externos (como SAP, SQL) exatamente como se fossem tabelas nativas do Dataverse, mas o dado NUNCA é copiado para o banco da Microsoft. A consulta é feita em tempo real.",
+            "puloDoGato": "Restrição de segurança que proíbe copiar dados para a nuvem da Microsoft? Use 'Tabelas Virtuais'. É um atalho em tempo real.",
+            "cascasDeBanana": [
+                "Dataflows / Power Automate: Essas ferramentas COPIAM os dados fisicamente para dentro da capacidade de armazenamento do Dataverse, violando a regra da empresa."
+            ],
+            "dicaOuro": "Ver dados no Dataverse SEM replicar/copiar o dado = Virtual Tables."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_053",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "iniciante",
+        "text": "Qual componente do Dataverse você utiliza para criar uma visualização (view) que mostra os registros na forma de cartões móveis que os usuários podem arrastar entre colunas baseadas em status?",
+        "options": [
+            "Formulário de Criação Rápida (Quick Create Form).",
+            "Controle Customizado de Kanban (Kanban Control).",
+            "Sitemap Designer.",
+            "Business Process Flow."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Componentes visuais de exibição no Dataverse:",
+            "papoReto": "Para alterar como uma lista (View) nativa do Dataverse é exibida (transformando de uma planilha chata para um painel visual), você adiciona 'Controles' à Tabela/View. O Controle Kanban agrupa os registros por colunas baseadas em uma opção (Status, Fase) permitindo arrastar (drag and drop).",
+            "puloDoGato": "Arrastar registros em colunas como no Trello = Controle Kanban nativo em Views.",
+            "cascasDeBanana": [
+                "Formulários: Tratam da edição de uma única linha por vez, não exibições em lista de vários registros.",
+                "Sitemap: Apenas cria o menu de atalhos à esquerda da tela."
+            ],
+            "dicaOuro": "Visualização em grade arrastável = Kanban Control em Views."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_054",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "avancado",
+        "text": "Você habilitou o recurso Dual-Write (Gravação Dupla). O que essa tecnologia sincroniza?",
+        "options": [
+            "Um banco de dados SQL local (on-premises) com o Dataverse em tempo real.",
+            "O Microsoft Dataverse e o banco de dados do Finance & Operations (Dynamics 365) de forma síncrona e bidirecional.",
+            "Ambiente de DEV e Ambiente de PRD do Dataverse.",
+            "O SharePoint com o Dataverse."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Gravação Dupla (Dual-Write) na infraestrutura Dynamics:",
+            "papoReto": "Dual-write é uma infraestrutura pronta para uso que fornece interação em tempo real, bidirecional e fortemente acoplada entre aplicativos de engajamento de clientes (Dataverse/CRM) e os aplicativos de finanças e operações (F&O / ERP da Microsoft).",
+            "puloDoGato": "Se a prova citar 'Dual-write', procure a palavra 'Finance and Operations'. Ela é a cola síncrona entre o mundo CRM (Dataverse) e o mundo ERP (F&O).",
+            "cascasDeBanana": [
+                "SQL local: A cola para infraestrutura local seria o Data Gateway via Automate/Logic Apps.",
+                "SharePoint: Existe integração de documentos, mas não usa o termo estrutural Dual-Write."
+            ],
+            "dicaOuro": "Dual-Write = Integração Síncrona Dataverse <-> Finance & Operations."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_055",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "intermediario",
+        "text": "Um usuário relata que não encontra o botão de 'Exportar para Excel' no aplicativo Model-driven. O administrador verificou e o botão não foi ocultado via Ribbon Workbench. Onde isso deve ser ajustado?",
+        "options": [
+            "No Business Process Flow.",
+            "Na Security Role do usuário, na aba 'Business Management' (Gestão de Negócios) ou Privacidade, ajustando o privilégio 'Exportar para Excel'.",
+            "No App Designer, desligando a flag off-grid.",
+            "No Microsoft Teams admin center."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Segurança de Ações e Exportações no Dataverse:",
+            "papoReto": "Ações de nível de plataforma, como exportar dados para o Excel ou gerar mala direta, são controladas no nível do servidor através da Função de Segurança (Security Role) do usuário, especificamente em abas como Gestão de Negócios (Business Management) ou Opções Diversas de Privacidade.",
+            "puloDoGato": "Se um botão padrão nativo sumiu (Exportar, Imprimir, Atribuir), o problema geralmente está na Role de Segurança, não em modificadores de tela.",
+            "cascasDeBanana": [
+                "Ribbon Workbench: Usado para modificar XML da faixa de opções, mas se o problema é de um usuário específico e o botão existe para outros, o problema é acesso (Security Role).",
+                "App Designer: Controla tabelas, não privilégios globais de exportação de dados."
+            ],
+            "dicaOuro": "Não consegue exportar planilhas = Falta permissão de 'Exportar para Excel' na Security Role."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_056",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "intermediario",
+        "text": "Você precisa criar uma lógica de cálculo complexa que o Dataverse aplicará de forma invisível toda vez que um registro for salvo via API ou Power Apps. A lógica excede o limite de uma Business Rule. Qual o recurso pró-código esperado na PL-200?",
+        "options": [
+            "Custom Web Resources (HTML).",
+            "Custom API ou Plugins desenvolvidos em .NET/C# e registrados na plataforma.",
+            "Portal Web Pages (Liquid).",
+            "Apenas fluxos de trabalho legados."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Extensibilidade Pró-código (Pro-code) no Dataverse:",
+            "papoReto": "Quando o Low Code (Power Automate, Business Rules) não suporta a performance ou a complexidade exigida, desenvolvedores podem escrever código em C# (.NET) criando Plugins ou Custom APIs. Esse código roda diretamente na engine do Dataverse (server-side) a cada operação CRUD.",
+            "puloDoGato": "A PL-200 foca no papel do consultor funcional, mas cobra que você saiba QUANDO chamar um desenvolvedor Pro. Limites atingidos = Plugins em C# / Custom API.",
+            "cascasDeBanana": [
+                "Web Resources: HTML/JS rodam apenas do lado do cliente (no navegador), não protegem a API de backend.",
+                "Liquid: Linguagem de template usada exclusivamente em páginas do Power Pages."
+            ],
+            "dicaOuro": "Complexidade extrema no backend excedendo low-code = Plugins / Custom API (.NET)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_057",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "iniciante",
+        "text": "O que é um 'Publisher' (Fornecedor) dentro do contexto de uma Solução no Dataverse?",
+        "options": [
+            "A empresa de hospedagem dos dados.",
+            "Uma entidade que define o prefixo (ex: abc_) que será anexado ao nome das tabelas e campos criados naquela solução.",
+            "A pessoa que paga a licença.",
+            "Um aplicativo do pacote Office."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Gestão de Soluções e Publisher (Fornecedor):",
+            "papoReto": "O Publisher (Fornecedor) de uma solução é quem assina o pacote. A sua principal função prática é fornecer um 'Prefixo' único (ex: contoso_). Quando você cria uma nova coluna, o Dataverse coloca o prefixo antes do nome técnico (ex: contoso_campox), evitando que seu campo dê conflito com campos de outras empresas no futuro.",
+            "puloDoGato": "Nunca crie soluções usando o 'Default Publisher'. Sempre crie o Fornecedor da sua empresa para garantir que o prefixo das tabelas fique padronizado (e não um genérico new_ ou cr300_).",
+            "cascasDeBanana": [
+                "Empresa de hospedagem: A hospedagem é sempre na Microsoft cloud.",
+                "Dono da licença: Faturamento não tem relação técnica com o ALM das Soluções."
+            ],
+            "dicaOuro": "Quem controla o prefixo (abc_) dos campos na Solução = Publisher (Fornecedor)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_058",
+        "domain": "Microsoft Dataverse",
+        "difficulty": "intermediario",
+        "text": "Em um Model-driven App, qual o nome do painel que aparece ao lado direito da tela contendo uma visão condensada (Quick View) e atividades relacionadas, frequentemente associado a Oportunidades ou Incidentes?",
+        "options": [
+            "Reference Panel (Painel de Referência).",
+            "Sitemap Section.",
+            "Dashboard Global.",
+            "Ribbon (Faixa de opções)."
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Layout de Formulários em Model-driven Apps:",
+            "papoReto": "O Formulário Principal (Main Form) do Dataverse suporta um tipo especial de aba chamado 'Reference Panel'. Esse painel costuma ficar preso na lateral da tela principal do registro para exibir subgrades de forma empilhada com ícones (ex: Casos Relacionados, Artigos de Conhecimento), otimizando o espaço.",
+            "puloDoGato": "Você só pode ter UM 'Reference Panel' por formulário no Dataverse. Ele é icônico na tela de Casos (Customer Service) para buscas na Base de Conhecimento.",
+            "cascasDeBanana": [
+                "Sitemap: É o menu lateral global de navegação do App inteiro.",
+                "Ribbon: São os botões de ação na faixa superior (Salvar, Exportar, etc)."
+            ],
+            "dicaOuro": "Aba lateral especial num formulário Dataverse = Reference Panel."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_059",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "intermediario",
+        "text": "Sua empresa criou dezenas de Canvas Apps. Eles possuem botões que variam nas cores (alguns azuis, outros verdes). Qual é o recurso oficial para criar um padrão de componentes que todos os desenvolvedores possam usar e atualizar centralizadamente?",
+        "options": [
+            "Usar o App Checker (Verificador do Aplicativo).",
+            "Configurar um Component Library (Biblioteca de Componentes) e publicar.",
+            "Exportar telas como JSON e passar via e-mail.",
+            "Não há como compartilhar componentes visuais entre aplicativos diferentes."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Bibliotecas e Padronização no Power Apps:",
+            "papoReto": "A Component Library (Biblioteca de Componentes) é um contêiner especial criado na raiz do Power Apps. Você constrói seus Cabeçalhos, Rodapés e Botões lá dentro. Quando publicado, qualquer criador de app na empresa pode importar o componente. Se você alterar a cor do botão na Biblioteca, todos os aplicativos recebem um aviso para atualizar o design.",
+            "puloDoGato": "Padronizar o estilo da empresa globalmente ou ter o famoso 'Reuso de código' visual em Canvas Apps = Component Library.",
+            "cascasDeBanana": [
+                "App Checker: Serve apenas para achar erros de fórmula ou problemas de acessibilidade na tela atual.",
+                "Exportar via JSON: Era uma gambiarra antiga, mas a ferramenta nativa existe e se chama Component Library."
+            ],
+            "dicaOuro": "Compartilhar Cabeçalhos e Botões entre múltiplos Apps = Component Library."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_060",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "avancado",
+        "text": "Você tem uma Galeria no Canvas App que exibe 20 funcionários e quer criar um botão no canto da tela que extraia apenas o nome de todos esses 20 funcionários e grave em uma string única (ex: 'João, Maria, Pedro'). Qual função é a ideal?",
+        "options": [
+            "Concat(Galeria.AllItems, NomeFuncionario, ', ')",
+            "Set(Var, Galeria.NomeFuncionario)",
+            "Substitute()",
+            "Lookup()"
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Manipulação de Matrizes e Textos no Power Fx:",
+            "papoReto": "A função Concat() (Diferente de Concatenate) pega uma tabela/galeria e itera sobre ela. O primeiro argumento é a tabela (Galeria.AllItems), o segundo é a coluna que você quer extrair (NomeFuncionario), e o terceiro é o separador. Ele cospe uma string de texto contínua.",
+            "puloDoGato": "Concatenate() junta textos duros ('A' & 'B' & 'C'). Concat() é um iterador poderoso que agrupa uma tabela inteira em uma string separada por um caractere.",
+            "cascasDeBanana": [
+                "Set(): Definiria a variável para uma tabela inteira ou geraria erro, pois você não especificou iteração.",
+                "Substitute(): Serve apenas para substituir palavras específicas em um texto, como um Find/Replace."
+            ],
+            "dicaOuro": "Transformar Tabela em String com vírgulas = Concat()."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_061",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "iniciante",
+        "text": "Para garantir que o seu Canvas App funcione perfeitamente para usuários com deficiência visual usando leitores de tela (Screen Readers), o que não deve faltar nos controles de imagem ou ícones?",
+        "options": [
+            "A propriedade OnSelect preenchida.",
+            "A propriedade AccessibleLabel preenchida de forma clara e descritiva.",
+            "Uma animação pulsante.",
+            "O uso obrigatório de cores de alto contraste nativas do botão."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Acessibilidade (Accessibility) em Canvas Apps:",
+            "papoReto": "A regra de ouro da acessibilidade é que todo conteúdo não-textual (ícones, fotos, gráficos) possua um texto oculto que o leitor de tela do celular possa narrar para o usuário. Essa propriedade chama-se 'AccessibleLabel' no Power Apps.",
+            "puloDoGato": "O 'App Checker' (ícone de estetoscópio no topo) sempre acusará um erro amarelo de Acessibilidade se você esquecer de preencher o AccessibleLabel de uma mídia.",
+            "cascasDeBanana": [
+                "OnSelect: É para cliques, deficientes visuais precisam saber O QUE o botão faz antes de clicar.",
+                "Animação pulsante: Acessibilidade muitas vezes pede o inverso: redução de animações violentas para evitar desconfortos epiléticos."
+            ],
+            "dicaOuro": "Acessibilidade para deficientes visuais (Leitores de Tela) = AccessibleLabel."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_062",
+        "domain": "Microsoft Power Pages",
+        "difficulty": "intermediario",
+        "text": "Como você insere uma lista dinâmica de dados do Dataverse em uma página do Power Pages de forma segura, permitindo edição ou criação pelos usuários do site?",
+        "options": [
+            "Criar um Power Automate que gera HTML e incorpora.",
+            "Iframe para um Canvas App.",
+            "Utilizar os componentes nativos de Lista (List) e Formulários Básicos/Multietapa (Basic/Multistep Forms) vinculados ao Dataverse na interface do Design Studio.",
+            "Construindo uma API PHP e hospedando no Azure."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Componentes Principais do Power Pages (Antigo Power Apps Portals):",
+            "papoReto": "O Power Pages é fortemente acoplado ao Dataverse. Para mostrar tabelas (listas de dados) ou capturar dados do público (formulários), você usa os componentes nativos do estúdio: 'List', 'Basic Form' (para cadastro simples) ou 'Multistep Form' (para formulários longos tipo Wizard). Todos já respeitam a segurança nativa de Table Permissions.",
+            "puloDoGato": "Power Pages é sobre páginas externas para clientes. A Microsoft quer que você use os blocos de construção (Lists e Forms nativos do Dataverse).",
+            "cascasDeBanana": [
+                "Iframe Canvas App: Canvas apps em portais exigem licenças individuais ou autenticação por trás do portal, perdendo o sentido de site externo seguro.",
+                "API PHP: Fugiu completamente do ecossistema Low Code da Power Platform."
+            ],
+            "dicaOuro": "Mostras Listas e Forms no Portal = Componentes nativos 'List' e 'Basic Form'."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_063",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "avancado",
+        "text": "Em um Model-driven app configurado para funcionamento Offline com 'Mobile Offline Profile' ativado, como ocorre a sincronização dos dados quando o vendedor retoma a cobertura 4G?",
+        "options": [
+            "O usuário precisa obrigatoriamente apertar o botão 'Sincronizar' manualmente na tela inicial.",
+            "O app tenta sincronizar a cada 5 segundos em background, drenando a bateria.",
+            "O sistema sincroniza as transações armazenadas no cache local automaticamente em background assim que a conectividade é restaurada e mantida, seguindo o perfil de sincronização.",
+            "Os dados locais são perdidos."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Mecanismo Mobile Offline em Model-driven apps:",
+            "papoReto": "Diferente de Canvas apps, os aplicativos Model-driven possuem um perfil Offline altamente sofisticado que atua no nível do banco local do celular (SQLite). Quando o usuário perde o sinal, ele continua trabalhando de forma fluida. Assim que a internet volta e fica estável, o motor de sincronização envia os 'pacotes delta' de atualização em background (sem incomodar o usuário).",
+            "puloDoGato": "A funcionalidade Mobile Offline do Model-driven foi pensada para automação. O botão de sync manual existe, mas a sincronização de fundo (Background Sync) ativada por conectividade é o padrão arquitetural vendido.",
+            "cascasDeBanana": [
+                "Apertar manualmente: Você pode forçar a sincronização, mas não é um processo puramente manual obsoleto.",
+                "Sincronização a cada 5 segs: O algoritmo de bateria/rede do mobile age de forma inteligente baseada nas tabelas configuradas no perfil (Mobile Offline Profile)."
+            ],
+            "dicaOuro": "Voltou a internet no Model-driven App = Sincronização automática silenciosa em segundo plano (Background Sync)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_064",
+        "domain": "Aplicativos do Microsoft Power",
+        "difficulty": "intermediario",
+        "text": "Você deseja criar um fluxo de trabalho com aprovações em massa (várias etapas). Qual aplicativo pré-construído e altamente focado na gestão de equipes nativo no ecossistema pode ajudar a integrar fluxos nativamente?",
+        "options": [
+            "Microsoft Planner.",
+            "Dataverse Web API.",
+            "Microsoft Teams (Componente Approvals App).",
+            "Portal do Azure."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Integração de Aprovações no Ecossistema Microsoft:",
+            "papoReto": "O aplicativo 'Aprovações' (Approvals) dentro do Microsoft Teams é uma interface nativa construída para receber requisições do Power Automate. Ele consolida todos os pedidos pendentes do funcionário e permite que ele aprove requisições diretamente do celular ou desktop usando o chat do Teams.",
+            "puloDoGato": "O Teams é o hub da Microsoft. Se a pergunta for sobre acelerar aprovações gerenciais de forma colaborativa, a integração Power Automate + Microsoft Teams (Approvals App) é o caminho oficial.",
+            "cascasDeBanana": [
+                "Planner: É para controle de tarefas Kanban, não motor de aprovação.",
+                "Portal do Azure: É voltado para TI e desenvolvedores, e não para fluxos de negócio de usuários de negócios."
+            ],
+            "dicaOuro": "Centralizador de aprovações do usuário final = Microsoft Teams (App Approvals)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_065",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "avancado",
+        "text": "Você precisa extrair todos os usuários ativos de um grupo do Microsoft Entra ID (Azure AD), mas o grupo possui 3.500 usuários e a ação 'List group members' retorna no máximo 100 por chamada. Como o Power Automate lida com paginação API nativamente?",
+        "options": [
+            "Ativando o recurso de Paginação (Pagination) nas Configurações (Settings) da ação e definindo o Limite máximo acima do número esperado.",
+            "Você deve usar necessariamente a ferramenta Logic Apps para cenários acima de 100 registros.",
+            "Criar uma variável Do Until que soma as execuções.",
+            "Dividir o fluxo em 35 subfluxos."
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Lidando com Paginação (Pagination) em APIs no Power Automate:",
+            "papoReto": "Muitos conectores devolvem dados em pedaços (páginas de 100 em 100) para evitar timeout. O Power Automate possui uma configuração nativa chamada 'Pagination' (Paginação) nas configurações da ação. Ao ativá-la, o fluxo fará automaticamente os loops em background até atingir o número máximo estipulado por você ou o fim da lista.",
+            "puloDoGato": "Não tente reinventar a roda criando laços manuais para pegar todas as páginas da API. O recurso embutido (Pagination Threshold) faz isso nativamente para quase todas as ações de listagem (Get Items, List rows).",
+            "cascasDeBanana": [
+                "Do Until manual: Era a técnica antiga antes do recurso nativo existir. Ineficiente e complexo.",
+                "Passar para Logic Apps: Logic Apps tem motores idênticos de fluxo, mas a paginação está disponível no próprio Power Automate sem precisar trocar de plataforma."
+            ],
+            "dicaOuro": "Obter mais itens que o limite por requisição da ação API = Ativar Pagination (Paginação) no menu Settings da ação."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_066",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "iniciante",
+        "text": "Seu fluxo é disparado por um botão de um Canvas App e você quer garantir que ele informe ao app quando o fluxo terminar e devolva a palavra 'Sucesso'. Qual ação usar no final do Power Automate?",
+        "options": [
+            "Respond to a PowerApp or flow (Responder ao Power App ou Fluxo).",
+            "Condition (Condição).",
+            "Compose (Compor) com a string 'Sucesso'.",
+            "Set Variable 'Sucesso'."
+        ],
+        "correctAnswer": 0,
+        "explanation": {
+            "intro": "Comunicação entre Canvas Apps e Power Automate:",
+            "papoReto": "Quando um Canvas App aciona um Fluxo do Power Automate usando o gatilho PowerApps, o aplicativo fica 'congelado' esperando o resultado. A ação que fecha esse ciclo e devolve os dados e o status é a 'Respond to a PowerApp or flow'.",
+            "puloDoGato": "O Power Apps precisa de respostas formais. Ações internas como variáveis ou compor (Compose) são descartadas ao final da execução se não forem empacotadas no bloco de Resposta.",
+            "cascasDeBanana": [
+                "Compose: Só manipula o dado na nuvem, não devolve via requisição HTTP para o celular do usuário.",
+                "Set Variable: Só afeta a instância rodando na nuvem."
+            ],
+            "dicaOuro": "Devolver dados processados para o aplicativo (Frontend) = Respond to a PowerApp or flow."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_067",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "intermediario",
+        "text": "Onde você pode visualizar se um fluxo de aprovação específico está retido em alguma etapa ou se falhou na sua execução atual de forma gráfica sem entrar no modo de edição?",
+        "options": [
+            "O Power Automate não permite isso grafically.",
+            "Dentro do Azure DevOps.",
+            "Pela guia 'Run History' (Histórico de Execuções) na página de detalhes do fluxo, clicando na execução exata.",
+            "No Dataverse Solution Explorer."
+        ],
+        "correctAnswer": 2,
+        "explanation": {
+            "intro": "Monitoramento e Resolução de Problemas no Automate:",
+            "papoReto": "Para debugar (encontrar a causa) o motivo pelo qual um e-mail não chegou ou o fluxo falhou, você deve ir à página de detalhes do fluxo, olhar a tabela de execuções de 28 dias e clicar na data específica. O painel exibirá o caminho exato que os dados fizeram e onde está o sinal de alerta vermelho.",
+            "puloDoGato": "A tela de 'Run History' é seu mapa mental visual que destaca em verde o que deu certo, em amarelo o que pulou, e em vermelho o erro brutal.",
+            "cascasDeBanana": [
+                "DevOps: Você monitora pipelines, mas o painel detalhado diário dos gatilhos é no portal nativo do Automate.",
+                "Sem modo gráfico: Falso. O Power Automate brilha exatamente no seu histórico de execuções desenhado no mesmo modelo que você construiu o fluxo."
+            ],
+            "dicaOuro": "Descobrir erro da última execução do fluxo = Verificar a guia Run History (Histórico de Execuções)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_068",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "avancado",
+        "text": "Em um processo crítico de aprovação, é obrigatório enviar um e-mail a toda equipe caso QUALQUER aprovação seja rejeitada. No Power Automate, como estruturar o bloco Start and Wait for Approval?",
+        "options": [
+            "Usar o tipo 'Approve/Reject - First to respond' e checar o Outcome na condição.",
+            "Usar o tipo 'Approve/Reject - Everyone must approve', e adicionar a condição se a Saída (Outcome) for diferente de 'Approve'.",
+            "É impossível forçar e-mail se um usuário rejeitar antes do outro.",
+            "Configurar aprovação personalizada com SharePoint."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Tipos lógicos de Aprovação no Power Automate:",
+            "papoReto": "O Power Automate oferece nativamente o tipo 'Todos devem aprovar' (Everyone must approve). Nesse cenário, se 5 diretores estiverem na lista, os 5 devem clicar em Aprovar. Se QUALQUER UM dos 5 apertar 'Rejeitar', o fluxo termina imediatamente o bloco de aprovação e lança a saída 'Reject', permitindo que o fluxo prossiga para enviar o e-mail coletivo.",
+            "puloDoGato": "No modelo 'Todos devem aprovar', o poder de veto é imediato. Uma única rejeição cancela a espera pelos demais e a resposta final vira Rejeitado.",
+            "cascasDeBanana": [
+                "First to respond: Só espera a primeira pessoa. Se a primeira aprovar, o bloco termina com sucesso e ignora os outros diretores, que era exatamente o que o processo proibia (queria todos avaliando).",
+                "Aprovação personalizada: Desnecessária, o recurso nativo de 'Everyone must approve' trata do consenso obrigatório."
+            ],
+            "dicaOuro": "Exigir unanimidade ou veto rápido na primeira rejeição = Tipo de aprovação 'Everyone must approve'."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_069",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "intermediario",
+        "text": "Um conector Customizado (Custom Connector) foi construído para conectar o Power Automate a uma API do governo que requer cabeçalhos HTTP estritos. Para o fluxo poder utilizá-lo livremente sem o criador precisar refazer a autenticação o tempo todo, como o conector deve ser publicado?",
+        "options": [
+            "Exportando para um pacote zip.",
+            "Criando uma Conexão (Connection) autorizada que armazena o token e vinculando-o à Ação no fluxo.",
+            "A API do Governo deve baixar o Gateway On-Premise da Microsoft.",
+            "Enviando o Conector para o AppSource."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Gestão de Credenciais em Conectores (Connections):",
+            "papoReto": "Quando você cria um Fluxo e usa uma Ação de um Conector (seja ele o Outlook ou um Conector Customizado), o fluxo requer uma 'Connection' (Conexão). Essa camada é o cofre que armazena a sua senha/Token (OAuth, API Key). O criador valida a Conexão uma vez e o fluxo roda nas nuvens utilizando aquele cofre armazenado sem pedir novamente.",
+            "puloDoGato": "Não confunda Conector com Conexão. O Conector é a 'receita' das URLs. A 'Conexão' é a credencial real armazenada do usuário autenticado. O Fluxo não anda sem as credenciais autorizadas vinculadas à ação.",
+            "cascasDeBanana": [
+                "Enviar para o AppSource: Isso torna o conector público globalmente no mundo. Não resolve a parte de credenciais locais da empresa.",
+                "Gateway: APIs externas governamentais via HTTP/REST publicadas na internet não requerem gateways."
+            ],
+            "dicaOuro": "O que armazena a autenticação de uma ação num fluxo? = Connection (Conexão)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_070",
+        "domain": "Fluxos em nuvem do Microsoft Power Automate",
+        "difficulty": "iniciante",
+        "text": "Sua equipe possui um endereço de e-mail compartilhado (suporte@empresa.com). Você quer que o Power Automate envie e-mails em nome dessa caixa de entrada, e não usando a sua foto e conta pessoal. Qual ação deve ser usada no conector Office 365 Outlook?",
+        "options": [
+            "Send an email (V2) e mudar a senha da sua conta.",
+            "Send an email from a shared mailbox (Enviar e-mail de uma caixa de correio compartilhada).",
+            "É impossível enviar usando e-mails de caixas gerais.",
+            "Forward email (Encaminhar)."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Ações do Conector Outlook Office 365:",
+            "papoReto": "Para e-mails corporativos, a Microsoft fornece ações específicas. Se a sua conta possui acesso no Exchange a uma 'Caixa Compartilhada' (Shared Mailbox), a ação correta no Automate é 'Send an email from a shared mailbox'. Assim o usuário final verá o remente oficial (suporte@) e não o seu nome pessoal.",
+            "puloDoGato": "Esconder seu nome de e-mails corporativos criados via Automate requer a ação nativa correta e direitos de 'Send as' no portal do Exchange.",
+            "cascasDeBanana": [
+                "Send an email V2: Envia da sua própria conexão de conta. Até possui opção de 'From', mas costuma falhar se não configurada corretamente vs a ação específica e mais direta de 'Shared Mailbox'.",
+                "Mudar a senha: Viola políticas de TI."
+            ],
+            "dicaOuro": "Fluxo mandando e-mail corporativo em nome da empresa = Send an email from a shared mailbox."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_071",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "avancado",
+        "text": "Seu chatbot foi publicado com sucesso na web. A equipe de Segurança (InfoSec) entra em pânico pois o bot exibe links e mensagens para qualquer pessoa na internet que encontre o iframe. Como impedir acessos não autorizados de forma rápida no painel administrativo do portal?",
+        "options": [
+            "Programar um nó de senha no Início (Greeting topic) do bot.",
+            "Na aba de Gerenciamento do canal Web, habilitar a Restrição Web (Web Channel Security / Require user to sign in).",
+            "Apagar o bot todas as noites e reinstalar.",
+            "Usar o firewall da rede local apenas."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Segurança na Publicação do Power Virtual Agents:",
+            "papoReto": "No painel do Copilot Studio / PVA, nas configurações de canais (Channels), você pode proteger o acesso web através das configurações de segurança globais. Exigir autenticação obrigatória do canal ou restringir em que domínios da web o iframe do bot pode ser carregado (Web channel security/CORS) é a proteção oficial primária.",
+            "puloDoGato": "Nunca use gambiarras para segurança (como perguntar senhas no fluxo do chat). Segurança se faz no container (Painel Administrativo do Canal) usando Authentication Providers.",
+            "cascasDeBanana": [
+                "Senha no Início: Um usuário malicioso poderia hackear o frontend. A proteção precisa ser de plataforma (Backend check).",
+                "Firewall de rede local: O bot vive na nuvem do Azure, o firewall local não protegeria o link direto do iframe."
+            ],
+            "dicaOuro": "Proteger acesso indevido ao Bot publicado = Configurações do Canal (Channel Security / Require Sign-in)."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_072",
+        "domain": "Integração do Power BI",
+        "difficulty": "intermediario",
+        "text": "Uma equipe de analistas que trabalha nos Model-driven apps também precisa ver seus KPIs. Como inserir o dashboard completo do Power BI na estrutura do App como se fosse um menu nativo do Dataverse?",
+        "options": [
+            "Criar uma página customizada (Custom Page) que carrega o Dashboard inteiro via componente.",
+            "Adicionar o relatório do Power BI diretamente no Sitemap como uma 'Web Resource / Subarea URL' ou usar a aba de componente nativa em Dashboards do Sistema.",
+            "É necessário usar o Canvas Apps.",
+            "Enviar via link PDF por e-mail semanal."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Exibição nativa do Power BI em Model-Driven Apps:",
+            "papoReto": "Após o ambiente ter a função de Embedding do PBI ativada, os criadores podem facilmente adicionar Power BI Dashboards no sistema. No Model-Driven App você cria um Dashboard do tipo 'Power BI' e esse Dashboard é listado diretamente no menu esquerdo (Sitemap) para acesso orgânico dos analistas sem precisar sair da plataforma do CRM.",
+            "puloDoGato": "Power BI não é um alien para o Dataverse. Ele é renderizado organicamente como 'Dashboards de Sistema/Pessoais' que podem ser amarrados diretamente na barra lateral (Sitemap).",
+            "cascasDeBanana": [
+                "Custom Page / Canvas: Complexidade desnecessária. Model-driven Apps possuem suporte embutido oficial para hospedar relatórios em abas da área de trabalho.",
+                "Link PDF: O PDF mata a interatividade, e não 'insere na estrutura do App' como a questão demanda."
+            ],
+            "dicaOuro": "Model-driven Dashboard mostrando KPIs do BI = Adicione como Dashboard do sistema e anexe ao Sitemap."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_073",
+        "domain": "Integração do Power BI",
+        "difficulty": "avancado",
+        "text": "Ao projetar uma integração entre Power BI e Dataverse em grandes corporações, os arquitetos desaconselham o uso do modo 'DirectQuery' na maioria das tabelas principais. Por qual motivo técnico?",
+        "options": [
+            "DirectQuery apaga os dados do Dataverse toda noite.",
+            "A consulta 'DirectQuery' exige cálculos diretos e frequentes contra o Dataverse para cada clique ou filtro de cada usuário. Em dezenas de milhões de linhas e dezenas de filtros, isso consome severamente os limites diários da API Dataverse (Service Protection Limits) e degrada o carregamento do relatório para tempos frustrantes.",
+            "Dataverse não suporta DirectQuery, apenas modo Import (Importação).",
+            "Ele exige licenciamento E5 Enterprise."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Limitações de Performance na Integração Power BI + Dataverse:",
+            "papoReto": "O modo DirectQuery cria uma conexão ativa onde o Power BI não armazena o dado na RAM dele, mas sim dispara consultas complexas SQL (fetchXML) para a API do Dataverse toda vez que você filtra ou clica. Com muitos dados, isso gera gargalos imensos de requisições de API no Dataverse, gerando erros 429 de Timeout/Limite de serviço atingido.",
+            "puloDoGato": "As melhores práticas mandam: Use o modo 'Importação' (Import) e carregue o dataset no Power BI diariamente para máxima performance. Use DirectQuery APENAS quando a atualização do segundo for uma questão crítica de vida ou morte.",
+            "cascasDeBanana": [
+                "Não suporta DirectQuery: O Dataverse suporta sim DirectQuery através do endpoint TDS, mas a recomendação é focar em cenários muito estritos, não sendo a recomendação geral devido ao custo de performance.",
+                "Apaga dados: Nenhuma consulta de relatórios altera/apaga dados da fonte original de forma assíncrona."
+            ],
+            "dicaOuro": "DirectQuery no Dataverse = Gera alto tráfego de API e degrada performance severamente em grandes volumes."
+        }
+    },
+    {
+        "id": "pl200_oficial_new_074",
+        "domain": "Criação de Chatbots com Power Virtual Agents",
+        "difficulty": "intermediario",
+        "text": "Onde ficam armazenados os registros do Histórico de Conversação (Transcripts) de um Bot do Power Virtual Agents criado dentro de um ambiente padronizado da empresa?",
+        "options": [
+            "Em um arquivo de texto no Azure.",
+            "Dentro do banco de dados do Dataverse atrelado ao Ambiente em que o Bot foi implantado (na tabela 'SessionTranscripts').",
+            "No OneDrive do criador do Bot.",
+            "O bot não salva o histórico devido à LGPD europeia."
+        ],
+        "correctAnswer": 1,
+        "explanation": {
+            "intro": "Armazenamento do Chatbot no Dataverse:",
+            "papoReto": "O Power Virtual Agents (Copilot Studio) faz parte do ecossistema da Power Platform. O coração do ecossistema é o Dataverse. Todo o histórico de mensagens, transcrições e métricas do bot fica salvo nativamente nas tabelas do sistema do Dataverse (ex: ConversationTranscript) do ambiente onde ele reside.",
+            "puloDoGato": "Isso é ouro para integrações. Como as conversas viram tabelas no Dataverse, você pode criar fluxos do Power Automate para auditar e analisar conversas de clientes de graça, diretamente pelo banco do ambiente.",
+            "cascasDeBanana": [
+                "OneDrive: O OneDrive é pessoal/intranet. Soluções empresariais de chat massivo guardam dados estruturados na arquitetura de banco de dados nativa.",
+                "Não salva (LGPD): Ele salva! Cabe aos engenheiros criar políticas de descarte (Data Retention Policies) via Dataverse (Jobs assíncronos de exclusão após X dias) para adequar-se à LGPD/GDPR."
+            ],
+            "dicaOuro": "Onde o Chatbot PVA guarda o histórico de conversas = Nas tabelas de sistema do Dataverse."
         }
     }
 ];

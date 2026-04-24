@@ -64,6 +64,14 @@ export const translations = {
     active_subscription: "Assinatura Premium Ativa",
     free_plan: "Plano Gratuito",
     simulator_center: "Central de Simulados",
+    analysis_by_domain: "Análise por Domínio",
+    email_placeholder: "seu@email.com",
+    pass_placeholder_6: "No mínimo 6 caracteres",
+    sim_paused: "Simulado Pausado",
+    paused_desc: "Pausar é importante, mas o foco agora é sua certificação. Clique abaixo para continuar.",
+    resume_now: "RETOMAR AGORA",
+    simulator: "Simulado",
+    real_exam_label: "PROVA REAL",
     
     // Níveis
     beginner: "Iniciante",
@@ -383,6 +391,14 @@ export const translations = {
     active_subscription: "Active Premium Subscription",
     free_plan: "Free Plan",
     simulator_center: "Simulator Center",
+    analysis_by_domain: "Analysis by Domain",
+    email_placeholder: "your@email.com",
+    pass_placeholder_6: "At least 6 characters",
+    sim_paused: "Simulator Paused",
+    paused_desc: "Pausing is important, but focus is key to your certification. Click below to continue.",
+    resume_now: "RESUME NOW",
+    simulator: "Simulator",
+    real_exam_label: "REAL EXAM",
 
     // Níveis
     beginner: "Beginner",

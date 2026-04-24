@@ -66,6 +66,48 @@ export default function Simulator({ session }) {
 
       const sourceQuestions = language === 'en' ? questionsDataEn : questionsData;
 
+      if (type === 'review') {
+        const historyId = searchParams.get('historyId');
+        if (!historyId) {
+          navigate('/dashboard');
+          return;
+        }
+
+        const { data: hData, error: hError } = await supabase
+          .from('simulator_history')
+          .select('*')
+          .eq('id', historyId)
+          .single();
+
+        if (hError || !hData) {
+          console.error("Erro ao carregar revisão:", hError);
+          navigate('/dashboard');
+          return;
+        }
+
+        // Reconstruir questões a partir dos IDs salvos
+        if (hData.question_ids && hData.question_ids.length > 0) {
+           const reconstructed = hData.question_ids.map(id => 
+              sourceQuestions.find(q => q.id === id)
+           ).filter(Boolean);
+           setQuestions(reconstructed);
+        } else {
+           // Fallback se não tiver IDs (em versões antigas)
+           alert("Este simulado antigo não possui dados de revisão detalhada.");
+           navigate('/dashboard');
+           return;
+        }
+
+        if (hData.answers) {
+           setProgress(hData.answers);
+        }
+
+        setSimuladorFinalizado(true);
+        setIsReviewing(true);
+        setLoading(false);
+        return;
+      }
+
       const getTheme = (ptQuery, enQuery) => {
         return shuffleArray(sourceQuestions.filter(q => {
           const domainMatch = q.domain.includes(ptQuery) || (enQuery && q.domain.includes(enQuery));
@@ -342,7 +384,9 @@ export default function Simulator({ session }) {
                 passed: isPassed,
                 total_questions: questions.length,
                 correct_answers: correctAnswersCount,
-                domain_stats: statsByDomain
+                domain_stats: statsByDomain,
+                question_ids: questions.map(q => q.id),
+                answers: progress
             });
         
         if (error) console.error("Erro ao salvar:", error);
@@ -659,7 +703,13 @@ export default function Simulator({ session }) {
             <div>
               <h2 className="font-bold text-slate-800 flex items-center gap-2 capitalize">
                 <Target className="text-blue-600" size={20} /> 
-                Simulado {type} {mode === 'exam' && <span className="text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded ml-2 uppercase tracking-tighter shadow-sm font-black">PROVA REAL</span>}
+                {t('simulator')} {
+                  type === 'iniciante' ? t('beginner') : 
+                  type === 'intermediario' ? t('intermediate') : 
+                  type === 'avancado' ? t('advanced_sim') : 
+                  type === 'geral' ? t('study_mode') : type
+                } 
+                {mode === 'exam' && <span className="text-[10px] bg-slate-800 text-white px-2 py-0.5 rounded ml-2 uppercase tracking-tighter shadow-sm font-black">{t('real_exam_label')}</span>}
               </h2>
             </div>
           </div>
@@ -687,9 +737,9 @@ export default function Simulator({ session }) {
           {isPaused && (
             <div className="absolute inset-0 z-[55] bg-white/80 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center">
                 <div className="bg-amber-100 p-6 rounded-full mb-6 text-amber-600 shadow-inner animate-pulse"><Pause size={48} /></div>
-                <h2 className="text-3xl font-black text-slate-800 mb-2">Simulado Pausado</h2>
-                <p className="text-slate-600 max-w-sm mb-8">Pausar é importante, mas o foco agora é sua certificação. Clique abaixo para continuar.</p>
-                <button onClick={() => setIsPaused(false)} className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-black shadow-xl hover:scale-105 transition-transform">RETOMAR AGORA</button>
+                <h2 className="text-3xl font-black text-slate-800 mb-2">{t('sim_paused')}</h2>
+                <p className="text-slate-600 max-w-sm mb-8">{t('paused_desc')}</p>
+                <button onClick={() => setIsPaused(false)} className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-black shadow-xl hover:scale-105 transition-transform">{t('resume_now')}</button>
             </div>
           )}
 

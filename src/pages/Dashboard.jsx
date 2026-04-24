@@ -81,9 +81,9 @@ export default function Dashboard({ session }) {
         .order('created_at', { ascending: false });
 
       if (error) {
-        console.error("Erro ao buscar histórico:", error);
+        console.error("Erro ao buscar histÃ³rico:", error);
       } else {
-        // Map dos tipos para nomes amigáveis (Internacionalizado)
+        // Map dos tipos para nomes amigÃ¡veis (Internacionalizado)
         const mappedData = data.map(h => {
           let displayType = h.exam_type;
           if (h.exam_type === 'iniciante') displayType = t('beginner');
@@ -102,8 +102,8 @@ export default function Dashboard({ session }) {
         });
         setHistory(mappedData);
 
-        // NOVO: Processamento para o Gráfico de Radar (Etapa 3)
-        // Agregamos os últimos 5 simulados para ter uma média de desempenho por tema
+        // NOVO: Processamento para o GrÃ¡fico de Radar (Etapa 3)
+        // Agregamos os Ãºltimos 5 simulados para ter uma mÃ©dia de desempenho por tema
         const statsAggregator = {};
         const recentTests = data.slice(0, 5);
         
@@ -125,7 +125,7 @@ export default function Dashboard({ session }) {
 
         setRadarData(chartData);
 
-        // NOVO: Cálculo de Ofensiva (Streak) Real
+        // NOVO: CÃ¡lculo de Ofensiva (Streak) Real
         const calculateStreak = (historyData) => {
           if (!historyData || historyData.length === 0) return 0;
           
@@ -190,7 +190,7 @@ export default function Dashboard({ session }) {
             const totalPoints = userStats.reduce((acc, curr) => acc + curr.correct_answers, 0);
             const bestScore = userStats.length > 0 ? Math.max(...userStats.map(h => h.score)) : 0;
             return {
-                name: p.nickname || p.full_name || 'Usuário Anônimo',
+                name: p.nickname || p.full_name || 'UsuÃ¡rio AnÃ´nimo',
                 total_correct: totalPoints,
                 best_score: bestScore
             };
@@ -199,7 +199,7 @@ export default function Dashboard({ session }) {
         setRanking(userRanking);
     } catch (err) {
         console.error("Erro ao carregar ranking (pode ser coluna ausente):", err);
-        setRanking([]); // Garante que a UI não quebre
+        setRanking([]); // Garante que a UI nÃ£o quebre
     } finally {
         setLoadingRanking(false);
     }
@@ -341,11 +341,11 @@ export default function Dashboard({ session }) {
       },
        { 
         id: 'award', 
-        icone: <Award size={28} className={history.some(h => h.exam_type === 'avançado' && h.passed) ? "text-red-600" : "text-slate-300"}/>, 
+        icone: <Award size={28} className={history.some(h => h.exam_type === 'avanÃ§ado' && h.passed) ? "text-red-600" : "text-slate-300"}/>, 
         titulo: t('ach_award_title'), 
         desc: t('ach_award_desc'), 
-        grad: history.some(h => h.exam_type === 'avançado' && h.passed) ? 'from-red-400 to-red-700' : 'from-slate-100 to-slate-200',
-        conquistado: history.some(h => h.exam_type === 'avançado' && h.passed)
+        grad: history.some(h => h.exam_type === 'avanÃ§ado' && h.passed) ? 'from-red-400 to-red-700' : 'from-slate-100 to-slate-200',
+        conquistado: history.some(h => h.exam_type === 'avanÃ§ado' && h.passed)
       },
   ];
 
@@ -415,7 +415,7 @@ export default function Dashboard({ session }) {
                         onClick={() => navigate('/settings')}
                         className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 flex items-center gap-3 transition-colors"
                       >
-                          <Settings size={16} /> {t('menu_ui_settings', 'Configurações de UI')}
+                          <Settings size={16} /> {t('menu_ui_settings', 'ConfiguraÃ§Ãµes de UI')}
                       </button>
                       <div className="my-2 border-t border-slate-100"></div>
                       <button 
@@ -443,7 +443,7 @@ export default function Dashboard({ session }) {
                         onClick={handleLogout} 
                         className="w-full text-left px-5 py-2.5 font-bold text-sm text-red-600 hover:bg-red-50 flex items-center gap-3 transition-colors"
                       >
-                          <LogOut size={16} /> {t('menu_logout', 'Encerrar Sessão')}
+                          <LogOut size={16} /> {t('menu_logout', 'Encerrar SessÃ£o')}
                       </button>
                       
                       {isAdmin && (
@@ -453,7 +453,7 @@ export default function Dashboard({ session }) {
                             onClick={() => navigate('/admin')} 
                             className="w-full text-left px-5 py-2.5 font-black text-xs text-blue-700 hover:bg-blue-50 flex items-center gap-3 transition-colors uppercase tracking-wider"
                           >
-                              <Shield size={16} /> {t('menu_admin_panel', 'Painel de Gestão')}
+                              <Shield size={16} /> {t('menu_admin_panel', 'Painel de GestÃ£o')}
                           </button>
                         </>
                       )}
@@ -471,32 +471,34 @@ export default function Dashboard({ session }) {
 
       {/* MODAL DE SELOS GAAMIFICATION */}
       {seloModal && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex justify-center items-center p-4" onClick={() => setSeloModal(null)}>
-            <div className="bg-white rounded-3xl w-full max-w-sm overflow-hidden shadow-2xl transform transition-all animate-fade-in-up" onClick={e => e.stopPropagation()}>
-                <div className={`h-24 bg-gradient-to-br ${seloModal.grad} w-full relative flex justify-center items-end pb-3`}>
-                    <div className="absolute top-4 right-4 bg-white/20 p-1.5 rounded-full cursor-pointer hover:bg-white/40" onClick={() => setSeloModal(null)}>
-                        <X size={16} className="text-white" />
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 overflow-y-auto" onClick={() => setSeloModal(null)}>
+            <div className="min-h-full flex justify-center items-center p-4">
+                <div className="bg-white rounded-3xl w-full max-w-sm shadow-2xl transform transition-all animate-fade-in-up" onClick={e => e.stopPropagation()}>
+                    <div className={`h-24 bg-gradient-to-br ${seloModal.grad} w-full relative flex justify-center items-end pb-3`}>
+                        <div className="absolute top-4 right-4 bg-white/20 p-1.5 rounded-full cursor-pointer hover:bg-white/40" onClick={() => setSeloModal(null)}>
+                            <X size={16} className="text-white" />
+                        </div>
                     </div>
-                </div>
-                <div className="flex justify-center -mt-10 mb-4 px-6 relative z-10">
-                    <div className="bg-white p-2 rounded-2xl shadow-xl w-20 h-20 flex items-center justify-center border-4 border-slate-50">
-                        {seloModal.icone}
+                    <div className="flex justify-center -mt-10 mb-4 px-6 relative z-10">
+                        <div className="bg-white p-2 rounded-2xl shadow-xl w-20 h-20 flex items-center justify-center border-4 border-slate-50">
+                            {seloModal.icone}
+                        </div>
                     </div>
-                </div>
-                <div className="text-center px-6 pb-8">
-                    <h3 className="font-black text-2xl text-slate-800 mb-2">{seloModal.titulo}</h3>
-                    <p className="text-slate-500 font-medium leading-relaxed text-sm bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        {seloModal.desc}
-                    </p>
-                    <button onClick={() => setSeloModal(null)} className="mt-6 w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition-colors">
-                        {t('amazing_back')}
-                    </button>
+                    <div className="text-center px-6 pb-8">
+                        <h3 className="font-black text-2xl text-slate-800 mb-2">{seloModal.titulo}</h3>
+                        <p className="text-slate-500 font-medium leading-relaxed text-sm bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            {seloModal.desc}
+                        </p>
+                        <button onClick={() => setSeloModal(null)} className="mt-6 w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition-colors">
+                            {t('amazing_back')}
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
       )}
 
-      {/* MODAL DE HISTÓRICO COMPLETO */}
+      {/* MODAL DE HISTÃ“RICO COMPLETO */}
       {historicoCompletoAberto && (
         <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex justify-end">
             <div className="bg-white w-full max-w-md h-full shadow-2xl flex flex-col animate-fade-in-up">
@@ -516,7 +518,7 @@ export default function Dashboard({ session }) {
                                     {h.passed ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
                                 </div>
                                 <div>
-                                    <span className={`text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md ${h.type === 'Avançado' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}`}>{h.type}</span>
+                                    <span className={`text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-md ${h.type === 'AvanÃ§ado' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}`}>{h.type}</span>
                                     <div className="font-bold text-slate-800 mt-1">{h.date}</div>
                                 </div>
                             </div>
@@ -537,12 +539,13 @@ export default function Dashboard({ session }) {
 
       {/* MODAL DE DETALHES DO RESULTADO */}
       {selectedHistoryItem && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[60] flex justify-center items-center p-4" onClick={() => setSelectedHistoryItem(null)}>
-            <div className="bg-white rounded-[2.5rem] w-full max-w-2xl overflow-hidden shadow-2xl transform transition-all animate-fade-in-up" onClick={e => e.stopPropagation()}>
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[60] overflow-y-auto" onClick={() => setSelectedHistoryItem(null)}>
+            <div className="min-h-full flex justify-center items-center p-4">
+                <div className="bg-white rounded-[2.5rem] w-full max-w-2xl shadow-2xl transform transition-all animate-fade-in-up" onClick={e => e.stopPropagation()}>
                 <div className={`h-32 bg-gradient-to-br ${selectedHistoryItem.passed ? 'from-emerald-500 to-teal-600' : 'from-red-500 to-rose-600'} w-full relative flex justify-between items-center px-8`}>
                     <div>
-                        <h3 className="text-white font-black text-2xl">{t('performance_report', 'Relatório de Desempenho')}</h3>
-                        <p className="text-white/80 font-bold text-sm uppercase tracking-widest">{selectedHistoryItem.type} • {selectedHistoryItem.date}</p>
+                        <h3 className="text-white font-black text-2xl">{t('performance_report', 'RelatÃ³rio de Desempenho')}</h3>
+                        <p className="text-white/80 font-bold text-sm uppercase tracking-widest">{selectedHistoryItem.type} â€¢ {selectedHistoryItem.date}</p>
                     </div>
                     <button onClick={() => setSelectedHistoryItem(null)} className="p-2 bg-white/20 hover:bg-white/30 rounded-full text-white transition-colors">
                         <X size={20} />
@@ -587,7 +590,7 @@ export default function Dashboard({ session }) {
                                             style={{ width: `${percent}%` }}
                                         ></div>
                                     </div>
-                                    <p className="text-[10px] text-slate-400 mt-1 font-bold">{stats.correct} {t('corrects', 'Acertos')} de {stats.total} {t('total', 'Questões')}</p>
+                                    <p className="text-[10px] text-slate-400 mt-1 font-bold">{stats.correct} {t('corrects', 'Acertos')} de {stats.total} {t('total', 'QuestÃµes')}</p>
                                 </div>
                             );
                         })}
@@ -604,7 +607,7 @@ export default function Dashboard({ session }) {
                             onClick={() => navigate(`/simulator/review?historyId=${selectedHistoryItem.id}`)}
                             className="flex-1 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-black transition-all shadow-xl flex items-center justify-center gap-2"
                         >
-                            <BookOpen size={18} /> {t('review_q', 'Revisar Questões')}
+                            <BookOpen size={18} /> {t('review_q', 'Revisar QuestÃµes')}
                         </button>
                         {selectedHistoryItem.score >= 80 && (
                              <button 
@@ -622,7 +625,7 @@ export default function Dashboard({ session }) {
 
       <div className="max-w-7xl mx-auto px-4 py-8 grid lg:grid-cols-12 gap-8">
         
-        {/* Coluna Central/Esquerda: Banner e Ações */}
+        {/* Coluna Central/Esquerda: Banner e AÃ§Ãµes */}
         <div className="lg:col-span-8 space-y-8">
           
           {/* Welcome Banner */}
@@ -649,7 +652,7 @@ export default function Dashboard({ session }) {
                </span>
             </div>
             
-            {/* Decorações do Banner */}
+            {/* DecoraÃ§Ãµes do Banner */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-10 w-40 h-40 bg-blue-400 opacity-10 rounded-full blur-2xl"></div>
             <Target className="absolute -bottom-16 -right-16 text-white opacity-10 transform rotate-12" size={300} />
@@ -734,7 +737,7 @@ export default function Dashboard({ session }) {
             </div>
           </div>
 
-          {/* NOVO: Modal de Seleção de Modo para Avançado (Etapa 5) */}
+          {/* NOVO: Modal de SeleÃ§Ã£o de Modo para AvanÃ§ado (Etapa 5) */}
           {showModeSelector && (
             <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex justify-center items-center p-4">
                <div className="bg-white rounded-[2.5rem] w-full max-w-lg overflow-hidden shadow-2xl animate-fade-in-up">
@@ -786,13 +789,13 @@ export default function Dashboard({ session }) {
           )}
         </div>
 
-        {/* Coluna Direita: Microsoft Style Histórico e Gamificação */}
+        {/* Coluna Direita: Microsoft Style HistÃ³rico e GamificaÃ§Ã£o */}
         <div className="lg:col-span-4 space-y-6">
           
-          {/* Seção de Conquistas e Gráfico de Radar */}
+          {/* SeÃ§Ã£o de Conquistas e GrÃ¡fico de Radar */}
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
              
-             {/* Gráfico de Radar: Desempenho Setorial */}
+             {/* GrÃ¡fico de Radar: Desempenho Setorial */}
              <div className="mb-8 p-4 bg-slate-50 rounded-2xl border border-slate-100">
                 <h3 className="font-black text-slate-800 flex items-center gap-2 text-sm mb-4 uppercase tracking-wider">
                     <PieChart className="text-blue-600" size={18} /> {t('performance_domain')}
